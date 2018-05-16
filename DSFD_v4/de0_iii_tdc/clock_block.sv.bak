@@ -1,0 +1,14 @@
+module clock_block(input clk, rst, input del, output[3:0] clocks, output[3:0] inv_clocks);
+
+logic[3:0] clks, del_clks, inv_clks;
+logic pll_locked;
+
+tdc_pll pll_inst (.areset(~rst), .inclk0(clk), .c0(clks[0]), .c1(clks[1]), 
+						.c2(clks[2]), .c3(clks[3]), .locked(pll_locked));
+						
+assign inv_clks = ~clks;
+assign del_clks = clks;
+assign clocks = del_clks;
+assign inv_clocks = inv_clks;
+
+endmodule

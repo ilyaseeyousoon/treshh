@@ -1,0 +1,25 @@
+
+State Machine - |DE0_TDC|tdc:tdc_inst_0|int_sync:i_sync|state
+Name state.st_ret_clock state.st_ena_on state.st_read_data state.st_change_clock state.st_ena_off state.st_wait 
+state.st_wait 0 0 0 0 0 0 
+state.st_ena_off 0 0 0 0 1 1 
+state.st_change_clock 0 0 0 1 0 1 
+state.st_read_data 0 0 1 0 0 1 
+state.st_ena_on 0 1 0 0 0 1 
+state.st_ret_clock 1 0 0 0 0 1 
+
+State Machine - |DE0_TDC|tdc:tdc_inst_0|frac_sync:fr_sync|state
+Name state.st_ret_clock state.st_ena_on state.st_read_data state.st_change_clock state.st_ena_off state.st_wait 
+state.st_wait 0 0 0 0 0 0 
+state.st_ena_off 0 0 0 0 1 1 
+state.st_change_clock 0 0 0 1 0 1 
+state.st_read_data 0 0 1 0 0 1 
+state.st_ena_on 0 1 0 0 0 1 
+state.st_ret_clock 1 0 0 0 0 1 
+
+State Machine - |DE0_TDC|dm_min:dm_inst|state
+Name state.st_lf state.st_mf state.st_hf state.st_wait 
+state.st_wait 0 0 0 0 
+state.st_hf 0 0 1 1 
+state.st_mf 0 1 0 1 
+state.st_lf 1 0 0 1 

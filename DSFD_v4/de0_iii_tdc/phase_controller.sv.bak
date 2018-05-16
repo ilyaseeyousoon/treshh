@@ -1,0 +1,29 @@
+module phase_controller (input clk, input rst, input [1:0] key_ctl, output mod);
+
+logic[15:0] clk_max;
+logic[15:0] clk_div;
+logic[10:0] clk_10k_d;
+logic clk_10k, coarse_press, fine_press;
+
+always @ (posedge pll_clk[0] or negedge rst)
+	begin
+		if(!rst)
+			begin
+				clk_div <= 0;
+				clk_10k <= 0;
+				clk_10k_d <= 0;
+			end
+		else
+			begin
+				if(clk_div == 9999) 
+					begin																													
+						clk_div = 0;
+						clk_10k <= ~clk_10k;
+					end
+				else clk_div <= clk_div + 1;
+				
+				clk_10k_d <= {clk_10k_d[9:0], clk_10k};
+			end
+	end
+	
+endmodule

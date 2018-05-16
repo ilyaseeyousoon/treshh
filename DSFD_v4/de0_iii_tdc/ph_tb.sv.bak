@@ -1,0 +1,25 @@
+`timescale 1ns/1ps;
+
+module ph_tb;
+
+logic clk, rst;
+logic[1:0] key;
+logic mod;
+
+initial begin
+clk = 0;
+forever #10 clk = ~clk;
+end
+
+initial begin
+rst = 0;
+#10 rst = 1;
+end
+
+initial begin
+key = 0;
+#40 key[1] = 1;
+#40 key[0] = 1;
+end
+
+phase_controller ph_inst (clk, )

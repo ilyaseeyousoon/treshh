@@ -1,0 +1,31 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/DE0_TDC.v}
+vlog -vlog01compat -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/mult_x50.v}
+vlog -vlog01compat -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/tdc_pll.v}
+vlog -vlog01compat -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc/db {C:/altera/15.0/projects/de0_iii_tdc/db/tdc_pll_altpll.v}
+vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/time_counter.sv}
+vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/tail_counter.sv}
+vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/mlt_x400.sv}
+vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/integer_counter.sv}
+vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/int_sync.sv}
+vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/head_counter.sv}
+vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/frac_sync.sv}
+vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/dm_min.sv}
+vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/clock_block.sv}
+vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/diff.sv}
+vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/tdc.sv}
+
+vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  tdc_tb
+
+add wave *
+view structure
+view signals
+run -all

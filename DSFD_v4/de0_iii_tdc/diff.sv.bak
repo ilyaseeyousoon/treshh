@@ -1,0 +1,8 @@
+module diff(input clk, input rst, input dval, input[19:0] mlt, output[19:0] out_data, output o_dval);
+
+always_ff @ (posedge clk or negedge rst)
+	begin
+	
+	end
+	
+endmodule

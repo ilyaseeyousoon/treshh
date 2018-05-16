@@ -1,0 +1,730 @@
+# Reading C:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# do de0_tdc_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/DE0_TDC.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:21 on Feb 01,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/DE0_TDC.v 
+# -- Compiling module DE0_TDC
+# 
+# Top level modules:
+# 	DE0_TDC
+# End time: 16:17:21 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/mult_x50.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:21 on Feb 01,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/mult_x50.v 
+# -- Compiling module mult_x50
+# 
+# Top level modules:
+# 	mult_x50
+# End time: 16:17:21 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/tdc_pll.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:21 on Feb 01,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/tdc_pll.v 
+# -- Compiling module tdc_pll
+# 
+# Top level modules:
+# 	tdc_pll
+# End time: 16:17:21 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc/db {C:/altera/15.0/projects/de0_iii_tdc/db/tdc_pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:21 on Feb 01,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc/db" C:/altera/15.0/projects/de0_iii_tdc/db/tdc_pll_altpll.v 
+# -- Compiling module tdc_pll_altpll
+# 
+# Top level modules:
+# 	tdc_pll_altpll
+# End time: 16:17:21 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/time_counter.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:21 on Feb 01,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/time_counter.sv 
+# -- Compiling module time_counter
+# 
+# Top level modules:
+# 	time_counter
+# End time: 16:17:21 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/tail_counter.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:21 on Feb 01,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/tail_counter.sv 
+# -- Compiling module tail_counter
+# 
+# Top level modules:
+# 	tail_counter
+# End time: 16:17:21 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/mlt_x400.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:21 on Feb 01,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/mlt_x400.sv 
+# -- Compiling module mlt_x400
+# 
+# Top level modules:
+# 	mlt_x400
+# End time: 16:17:21 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/integer_counter.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:21 on Feb 01,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/integer_counter.sv 
+# -- Compiling module integer_counter
+# 
+# Top level modules:
+# 	integer_counter
+# End time: 16:17:21 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/int_sync.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:21 on Feb 01,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/int_sync.sv 
+# -- Compiling package int_sync_sv_unit
+# -- Compiling module int_sync
+# 
+# Top level modules:
+# 	int_sync
+# End time: 16:17:21 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/head_counter.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:21 on Feb 01,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/head_counter.sv 
+# -- Compiling module head_counter
+# 
+# Top level modules:
+# 	head_counter
+# End time: 16:17:21 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/frac_sync.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:21 on Feb 01,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/frac_sync.sv 
+# -- Compiling package frac_sync_sv_unit
+# -- Compiling module frac_sync
+# 
+# Top level modules:
+# 	frac_sync
+# End time: 16:17:22 on Feb 01,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/dm_min.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:22 on Feb 01,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/dm_min.sv 
+# -- Compiling module dm_min
+# 
+# Top level modules:
+# 	dm_min
+# End time: 16:17:22 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/clock_block.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:22 on Feb 01,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/clock_block.sv 
+# -- Compiling module clock_block
+# 
+# Top level modules:
+# 	clock_block
+# End time: 16:17:22 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/diff.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:22 on Feb 01,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/diff.sv 
+# -- Compiling module diff
+# 
+# Top level modules:
+# 	diff
+# End time: 16:17:22 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/phase_controller.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:22 on Feb 01,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/phase_controller.sv 
+# -- Compiling module phase_controller
+# 
+# Top level modules:
+# 	phase_controller
+# End time: 16:17:22 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/tdc.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:22 on Feb 01,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/tdc.sv 
+# -- Compiling module tdc
+# 
+# Top level modules:
+# 	tdc
+# End time: 16:17:22 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/altera/15.0/projects/de0_iii_tdc {C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:22 on Feb 01,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/altera/15.0/projects/de0_iii_tdc" C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv 
+# -- Compiling module tdc_tb
+# 
+# Top level modules:
+# 	tdc_tb
+# End time: 16:17:22 on Feb 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  tdc_tb
+# vsim -gui "+altera" -l msim_transcript -do "de0_tdc_run_msim_rtl_verilog.do" 
+# Start time: 16:17:24 on Feb 01,2017
+# Loading sv_std.std
+# Loading work.tdc_tb
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.DE0_TDC
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.phase_controller
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_block
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.tdc_pll
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.dm_min
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.tdc
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.frac_sync_sv_unit
+# Loading work.frac_sync
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.int_sync_sv_unit
+# Loading work.int_sync
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.mlt_x400
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.diff
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.mult_x50
+# Loading lpm_ver.lpm_mult
+# Loading lpm_ver.LPM_HINT_EVALUATION
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.time_counter
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.head_counter
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.tail_counter
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.integer_counter
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vsim-3017) C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv(20): [TFMPC] - Too few port connections. Expected 10, found 7.
+# 
+#         Region: /tdc_tb/tdc
+# ** Warning: (vsim-3015) C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv(20): [PCDPC] - Port size (3) does not match connection size (2) for port 'KEY'. The port definition is at: C:/altera/15.0/projects/de0_iii_tdc/DE0_TDC.v(15).
+# 
+#         Region: /tdc_tb/tdc
+# ** Warning: (vsim-3015) C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv(20): [PCDPC] - Port size (1) does not match connection size (8) for port 'MOD_STATIC'. The port definition is at: C:/altera/15.0/projects/de0_iii_tdc/DE0_TDC.v(19).
+# 
+#         Region: /tdc_tb/tdc
+# ** Warning: (vsim-3722) C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv(20): [TFMPC] - Missing connection for port 'DAC_OUT'.
+# 
+# ** Warning: (vsim-3722) C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv(20): [TFMPC] - Missing connection for port 'DAC_WR'.
+# 
+# ** Warning: (vsim-3722) C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv(20): [TFMPC] - Missing connection for port 'SW'.
+# 
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#  Note : Cyclone III PLL was reset
+# Time: 0  Instance: tdc_tb.tdc.cb_inst.pll_inst.altpll_component.cycloneiii_pll.pll3
+#  Note : Cyclone III PLL locked to incoming clock
+# Time: 170000  Instance: tdc_tb.tdc.cb_inst.pll_inst.altpll_component.cycloneiii_pll.pll3
+add wave -position end sim:/tdc_tb/tdc/dm_inst/*
+restart -f
+# Loading sv_std.std
+# Loading work.tdc_tb
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.phase_controller
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_block
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.dm_min
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.tdc
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.frac_sync_sv_unit
+# Loading work.frac_sync
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.int_sync_sv_unit
+# Loading work.int_sync
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.mlt_x400
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.diff
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.time_counter
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.head_counter
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.tail_counter
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.integer_counter
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'cycloneiii_ver' at "cycloneiii_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vsim-3017) C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv(20): [TFMPC] - Too few port connections. Expected 10, found 7.
+# 
+#         Region: /tdc_tb/tdc
+# ** Warning: (vsim-3015) C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv(20): [PCDPC] - Port size (3) does not match connection size (2) for port 'KEY'. The port definition is at: C:/altera/15.0/projects/de0_iii_tdc/DE0_TDC.v(15).
+# 
+#         Region: /tdc_tb/tdc
+# ** Warning: (vsim-3015) C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv(20): [PCDPC] - Port size (1) does not match connection size (8) for port 'MOD_STATIC'. The port definition is at: C:/altera/15.0/projects/de0_iii_tdc/DE0_TDC.v(19).
+# 
+#         Region: /tdc_tb/tdc
+# ** Warning: (vsim-3722) C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv(20): [TFMPC] - Missing connection for port 'DAC_OUT'.
+# 
+# ** Warning: (vsim-3722) C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv(20): [TFMPC] - Missing connection for port 'DAC_WR'.
+# 
+# ** Warning: (vsim-3722) C:/altera/15.0/projects/de0_iii_tdc/tdc_tb.sv(20): [TFMPC] - Missing connection for port 'SW'.
+# 
+run
+#  Note : Cyclone III PLL was reset
+# Time: 0  Instance: tdc_tb.tdc.cb_inst.pll_inst.altpll_component.cycloneiii_pll.pll3
+#  Note : Cyclone III PLL locked to incoming clock
+# Time: 170000  Instance: tdc_tb.tdc.cb_inst.pll_inst.altpll_component.cycloneiii_pll.pll3
+write list -window .main_pane.list.interior.cs.body C:/altera/15.0/projects/de0_iii_tdc/simulation/modelsim/list_6ms.lst
+# End time: 22:15:22 on Feb 01,2017, Elapsed time: 5:57:58
+# Errors: 148, Warnings: 12
