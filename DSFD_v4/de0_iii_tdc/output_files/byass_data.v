@@ -1,4 +1,4 @@
-module byass_data(input clk, input rst, input [1:0] dval, input[19:0]input_to_byass, output[7:0] out_data_byass);
+module byass_data(input clk, input rst, input  dval, input[19:0]input_to_byass,input SW_mp ,output[7:0] out_data_byass);
 
 
 
@@ -11,7 +11,6 @@ always @ (posedge clk )
 begin 
      if(!rst)
         begin 
-	   count_byass [3:0] <= 4'd5;
 
         end
 
@@ -19,48 +18,7 @@ begin
 		  begin 
 		   
 				
-				if((dval[1]==0 ) && (count_plus_flag==0))
-				begin 
-				
-						if(count_byass<12)
-						begin
-						count_byass<=count_byass+1;
-						end
-						count_plus_flag<=1;
-						
-				end
-		  
-					else
-					begin 
-		      
-						if(dval[1]==1)
-						begin 	
-						count_plus_flag<=0;
-						end
-		  
-					end
-		  
-
-				if((dval[0]==0 ) && (count_min_flag==0))
-				begin 
-				
-						if(count_byass>0)
-						begin
-						count_byass<=count_byass-1;
-						end
-						count_min_flag<=1;
-						
-				end
-		  
-			   else
-				begin 
-		      
-						if(dval[0]==1)
-						begin 	
-						count_min_flag<=0;
-						end
-		  
-			   end		  
+	  
 		  
 		  case (count_byass)
 		  
@@ -85,6 +43,37 @@ begin
 		  
 	     end 
 end
+
+
+always @ (posedge dval )
+begin
+				if((SW_mp==1))
+				begin 
+				
+						if(count_byass<12)
+						begin
+						count_plus_flag<=1;
+						count_byass<=count_byass+1;
+						end
+						
+						
+				end
+		  
+					else
+					begin
+
+						if(count_byass>0)
+						begin
+						count_min_flag<=1;
+						count_byass<=count_byass-1;
+					   end
+						
+						
+				   end
+	end
+
+
+
 
 assign out_data_byass[7:0] = output_buf[7:0];
 

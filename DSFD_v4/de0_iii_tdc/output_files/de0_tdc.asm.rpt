@@ -1,5 +1,5 @@
 Assembler report for de0_tdc
-Fri May 18 16:29:34 2018
+Fri May 18 19:28:02 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri May 18 16:29:34 2018 ;
+; Assembler Status      ; Successful - Fri May 18 19:28:02 2018 ;
 ; Revision Name         ; de0_tdc                               ;
 ; Top-level Entity Name ; DE0_TDC                               ;
 ; Family                ; Cyclone III                           ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                   ;
 +----------------+---------------------------------------------------------------------------+
 ; Device         ; EP3C16F484C6                                                              ;
-; JTAG usercode  ; 0x00148ED1                                                                ;
-; Checksum       ; 0x00148ED1                                                                ;
+; JTAG usercode  ; 0x00232886                                                                ;
+; Checksum       ; 0x00232886                                                                ;
 +----------------+---------------------------------------------------------------------------+
 
 
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri May 18 16:29:30 2018
+    Info: Processing started: Fri May 18 19:27:59 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off de0_tdc -c de0_tdc
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 450 megabytes
-    Info: Processing ended: Fri May 18 16:29:34 2018
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 466 megabytes
+    Info: Processing ended: Fri May 18 19:28:02 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 

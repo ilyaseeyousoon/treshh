@@ -82,7 +82,7 @@ reg clk_20k;
 
 wire signal, mod, mod_d, dm_clk, diff_dval, tdc_input_signal, ph_mod;
 
-assign TEST_SIGNAL=pll_clk[5];
+assign TEST_SIGNAL=ph_mod;
 assign TEST_SIGNAL2=clk_10k;
 
 
@@ -157,20 +157,20 @@ always @ (posedge pll_clk[0] or negedge rst)
 			end
 	end
 	
-phase_controller ph_ctl(pll_clk[0], KEY[0], KEY[2:1], SW[0], ph_mod);
+phase_controller ph_ctl(pll_clk[0], 1, KEY[2:1], SW[0], ph_mod);
 
 //signal_pll pll_sg (.areset(~pll_rst), .inclk0(CLOCK_50), .c0(dm_clk), .c1(mod));
 
-clock_block    cb_inst (CLOCK_50, rst, KEY[0], pll_clk, inv_clk);   
+clock_block    cb_inst (CLOCK_50, rst, 1, pll_clk, inv_clk);   
 					
 dm_min dm_inst (pll_clk[0], rst, clk_10k, digmod_out, mod_d);
 
-	tdc tdc_inst_0 (tdc_clocks, rst, tdc_input_signal, clk_20k, tdc_out_0, tdc_dval[0], TRIG);					
+	tdc tdc_inst_0 (tdc_clocks, rst, tdc_input_signal, ph_mod, tdc_out_0, tdc_dval[0], TRIG);					
 //tdc tdc_inst_0 (tdc_clocks, rst, tdc_input_signal, clk_20k, tdc_out_0, tdc_dval[0], TRIG);
 diff diff_inst (tdc_clocks[0], rst, tdc_dval[0], tdc_out_0,clk_10k, diff_out_0, diff_dval);
 
 //byass_data byass_data1( tdc_clocks[0],  rst,  KEY[2:1], diff_out_0, out_data_byass_top);
-byass_data byass_data1( tdc_clocks[0],  rst,  KEY[2:1], diff_out_0, out_data_byass_top);
+byass_data byass_data1( tdc_clocks[0],  rst,  KEY[0], diff_out_0,SW[8], out_data_byass_top);
 
 sin_addr sin_addr1 (pll_clk[4],address_to_sin);
 
