@@ -22,7 +22,12 @@ module DE0_TDC(
 	DAC_WR,
 	DAC2_DB,
 	DAC2_WR,
-	SW
+	SW,
+	TEST_SIGNAL,
+	TEST_SIGNAL2,
+	SPI3_CLK,
+	SPI3_MOSI,
+	SPI3_SS
 );
 
 //=======================================================
@@ -47,6 +52,11 @@ input SIGNAL;
 output MOD;
 output MOD_STATIC;
 output TRIG;
+output TEST_SIGNAL;
+output TEST_SIGNAL2;
+output SPI3_SS;
+output SPI3_CLK;
+output SPI3_MOSI;
 output[7:0] DAC_OUT,DAC2_DB;
 output DAC_WR;
 output DAC2_WR;
@@ -66,8 +76,16 @@ wire [7:0] out_data_byass_top ,sin_to_dac ;
 wire [8:0] address_to_sin;
 assign DAC2_DB = sin_to_dac;
 assign DAC2_WR = pll_clk[4];
+reg[15:0] clk_div2;
+reg[10:0] clk_20k_d;
+reg clk_20k;
 
 wire signal, mod, mod_d, dm_clk, diff_dval, tdc_input_signal, ph_mod;
+
+assign TEST_SIGNAL=pll_clk[5];
+assign TEST_SIGNAL2=clk_10k;
+
+
 
 wire[19:0] tdc_out_0, tdc_out_1, tdc_out_2, tdc_out_3;
 wire[19:0] diff_out_0;
@@ -118,6 +136,27 @@ always @ (posedge pll_clk[0] or negedge rst)
 			end
 	end
 	
+	always @ (posedge pll_clk[0] or negedge rst)
+	begin
+		if(!rst)
+			begin
+				clk_div2 <= 0;
+				clk_20k <= 0;
+				clk_20k_d <= 0;
+			end
+		else
+			begin	
+				if(clk_div2 == 4999) 
+					begin																													
+						clk_div2 = 0;
+						clk_20k <= ~clk_20k;
+					end
+				else clk_div2 <= clk_div2 + 1;
+				
+				clk_20k_d <= {clk_20k_d[9:0], clk_20k};
+			end
+	end
+	
 phase_controller ph_ctl(pll_clk[0], KEY[0], KEY[2:1], SW[0], ph_mod);
 
 //signal_pll pll_sg (.areset(~pll_rst), .inclk0(CLOCK_50), .c0(dm_clk), .c1(mod));
@@ -125,9 +164,10 @@ phase_controller ph_ctl(pll_clk[0], KEY[0], KEY[2:1], SW[0], ph_mod);
 clock_block    cb_inst (CLOCK_50, rst, KEY[0], pll_clk, inv_clk);   
 					
 dm_min dm_inst (pll_clk[0], rst, clk_10k, digmod_out, mod_d);
-						
-tdc tdc_inst_0 (tdc_clocks, rst, tdc_input_signal, ph_mod, tdc_out_0, tdc_dval[0], TRIG);
-diff diff_inst (tdc_clocks[0], rst, tdc_dval[0], tdc_out_0, diff_out_0, diff_dval);
+
+	tdc tdc_inst_0 (tdc_clocks, rst, tdc_input_signal, clk_20k, tdc_out_0, tdc_dval[0], TRIG);					
+//tdc tdc_inst_0 (tdc_clocks, rst, tdc_input_signal, clk_20k, tdc_out_0, tdc_dval[0], TRIG);
+diff diff_inst (tdc_clocks[0], rst, tdc_dval[0], tdc_out_0,clk_10k, diff_out_0, diff_dval);
 
 //byass_data byass_data1( tdc_clocks[0],  rst,  KEY[2:1], diff_out_0, out_data_byass_top);
 byass_data byass_data1( tdc_clocks[0],  rst,  KEY[2:1], diff_out_0, out_data_byass_top);
@@ -136,7 +176,7 @@ sin_addr sin_addr1 (pll_clk[4],address_to_sin);
 
 singen  singen1 ( address_to_sin,pll_clk[4],sin_to_dac );
 
-
+spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[5],clk_20k,SPI3_MOSI,SPI3_CLK,SPI3_SS,diff_out_0);
 
 
 

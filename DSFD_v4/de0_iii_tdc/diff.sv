@@ -1,4 +1,4 @@
-module diff(input clk, input rst, input dval, input[19:0] mlt, output[19:0] out_data, output o_dval);
+module diff(input clk, input rst, input dval, input[19:0] mlt,input clk_10k, output[19:0] out_data, output o_dval);
 
 logic[19:0] in_buf_1, in_buf_2;
 logic[20:0] diff, diff_1;
@@ -48,7 +48,14 @@ always_ff @ (posedge clk or negedge rst)
 						buf1_rdy <= 0;
 						buf2_rdy <= 0;
 						test_ctr <= test_ctr + 1;
+						if(clk_10k==1)// добавил проверку для 20 Кгц. на 10 будет фигня 
+						begin
+						diff <= in_buf_1-in_buf_2 + 20'h007F0;
+						end
+						else
+						begin
 						diff <= in_buf_2-in_buf_1 + 20'h007F0;
+						end
 						out_valid <= 1;
 					end
 				else out_valid <= 0;

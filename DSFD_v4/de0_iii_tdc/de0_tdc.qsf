@@ -163,5 +163,21 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAC2_DB
 set_location_assignment PIN_AB14 -to DAC2_WR
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAC2_WR
 set_global_assignment -name QIP_FILE pll_spi.qip
-set_global_assignment -name VERILOG_FILE "output_files/output_files/module diff2.v"
+set_location_assignment PIN_V6 -to TEST_SIGNAL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TEST_SIGNAL
+set_location_assignment PIN_V7 -to TEST_SIGNAL2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TEST_SIGNAL2
+set_global_assignment -name VERILOG_FILE spi_data_transm.v
+set_location_assignment PIN_AB13 -to SPI3_SS
+set_location_assignment PIN_AA14 -to SPI3_CLK
+set_location_assignment PIN_AA15 -to SPI3_MOSI
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SPI3_SS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SPI3_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SPI3_MOSI
+set_location_assignment PIN_AB5 -to SPI1_SS
+set_location_assignment PIN_AB8 -to SPI1_CLK
+set_location_assignment PIN_AB10 -to SPI1_MOSI
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SPI1_SS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SPI1_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SPI1_MOSI
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

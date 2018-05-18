@@ -30,12 +30,14 @@ always_ff @ (posedge clk or negedge rst)
 		else
 			begin
 				lr_ena <= {lr_ena[3:0], start};
-				for(i = 0; i < 8; i++)
+				for(i = 0; i < 1; i++)//изменение числа каналов
+					begin
+				if((i !=1)&& (i != 2) && (i!=3))
 					begin
 						frac_delay[i] <= (start) ? frac_data[i] : 0;
 						sum_st_1[i] <= (lr_ena[0]) ? (mult_out[i] + frac_delay[i]) : 0;
 					end
-					
+					end
 				for(i = 0; i < 4; i++)
 					sum_st_2[i] <= (lr_ena[1]) ? (sum_st_1[i*2] + sum_st_1[i*2+1]) : 0;
 					

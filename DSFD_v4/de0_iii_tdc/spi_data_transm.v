@@ -24,7 +24,7 @@ input clk; // Main Clock 250 MHz
 	reg spi_ss = 1;
 	reg clkout_prev = 0; 
 	reg clkout = 0;
-	
+	assign spi_clk = spi_clk_i;
 	wire clkout_xor = clkout_prev ^ clkout;
 	
 	// metastability suppression for 250 MHz
