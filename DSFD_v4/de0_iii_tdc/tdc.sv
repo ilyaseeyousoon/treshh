@@ -1,9 +1,12 @@
-module tdc (input[15:0] pll_clk, input rst, input signal, input mod, output[19:0] out_time, output dval, output test);
+module tdc (input[15:0] pll_clk, input rst, input signal, input mod, output[36:0] out_time, output dval, output test);
 
 parameter CTR_NUM = 16;
 
-logic[9:0] int_mlt_data[7:0];
-logic[6:0] frac_mlt_data[7:0];
+//logic[9:0] int_mlt_data[7:0];
+//logic[6:0] frac_mlt_data[7:0];
+logic[9:0] int_mlt_data[CTR_NUM-1:0];//добавлено
+logic[6:0] frac_mlt_data[CTR_NUM-1:0];//добавлено
+
 logic[6:0] frac_num[CTR_NUM-1:0], frac_sync_data[CTR_NUM-1:0], frac_sync_out[CTR_NUM-1:0];
 logic[9:0] int_num[CTR_NUM-1:0], int_sync_data[CTR_NUM-1:0], int_sync_out[CTR_NUM-1:0];
 logic[1:0] lr_signal[CTR_NUM-1:0], lr_mod[CTR_NUM-1:0];

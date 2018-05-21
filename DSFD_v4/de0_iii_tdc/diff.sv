@@ -1,7 +1,7 @@
-module diff(input clk, input rst, input dval, input[19:0] mlt,input clk_10k, output[19:0] out_data, output o_dval);
+module diff(input clk, input rst, input dval, input[36:0] mlt,input clk_10k, output[19:0] out_data, output o_dval);
 
-logic[19:0] in_buf_1, in_buf_2;
-logic[20:0] diff, diff_1;
+logic[36:0] in_buf_1, in_buf_2;
+logic[37:0] diff, diff_1;
 logic[15:0] wr_delay;
 logic buf1_rdy, buf2_rdy, out_valid, recv;
 

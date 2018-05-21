@@ -80,6 +80,10 @@ reg[15:0] clk_div2;
 reg[10:0] clk_20k_d;
 reg clk_20k;
 
+reg[15:0] clk_div3;
+reg[10:0] clk_40k_d;
+reg clk_40k;
+
 wire signal, mod, mod_d, dm_clk, diff_dval, tdc_input_signal, ph_mod;
 
 assign TEST_SIGNAL=ph_mod;
@@ -87,7 +91,7 @@ assign TEST_SIGNAL2=clk_10k;
 
 
 
-wire[19:0] tdc_out_0, tdc_out_1, tdc_out_2, tdc_out_3;
+wire[36:0] tdc_out_0, tdc_out_1, tdc_out_2, tdc_out_3;
 wire[19:0] diff_out_0;
 wire digmod_out, pll_lock, rst;
 wire[9:0] pll_clk, inv_clk;
@@ -157,6 +161,28 @@ always @ (posedge pll_clk[0] or negedge rst)
 			end
 	end
 	
+		always @ (posedge pll_clk[0] or negedge rst)
+	begin
+		if(!rst)
+			begin
+				clk_div3 <= 0;
+				clk_40k <= 0;
+				clk_40k_d <= 0;
+			end
+		else
+			begin	
+				if(clk_div2 == 2499) 
+					begin																													
+						clk_div3 = 0;
+						clk_40k <= ~clk_40k;
+					end
+				else clk_div3 <= clk_div3 + 1;
+				
+				clk_40k_d <= {clk_40k_d[9:0], clk_40k};
+			end
+	end
+	
+	
 phase_controller ph_ctl(pll_clk[0], 1, KEY[2:1], SW[0], ph_mod);
 
 //signal_pll pll_sg (.areset(~pll_rst), .inclk0(CLOCK_50), .c0(dm_clk), .c1(mod));
@@ -176,7 +202,7 @@ sin_addr sin_addr1 (pll_clk[9],address_to_sin);
 
 singen  singen1 ( address_to_sin,pll_clk[9],sin_to_dac );
 
-spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_20k,SPI3_MOSI,SPI3_CLK,SPI3_SS,diff_out_0);
+spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,SPI3_CLK,SPI3_SS,diff_out_0);
 
 
 

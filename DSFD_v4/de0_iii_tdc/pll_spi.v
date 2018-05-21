@@ -131,7 +131,7 @@ module pll_spi (
 		altpll_component.clk2_duty_cycle = 50,
 		altpll_component.clk2_multiply_by = 4,
 		altpll_component.clk2_phase_shift = "1458",
-		altpll_component.clk3_divide_by = 50,
+		altpll_component.clk3_divide_by = 25,
 		altpll_component.clk3_duty_cycle = 50,
 		altpll_component.clk3_multiply_by = 1,
 		altpll_component.clk3_phase_shift = "0",
@@ -225,7 +225,7 @@ endmodule
 // Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE0 STRING "200.000000"
 // Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE1 STRING "200.000000"
 // Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE2 STRING "200.000000"
-// Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE3 STRING "1.000000"
+// Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE3 STRING "2.000000"
 // Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE4 STRING "5.000000"
 // Retrieval info: PRIVATE: EXPLICIT_SWITCHOVER_COUNTER STRING "0"
 // Retrieval info: PRIVATE: EXT_FEEDBACK_RADIO STRING "0"
@@ -266,7 +266,7 @@ endmodule
 // Retrieval info: PRIVATE: OUTPUT_FREQ0 STRING "200.00000000"
 // Retrieval info: PRIVATE: OUTPUT_FREQ1 STRING "200.00000000"
 // Retrieval info: PRIVATE: OUTPUT_FREQ2 STRING "200.00000000"
-// Retrieval info: PRIVATE: OUTPUT_FREQ3 STRING "1.00000000"
+// Retrieval info: PRIVATE: OUTPUT_FREQ3 STRING "2.00000000"
 // Retrieval info: PRIVATE: OUTPUT_FREQ4 STRING "5.00000000"
 // Retrieval info: PRIVATE: OUTPUT_FREQ_MODE0 STRING "1"
 // Retrieval info: PRIVATE: OUTPUT_FREQ_MODE1 STRING "1"
@@ -346,7 +346,7 @@ endmodule
 // Retrieval info: CONSTANT: CLK2_DUTY_CYCLE NUMERIC "50"
 // Retrieval info: CONSTANT: CLK2_MULTIPLY_BY NUMERIC "4"
 // Retrieval info: CONSTANT: CLK2_PHASE_SHIFT STRING "1458"
-// Retrieval info: CONSTANT: CLK3_DIVIDE_BY NUMERIC "50"
+// Retrieval info: CONSTANT: CLK3_DIVIDE_BY NUMERIC "25"
 // Retrieval info: CONSTANT: CLK3_DUTY_CYCLE NUMERIC "50"
 // Retrieval info: CONSTANT: CLK3_MULTIPLY_BY NUMERIC "1"
 // Retrieval info: CONSTANT: CLK3_PHASE_SHIFT STRING "0"
