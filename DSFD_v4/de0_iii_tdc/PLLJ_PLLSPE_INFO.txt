@@ -1,5 +1,5 @@
 PLL_Name	clock_block:cb_inst|pll_spi:pll_inst2|altpll:altpll_component|pll_spi_altpll:auto_generated|pll1
-PLLJITTER	30
+PLLJITTER	41
 PLLSPEmax	84
 PLLSPEmin	-53
 

@@ -1,4 +1,4 @@
-parameter CTR_NUMBER = 8;	//number of integer and fractional counters
+parameter CTR_NUMBER = 16;	//number of integer and fractional counters
 
 module int_sync (input[CTR_NUMBER-1:0] clocks, input rst, input[9:0] in_data[CTR_NUMBER-1:0], input[CTR_NUMBER-1:0] in_wr, 
 					  output[9:0] out_data[CTR_NUMBER-1:0], output valid);

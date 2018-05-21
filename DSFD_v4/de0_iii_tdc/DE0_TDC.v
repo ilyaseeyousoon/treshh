@@ -75,7 +75,7 @@ reg clk_10k;
 wire [7:0] out_data_byass_top ,sin_to_dac ;
 wire [8:0] address_to_sin;
 assign DAC2_DB = sin_to_dac;
-assign DAC2_WR = pll_clk[4];
+assign DAC2_WR = pll_clk[9];
 reg[15:0] clk_div2;
 reg[10:0] clk_20k_d;
 reg clk_20k;
@@ -90,11 +90,11 @@ assign TEST_SIGNAL2=clk_10k;
 wire[19:0] tdc_out_0, tdc_out_1, tdc_out_2, tdc_out_3;
 wire[19:0] diff_out_0;
 wire digmod_out, pll_lock, rst;
-wire[5:0] pll_clk, inv_clk;
-wire[7:0] tdc_clocks;
+wire[9:0] pll_clk, inv_clk;
+wire[15:0] tdc_clocks;
 
 //assign inv_clk = ~pll_clk;
-assign tdc_clocks = {pll_clk, inv_clk}; //pll clock inversion
+assign tdc_clocks = {pll_clk[7:0], inv_clk[7:0]}; //pll clock inversion
 assign MOD = ph_mod;
 assign MOD_STATIC = clk_10k;
 assign DAC_OUT = out_data_byass_top;
@@ -110,8 +110,8 @@ assign tdc_input_signal = (SW[9]) ? SIGNAL : digmod_out;
 //assign GPIO[2] = digmod_out; 	  //GPIO_03, pin 6
 //assign GPIO[3] = mod_d;			  //GPIO_05, pin 8
 
-assign rst = KEY[0];
-assign pll_rst = KEY[0];
+assign rst = 1;
+assign pll_rst = 1;
 assign LED[0] = |{tdc_out_0, tdc_out_1, tdc_out_2, tdc_out_3};
 assign LED[1] = tdc_dval;
 
@@ -172,11 +172,11 @@ diff diff_inst (tdc_clocks[0], rst, tdc_dval[0], tdc_out_0,clk_10k, diff_out_0, 
 //byass_data byass_data1( tdc_clocks[0],  rst,  KEY[2:1], diff_out_0, out_data_byass_top);
 byass_data byass_data1( tdc_clocks[0],  rst,  KEY[0], diff_out_0,SW[8], out_data_byass_top);
 
-sin_addr sin_addr1 (pll_clk[4],address_to_sin);
+sin_addr sin_addr1 (pll_clk[9],address_to_sin);
 
-singen  singen1 ( address_to_sin,pll_clk[4],sin_to_dac );
+singen  singen1 ( address_to_sin,pll_clk[9],sin_to_dac );
 
-spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[5],clk_20k,SPI3_MOSI,SPI3_CLK,SPI3_SS,diff_out_0);
+spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_20k,SPI3_MOSI,SPI3_CLK,SPI3_SS,diff_out_0);
 
 
 

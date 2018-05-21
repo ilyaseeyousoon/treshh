@@ -11,7 +11,7 @@ logic[4:0] lr_ena;
 					  
 genvar g;
 generate
-	for(g = 0; g < 8; g++) begin : gen_mult
+	for(g = 0; g < 16; g++) begin : gen_mult
 		mult_x50 mlt_inst (~rst, start, clk, int_data[g], mult_out[g]);
 	end
 endgenerate
@@ -30,7 +30,7 @@ always_ff @ (posedge clk or negedge rst)
 		else
 			begin
 				lr_ena <= {lr_ena[3:0], start};
-				for(i = 0; i < 8; i++)//изменение числа каналов
+				for(i = 0; i < 16; i++)//изменение числа каналов
 					begin
 				//if((i !=1)&& (i != 2) && (i!=3))
 				//	begin

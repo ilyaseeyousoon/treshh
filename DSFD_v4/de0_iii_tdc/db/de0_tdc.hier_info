@@ -1,38 +1,38 @@
 |DE0_TDC
 CLOCK_50 => CLOCK_50.IN1
-LED[0] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-LED[1] << tdc_dval[0].DB_MAX_OUTPUT_PORT_TYPE
-LED[2] << <GND>
-LED[3] << <GND>
-LED[4] << <GND>
-LED[5] << <GND>
-LED[6] << <GND>
-LED[7] << <GND>
+LED[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= tdc_dval[0].DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= <GND>
+LED[3] <= <GND>
+LED[4] <= <GND>
+LED[5] <= <GND>
+LED[6] <= <GND>
+LED[7] <= <GND>
 KEY[0] => rst.IN6
 KEY[1] => KEY[1].IN1
 KEY[2] => KEY[2].IN1
 SIGNAL => tdc_input_signal.DATAB
-MOD << ph_mod.DB_MAX_OUTPUT_PORT_TYPE
-MOD_STATIC << clk_10k.DB_MAX_OUTPUT_PORT_TYPE
-TRIG << tdc:tdc_inst_0.port6
-DAC_OUT[0] << byass_data:byass_data1.port5
-DAC_OUT[1] << byass_data:byass_data1.port5
-DAC_OUT[2] << byass_data:byass_data1.port5
-DAC_OUT[3] << byass_data:byass_data1.port5
-DAC_OUT[4] << byass_data:byass_data1.port5
-DAC_OUT[5] << byass_data:byass_data1.port5
-DAC_OUT[6] << byass_data:byass_data1.port5
-DAC_OUT[7] << byass_data:byass_data1.port5
-DAC_WR << diff:diff_inst.port6
-DAC2_DB[0] << singen:singen1.port2
-DAC2_DB[1] << singen:singen1.port2
-DAC2_DB[2] << singen:singen1.port2
-DAC2_DB[3] << singen:singen1.port2
-DAC2_DB[4] << singen:singen1.port2
-DAC2_DB[5] << singen:singen1.port2
-DAC2_DB[6] << singen:singen1.port2
-DAC2_DB[7] << singen:singen1.port2
-DAC2_WR << pll_clk[4].DB_MAX_OUTPUT_PORT_TYPE
+MOD <= ph_mod.DB_MAX_OUTPUT_PORT_TYPE
+MOD_STATIC <= clk_10k.DB_MAX_OUTPUT_PORT_TYPE
+TRIG <= tdc:tdc_inst_0.port6
+DAC_OUT[0] <= byass_data:byass_data1.port5
+DAC_OUT[1] <= byass_data:byass_data1.port5
+DAC_OUT[2] <= byass_data:byass_data1.port5
+DAC_OUT[3] <= byass_data:byass_data1.port5
+DAC_OUT[4] <= byass_data:byass_data1.port5
+DAC_OUT[5] <= byass_data:byass_data1.port5
+DAC_OUT[6] <= byass_data:byass_data1.port5
+DAC_OUT[7] <= byass_data:byass_data1.port5
+DAC_WR <= diff:diff_inst.port6
+DAC2_DB[0] <= singen:singen1.port2
+DAC2_DB[1] <= singen:singen1.port2
+DAC2_DB[2] <= singen:singen1.port2
+DAC2_DB[3] <= singen:singen1.port2
+DAC2_DB[4] <= singen:singen1.port2
+DAC2_DB[5] <= singen:singen1.port2
+DAC2_DB[6] <= singen:singen1.port2
+DAC2_DB[7] <= singen:singen1.port2
+DAC2_WR <= pll_clk[9].DB_MAX_OUTPUT_PORT_TYPE
 SW[0] => SW[0].IN1
 SW[1] => ~NO_FANOUT~
 SW[2] => ~NO_FANOUT~
@@ -43,11 +43,11 @@ SW[6] => ~NO_FANOUT~
 SW[7] => ~NO_FANOUT~
 SW[8] => SW[8].IN1
 SW[9] => tdc_input_signal.OUTPUTSELECT
-TEST_SIGNAL << ph_mod.DB_MAX_OUTPUT_PORT_TYPE
-TEST_SIGNAL2 << clk_10k.DB_MAX_OUTPUT_PORT_TYPE
-SPI3_CLK << spi_data_transm:spi_data_transm1.port4
-SPI3_MOSI << spi_data_transm:spi_data_transm1.port3
-SPI3_SS << spi_data_transm:spi_data_transm1.port5
+TEST_SIGNAL <= ph_mod.DB_MAX_OUTPUT_PORT_TYPE
+TEST_SIGNAL2 <= clk_10k.DB_MAX_OUTPUT_PORT_TYPE
+SPI3_CLK <= spi_data_transm:spi_data_transm1.port4
+SPI3_MOSI <= spi_data_transm:spi_data_transm1.port3
+SPI3_SS <= spi_data_transm:spi_data_transm1.port5
 
 
 |DE0_TDC|phase_controller:ph_ctl
@@ -153,12 +153,20 @@ clocks[2] <= tdc_pll:pll_inst.c2
 clocks[3] <= tdc_pll:pll_inst.c3
 clocks[4] <= tdc_pll:pll_inst.c4
 clocks[5] <= pll_spi:pll_inst2.c0
+clocks[6] <= pll_spi:pll_inst2.c1
+clocks[7] <= pll_spi:pll_inst2.c2
+clocks[8] <= pll_spi:pll_inst2.c3
+clocks[9] <= pll_spi:pll_inst2.c4
 inv_clocks[0] <= tdc_pll:pll_inst.c0
 inv_clocks[1] <= tdc_pll:pll_inst.c1
 inv_clocks[2] <= tdc_pll:pll_inst.c2
 inv_clocks[3] <= tdc_pll:pll_inst.c3
 inv_clocks[4] <= tdc_pll:pll_inst.c4
 inv_clocks[5] <= pll_spi:pll_inst2.c0
+inv_clocks[6] <= pll_spi:pll_inst2.c1
+inv_clocks[7] <= pll_spi:pll_inst2.c2
+inv_clocks[8] <= pll_spi:pll_inst2.c3
+inv_clocks[9] <= pll_spi:pll_inst2.c4
 
 
 |DE0_TDC|clock_block:cb_inst|tdc_pll:pll_inst
@@ -247,8 +255,12 @@ locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 
 |DE0_TDC|clock_block:cb_inst|pll_spi:pll_inst2
 areset => areset.IN1
-inclk0 => sub_wire4[0].IN1
+inclk0 => sub_wire8[0].IN1
 c0 <= altpll:altpll_component.clk
+c1 <= altpll:altpll_component.clk
+c2 <= altpll:altpll_component.clk
+c3 <= altpll:altpll_component.clk
+c4 <= altpll:altpll_component.clk
 locked <= altpll:altpll_component.locked
 
 
@@ -11627,26 +11639,7 @@ mlt[18] => in_buf_1[18].DATAIN
 mlt[18] => in_buf_2[18].DATAIN
 mlt[19] => in_buf_1[19].DATAIN
 mlt[19] => in_buf_2[19].DATAIN
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
-clk_10k => diff.OUTPUTSELECT
+clk_10k => ~NO_FANOUT~
 out_data[0] <= diff_1[0].DB_MAX_OUTPUT_PORT_TYPE
 out_data[1] <= diff_1[1].DB_MAX_OUTPUT_PORT_TYPE
 out_data[2] <= diff_1[2].DB_MAX_OUTPUT_PORT_TYPE
