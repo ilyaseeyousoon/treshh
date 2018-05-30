@@ -51,11 +51,11 @@ always_ff @ (posedge clk or negedge rst)
 						if(clk_10k==1)// добавил проверку для 20 Кгц. на 10 будет фигня 
 						begin
 						//diff <= in_buf_1-in_buf_2 + 20'h007F0;
-						diff <= in_buf_2-in_buf_1 + 20'h007F0;
+						diff <= in_buf_2+in_buf_1 + 20'h007F0;
 						end
 						else
 						begin
-						diff <= in_buf_2-in_buf_1 + 20'h007F0;
+						diff <= in_buf_2+in_buf_1 + 20'h007F0;
 						end
 						out_valid <= 1;
 					end
