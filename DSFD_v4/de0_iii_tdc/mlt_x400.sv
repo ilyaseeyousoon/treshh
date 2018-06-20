@@ -42,7 +42,7 @@ always_ff @ (posedge clk or negedge rst)
 		else
 			begin
 				lr_ena <= {lr_ena[4:0], start};
-				for(i = 0; i < 16; i++)//изменение числа каналов
+				for(i = 0; i < 8; i++)//изменение числа каналов
 					begin
 				//if((i !=1)&& (i != 3) && (i!=5))
 				//	begin

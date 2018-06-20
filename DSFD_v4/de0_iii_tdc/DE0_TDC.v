@@ -27,7 +27,9 @@ module DE0_TDC(
 	TEST_SIGNAL2,
 	SPI3_CLK,
 	SPI3_MOSI,
-	SPI3_SS
+	SPI3_SS,
+	SPI1_MOSI,
+	SPI1_SS
 );
 
 //=======================================================
@@ -54,9 +56,14 @@ output MOD_STATIC;
 output TRIG;
 output TEST_SIGNAL;
 output TEST_SIGNAL2;
+
 output SPI3_SS;
-output SPI3_CLK;
 output SPI3_MOSI;
+
+output SPI1_SS;
+output SPI3_CLK;
+output SPI1_MOSI;
+
 output[7:0] DAC_OUT,DAC2_DB;
 output DAC_WR;
 output DAC2_WR;
@@ -84,9 +91,13 @@ reg[15:0] clk_div3;
 reg[10:0] clk_40k_d;
 reg clk_40k;
 
+wire [19:0]result_sum;
+
+
+
 wire signal, mod, mod_d, dm_clk, diff_dval, tdc_input_signal, ph_mod;
 
-assign TEST_SIGNAL=ph_mod;
+assign TEST_SIGNAL=diff_dval;
 assign TEST_SIGNAL2=clk_10k;
 
 
@@ -171,7 +182,7 @@ always @ (posedge pll_clk[0] or negedge rst)
 			end
 		else
 			begin	
-				if(clk_div2 == 2499) 
+				if(clk_div3 == 2499) // поменять и протестить работу spi!!!
 					begin																													
 						clk_div3 = 0;
 						clk_40k <= ~clk_40k;
@@ -202,8 +213,19 @@ sin_addr sin_addr1 (pll_clk[9],address_to_sin);
 
 singen  singen1 ( address_to_sin,pll_clk[9],sin_to_dac );
 
-spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,SPI3_CLK,SPI3_SS,diff_out_0);
+//spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,SPI3_CLK,SPI3_SS,result_sum[15:0]);
 
+spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_40k,SPI1_MOSI,SPI3_CLK,SPI1_SS,diff_out_0[15:0]);
+wire gg;
+spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,gg,SPI3_SS,diff_out_0[15:0]);
+
+/*
+spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_40k,SPI1_MOSI,SPI3_CLK,SPI1_SS,sin_to_dac[7:0]);
+wire gg;
+spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,gg,SPI3_SS,sin_to_dac[7:0]);
+*/
+
+accumulation ( clk_20k,diff_dval,  rst,  diff_out_0[15:0],  result_sum );
 
 
 endmodule

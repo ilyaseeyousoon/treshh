@@ -81,7 +81,7 @@ endmodule
 // Retrieval info: PRIVATE: DIV_FACTOR0 NUMERIC "1"
 // Retrieval info: PRIVATE: DIV_FACTOR1 NUMERIC "1"
 // Retrieval info: PRIVATE: DIV_FACTOR2 NUMERIC "1"
-// Retrieval info: PRIVATE: DIV_FACTOR3 NUMERIC "1"
+// Retrieval info: PRIVATE: DIV_FACTOR3 NUMERIC "25"
 // Retrieval info: PRIVATE: DIV_FACTOR4 NUMERIC "1"
 // Retrieval info: PRIVATE: DUTY_CYCLE0 STRING "50.00000000"
 // Retrieval info: PRIVATE: DUTY_CYCLE1 STRING "50.00000000"

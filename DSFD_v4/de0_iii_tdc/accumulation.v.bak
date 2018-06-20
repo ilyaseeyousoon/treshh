@@ -1,0 +1,19 @@
+module accumulation (input clk, input rst, input [15:0] input_signal, output [25:0] result);
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+endmodule
