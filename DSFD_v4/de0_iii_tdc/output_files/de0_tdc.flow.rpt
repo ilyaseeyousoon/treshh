@@ -1,6 +1,6 @@
 Flow report for de0_tdc
-Wed Jun 20 16:55:19 2018
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Thu Jun 21 19:25:32 2018
+Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
 ---------------------
@@ -21,42 +21,43 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
 to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Flow Summary                                                                    ;
-+------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Wed Jun 20 16:55:19 2018      ;
-; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name                      ; de0_tdc                                    ;
-; Top-level Entity Name              ; DE0_TDC                                    ;
-; Family                             ; Cyclone III                                ;
-; Device                             ; EP3C16F484C6                               ;
-; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 2,863 / 15,408 ( 19 % )                    ;
-;     Total combinational functions  ; 2,011 / 15,408 ( 13 % )                    ;
-;     Dedicated logic registers      ; 2,526 / 15,408 ( 16 % )                    ;
-; Total registers                    ; 2526                                       ;
-; Total pins                         ; 51 / 347 ( 15 % )                          ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 4,096 / 516,096 ( < 1 % )                  ;
-; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
-; Total PLLs                         ; 2 / 4 ( 50 % )                             ;
-+------------------------------------+--------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Thu Jun 21 19:25:32 2018       ;
+; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
+; Revision Name                      ; de0_tdc                                     ;
+; Top-level Entity Name              ; DE0_TDC                                     ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE22F17C6                                ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 3,731 / 22,320 ( 17 % )                     ;
+;     Total combinational functions  ; 2,490 / 22,320 ( 11 % )                     ;
+;     Dedicated logic registers      ; 3,295 / 22,320 ( 15 % )                     ;
+; Total registers                    ; 3295                                        ;
+; Total pins                         ; 51 / 154 ( 33 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 8,704 / 608,256 ( 1 % )                     ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
+; Total PLLs                         ; 2 / 4 ( 50 % )                              ;
++------------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,66 +65,91 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/20/2018 16:54:13 ;
+; Start date & time ; 06/21/2018 19:24:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; de0_tdc             ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                      ;
-+--------------------------------------+---------------------------------+---------------+-------------+----------------+
-; Assignment Name                      ; Value                           ; Default Value ; Entity Name ; Section Id     ;
-+--------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 246320234796001.152950285308128 ; --            ; --          ; --             ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; tdc_tb         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; ph_tb          ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tdc_tb                          ; --            ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl               ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog) ; <None>        ; --          ; --             ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                 ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_FILE                  ; tdc_tb.sv                       ; --            ; --          ; tdc_tb         ;
-; EDA_TEST_BENCH_FILE                  ; ph_tb.sv                        ; --            ; --          ; ph_tb          ;
-; EDA_TEST_BENCH_MODULE_NAME           ; tdc_tb                          ; --            ; --          ; tdc_tb         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; ph_tb                           ; --            ; --          ; ph_tb          ;
-; EDA_TEST_BENCH_NAME                  ; tdc_tb                          ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_NAME                  ; ph_tb                           ; --            ; --          ; eda_simulation ;
-; EDA_TIME_SCALE                       ; 1 ps                            ; --            ; --          ; eda_simulation ;
-; ENABLE_SIGNALTAP                     ; On                              ; --            ; --          ; --             ;
-; IP_TOOL_NAME                         ; LPM_MULT                        ; --            ; --          ; --             ;
-; IP_TOOL_NAME                         ; ALTPLL                          ; --            ; --          ; --             ;
-; IP_TOOL_NAME                         ; LPM_ADD_SUB                     ; --            ; --          ; --             ;
-; IP_TOOL_NAME                         ; ROM: 1-PORT                     ; --            ; --          ; --             ;
-; IP_TOOL_NAME                         ; LPM_COUNTER                     ; --            ; --          ; --             ;
-; IP_TOOL_NAME                         ; ALTPLL                          ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                      ; 13.1                            ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                      ; 13.1                            ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                      ; 13.1                            ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                      ; 13.1                            ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                      ; 13.1                            ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                      ; 13.1                            ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                              ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                               ; --            ; --          ; --             ;
-; MISC_FILE                            ; mult_x50_bb.v                   ; --            ; --          ; --             ;
-; MISC_FILE                            ; tdc_pll_bb.v                    ; --            ; --          ; --             ;
-; MISC_FILE                            ; tdc_pll.ppf                     ; --            ; --          ; --             ;
-; MISC_FILE                            ; diff_sub_bb.v                   ; --            ; --          ; --             ;
-; MISC_FILE                            ; singen.bsf                      ; --            ; --          ; --             ;
-; MISC_FILE                            ; singen_bb.v                     ; --            ; --          ; --             ;
-; MISC_FILE                            ; sin_addr.bsf                    ; --            ; --          ; --             ;
-; MISC_FILE                            ; sin_addr_bb.v                   ; --            ; --          ; --             ;
-; MISC_FILE                            ; pll_spi_bb.v                    ; --            ; --          ; --             ;
-; MISC_FILE                            ; pll_spi.ppf                     ; --            ; --          ; --             ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing               ; --            ; --          ; --             ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing               ; --            ; --          ; --             ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                      ; --            ; --          ; --             ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                      ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; 16764057                        ; --            ; DE0_TDC     ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING           ; --            ; DE0_TDC     ; Top            ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                          ; --            ; DE0_TDC     ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                    ; --            ; --          ; --             ;
-; USE_SIGNALTAP_FILE                   ; output_files/2.stp              ; --            ; --          ; --             ;
-+--------------------------------------+---------------------------------+---------------+-------------+----------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                                                             ;
++--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
+; Assignment Name                      ; Value                                                                                                                                                ; Default Value ; Entity Name ; Section Id       ;
++--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
+; COMPILER_SIGNATURE_ID                ; 246320234796001.152959827007536                                                                                                                      ; --            ; --          ; --               ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                                                                                                                   ; --            ; --          ; tdc_tb           ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                                                                                                                   ; --            ; --          ; ph_tb            ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tdc_tb                                                                                                                                               ; --            ; --          ; eda_simulation   ;
+; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                                                                                                                                    ; --            ; --          ; eda_simulation   ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)                                                                                                                      ; <None>        ; --          ; --               ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                                                                                                                      ; --            ; --          ; eda_simulation   ;
+; EDA_TEST_BENCH_FILE                  ; tdc_tb.sv                                                                                                                                            ; --            ; --          ; tdc_tb           ;
+; EDA_TEST_BENCH_FILE                  ; ph_tb.sv                                                                                                                                             ; --            ; --          ; ph_tb            ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tdc_tb                                                                                                                                               ; --            ; --          ; tdc_tb           ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ph_tb                                                                                                                                                ; --            ; --          ; ph_tb            ;
+; EDA_TEST_BENCH_NAME                  ; tdc_tb                                                                                                                                               ; --            ; --          ; eda_simulation   ;
+; EDA_TEST_BENCH_NAME                  ; ph_tb                                                                                                                                                ; --            ; --          ; eda_simulation   ;
+; EDA_TIME_SCALE                       ; 1 ps                                                                                                                                                 ; --            ; --          ; eda_simulation   ;
+; ENABLE_SIGNALTAP                     ; On                                                                                                                                                   ; --            ; --          ; --               ;
+; IP_TOOL_NAME                         ; LPM_MULT                                                                                                                                             ; --            ; --          ; --               ;
+; IP_TOOL_NAME                         ; ALTPLL                                                                                                                                               ; --            ; --          ; --               ;
+; IP_TOOL_NAME                         ; LPM_ADD_SUB                                                                                                                                          ; --            ; --          ; --               ;
+; IP_TOOL_NAME                         ; ROM: 1-PORT                                                                                                                                          ; --            ; --          ; --               ;
+; IP_TOOL_NAME                         ; LPM_COUNTER                                                                                                                                          ; --            ; --          ; --               ;
+; IP_TOOL_NAME                         ; ALTPLL                                                                                                                                               ; --            ; --          ; --               ;
+; IP_TOOL_VERSION                      ; 13.1                                                                                                                                                 ; --            ; --          ; --               ;
+; IP_TOOL_VERSION                      ; 13.1                                                                                                                                                 ; --            ; --          ; --               ;
+; IP_TOOL_VERSION                      ; 13.1                                                                                                                                                 ; --            ; --          ; --               ;
+; IP_TOOL_VERSION                      ; 13.1                                                                                                                                                 ; --            ; --          ; --               ;
+; IP_TOOL_VERSION                      ; 13.1                                                                                                                                                 ; --            ; --          ; --               ;
+; IP_TOOL_VERSION                      ; 13.1                                                                                                                                                 ; --            ; --          ; --               ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                                                                                                                   ; --            ; --          ; --               ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                                                                                                                    ; --            ; --          ; --               ;
+; MISC_FILE                            ; mult_x50_bb.v                                                                                                                                        ; --            ; --          ; --               ;
+; MISC_FILE                            ; tdc_pll_bb.v                                                                                                                                         ; --            ; --          ; --               ;
+; MISC_FILE                            ; tdc_pll.ppf                                                                                                                                          ; --            ; --          ; --               ;
+; MISC_FILE                            ; diff_sub_bb.v                                                                                                                                        ; --            ; --          ; --               ;
+; MISC_FILE                            ; singen.bsf                                                                                                                                           ; --            ; --          ; --               ;
+; MISC_FILE                            ; singen_bb.v                                                                                                                                          ; --            ; --          ; --               ;
+; MISC_FILE                            ; sin_addr.bsf                                                                                                                                         ; --            ; --          ; --               ;
+; MISC_FILE                            ; sin_addr_bb.v                                                                                                                                        ; --            ; --          ; --               ;
+; MISC_FILE                            ; pll_spi_bb.v                                                                                                                                         ; --            ; --          ; --               ;
+; MISC_FILE                            ; pll_spi.ppf                                                                                                                                          ; --            ; --          ; --               ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                                                                                                                    ; --            ; --          ; --               ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                                                                                                                    ; --            ; --          ; --               ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                                                                                                                           ; --            ; --          ; --               ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                                                                                                                           ; --            ; --          ; --               ;
+; PARTITION_COLOR                      ; 16764057                                                                                                                                             ; --            ; DE0_TDC     ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                                                                                                                                ; --            ; DE0_TDC     ; Top              ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                                                                                                                               ; --            ; DE0_TDC     ; Top              ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                                                                                                                         ; --            ; --          ; --               ;
+; SLD_FILE                             ; db/2_auto_stripped.stp                                                                                                                               ; --            ; --          ; --               ;
+; SLD_NODE_CREATOR_ID                  ; 110                                                                                                                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_ENTITY_NAME                 ; sld_signaltap                                                                                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_RAM_BLOCK_TYPE=AUTO                                                                                                                              ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_NODE_INFO=805334528                                                                                                                              ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_POWER_UP_TRIGGER=0                                                                                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                                                                                           ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STATE_FLOW_USE_GENERATED=0                                                                                                                       ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STATE_BITS=11                                                                                                                                    ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_BUFFER_FULL_STOP=1                                                                                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_CURRENT_RESOURCE_WIDTH=1                                                                                                                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_INCREMENTAL_ROUTING=1                                                                                                                            ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_LEVEL=1                                                                                                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,                                                                                                                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                                                                                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ENABLE_ADVANCED_TRIGGER=0                                                                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_DATA_BITS=36                                                                                                                                     ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_BITS=36                                                                                                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STORAGE_QUALIFIER_BITS=36                                                                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_INVERSION_MASK_LENGTH=129                                                                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_SEGMENT_SIZE=128                                                                                                                                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_SAMPLE_DEPTH=128                                                                                                                                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_IN_ENABLED=0                                                                                                                             ; --            ; --          ; auto_signaltap_0 ;
+; USE_SIGNALTAP_FILE                   ; output_files/2.stp                                                                                                                                   ; --            ; --          ; --               ;
++--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -131,12 +157,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 522 MB              ; 00:00:12                           ;
-; Fitter                    ; 00:00:27     ; 1.0                     ; 788 MB              ; 00:00:27                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 462 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 507 MB              ; 00:00:09                           ;
-; EDA Netlist Writer        ; 00:00:07     ; 1.0                     ; 444 MB              ; 00:00:08                           ;
-; Total                     ; 00:00:59     ; --                      ; --                  ; 00:01:00                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 654 MB              ; 00:00:11                           ;
+; Fitter                    ; 00:00:26     ; 1.2                     ; 1046 MB             ; 00:00:32                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 492 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 597 MB              ; 00:00:08                           ;
+; EDA Netlist Writer        ; 00:00:06     ; 1.0                     ; 491 MB              ; 00:00:06                           ;
+; Total                     ; 00:00:52     ; --                      ; --                  ; 00:00:59                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

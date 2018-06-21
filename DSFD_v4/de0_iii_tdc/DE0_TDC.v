@@ -97,7 +97,7 @@ wire [19:0]result_sum;
 
 wire signal, mod, mod_d, dm_clk, diff_dval, tdc_input_signal, ph_mod;
 
-assign TEST_SIGNAL=diff_dval;
+assign TEST_SIGNAL=SIGNAL;
 assign TEST_SIGNAL2=clk_10k;
 
 
@@ -114,7 +114,8 @@ assign MOD = ph_mod;
 assign MOD_STATIC = clk_10k;
 assign DAC_OUT = out_data_byass_top;
 assign DAC_WR = diff_dval;
-assign tdc_input_signal = (SW[9]) ? SIGNAL : digmod_out;
+//assign tdc_input_signal = (SW[9]) ? SIGNAL : digmod_out;
+assign tdc_input_signal =  SIGNAL;
 
 //pll_clkdiv div_inst (tdc_clocks, rst, LED);
 //=======================================================
@@ -127,8 +128,8 @@ assign tdc_input_signal = (SW[9]) ? SIGNAL : digmod_out;
 
 assign rst = 1;
 assign pll_rst = 1;
-assign LED[0] = |{tdc_out_0, tdc_out_1, tdc_out_2, tdc_out_3};
-assign LED[1] = tdc_dval;
+//assign LED[0] = |{tdc_out_0, tdc_out_1, tdc_out_2, tdc_out_3};
+//assign LED[1] = tdc_dval;
 
 always @ (posedge pll_clk[0] or negedge rst)
 	begin
@@ -194,7 +195,8 @@ always @ (posedge pll_clk[0] or negedge rst)
 	end
 	
 	
-phase_controller ph_ctl(pll_clk[0], 1, KEY[2:1], SW[0], ph_mod);
+//phase_controller ph_ctl(pll_clk[0], 1, KEY[1:0], SW[0], ph_mod);
+  phase_controller ph_ctl(pll_clk[0], 1, KEY[1:0], 1, ph_mod);
 
 //signal_pll pll_sg (.areset(~pll_rst), .inclk0(CLOCK_50), .c0(dm_clk), .c1(mod));
 
@@ -215,9 +217,18 @@ singen  singen1 ( address_to_sin,pll_clk[9],sin_to_dac );
 
 //spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,SPI3_CLK,SPI3_SS,result_sum[15:0]);
 
-spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_40k,SPI1_MOSI,SPI3_CLK,SPI1_SS,diff_out_0[15:0]);
+reg [7:0] temp =0;
+wire [15:0] h={diff_out_0[7:0],temp[7:0] };
+
+spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_20k,SPI3_MOSI,SPI3_CLK,SPI3_SS,diff_out_0[15:0]);
+
+
+/*
+reg [7:0] temp =0;
+wire [15:0] h={sin_to_dac[7:0],temp[7:0] };
 wire gg;
-spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,gg,SPI3_SS,diff_out_0[15:0]);
+spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,SPI3_CLK,SPI3_SS,h);
+*/
 
 /*
 spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_40k,SPI1_MOSI,SPI3_CLK,SPI1_SS,sin_to_dac[7:0]);

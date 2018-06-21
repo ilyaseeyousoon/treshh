@@ -20,27 +20,6 @@ spi_state.01111 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
 spi_state.10000 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 spi_state.10001 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |DE0_TDC|spi_data_transm:spi_data_transm1|spi_state
-Name spi_state.10001 spi_state.10000 spi_state.01111 spi_state.01110 spi_state.01101 spi_state.01100 spi_state.01011 spi_state.01010 spi_state.01001 spi_state.01000 spi_state.00111 spi_state.00110 spi_state.00101 spi_state.00100 spi_state.00011 spi_state.00010 spi_state.00001 spi_state.00000 
-spi_state.00000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-spi_state.00001 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-spi_state.00010 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-spi_state.00011 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-spi_state.00100 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-spi_state.00101 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-spi_state.00110 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-spi_state.00111 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-spi_state.01000 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-spi_state.01001 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-spi_state.01010 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-spi_state.01011 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-spi_state.01100 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-spi_state.01101 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-spi_state.01110 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-spi_state.01111 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-spi_state.10000 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-spi_state.10001 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-
 State Machine - |DE0_TDC|tdc:tdc_inst_0|int_sync:i_sync|state
 Name state.st_ret_clock state.st_ena_on state.st_read_data state.st_change_clock state.st_ena_off state.st_wait 
 state.st_wait 0 0 0 0 0 0 

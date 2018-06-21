@@ -1,0 +1,46 @@
+
+
+C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/pll_spi.v
+
+Jun 21 06PM:02:51>: Error in CNX file format.
+
+Error messages are listed in file
+C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/pll_spi.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/pll_spi.v
+
+Jun 21 06PM:03:02>: Error in CNX file format.
+
+Error messages are listed in file
+C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/pll_spi.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/pll_spi.v
+
+Jun 21 06PM:03:13>: Error in CNX file format.
+
+Error messages are listed in file
+C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/pll_spi.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/tdc_pll.v
+
+Jun 21 06PM:03:21>: Error in CNX file format.
+
+Error messages are listed in file
+C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/tdc_pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/pll_spi.v
+
+Jun 21 06PM:03:43>: Error in CNX file format.
+
+Error messages are listed in file
+C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/pll_spi.cnxerr.
+
+Can't create the custom megafunction variation file(s)

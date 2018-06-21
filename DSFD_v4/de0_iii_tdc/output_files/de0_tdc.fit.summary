@@ -1,16 +1,16 @@
-Fitter Status : Successful - Wed Jun 20 16:54:52 2018
-Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Fitter Status : Successful - Thu Jun 21 19:25:09 2018
+Quartus II 64-Bit Version : 14.0.0 Build 200 06/17/2014 SJ Full Version
 Revision Name : de0_tdc
 Top-level Entity Name : DE0_TDC
-Family : Cyclone III
-Device : EP3C16F484C6
+Family : Cyclone IV E
+Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 2,863 / 15,408 ( 19 % )
-    Total combinational functions : 2,011 / 15,408 ( 13 % )
-    Dedicated logic registers : 2,526 / 15,408 ( 16 % )
-Total registers : 2526
-Total pins : 51 / 347 ( 15 % )
+Total logic elements : 3,731 / 22,320 ( 17 % )
+    Total combinational functions : 2,490 / 22,320 ( 11 % )
+    Dedicated logic registers : 3,295 / 22,320 ( 15 % )
+Total registers : 3295
+Total pins : 51 / 154 ( 33 % )
 Total virtual pins : 0
-Total memory bits : 4,096 / 516,096 ( < 1 % )
-Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total memory bits : 8,704 / 608,256 ( 1 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
 Total PLLs : 2 / 4 ( 50 % )
