@@ -220,15 +220,17 @@ singen  singen1 ( address_to_sin,pll_clk[9],sin_to_dac );
 //reg [7:0] temp =0;
 //wire [15:0] h={diff_out_0[7:0],temp[7:0] };
 
-//spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_20k,SPI3_MOSI,SPI3_CLK,SPI3_SS,result_sum[15:0]);
-spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_20k,SPI3_MOSI,SPI3_CLK,SPI3_SS,diff_out_0[15:0]);
-
-/*
 reg [7:0] temp =0;
-wire [15:0] h={sin_to_dac[7:0],temp[7:0] };
+wire [15:0]  data_to_spi = SW[2] ? {diff_out_spi[7:0],temp[7:0]} : diff_out_spi[19:0];
+wire [19:0] diff_out_spi= SW[2]	? diff_out_0+ 20'd125 : diff_out_0+ 20'd30000;
+spi_data_transm spi_data_transm(pll_clk[0],pll_clk[8],clk_20k,SPI3_MOSI,SPI3_CLK,SPI3_SS,data_to_spi[15:0]);
+
+accumulation ( ph_mod,diff_dval,  rst,  diff_out_0[15:0],  result_sum );
+wire [15:0] h={result_sum[7:0],temp[7:0] };
 wire gg;
-spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,SPI3_CLK,SPI3_SS,h);
-*/
+spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_20k,SPI1_MOSI,gg,SPI1_SS,h[15:0]);
+
+//spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,SPI3_CLK,SPI3_SS,h);
 
 /*
 spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_40k,SPI1_MOSI,SPI3_CLK,SPI1_SS,sin_to_dac[7:0]);
@@ -236,7 +238,7 @@ wire gg;
 spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,gg,SPI3_SS,sin_to_dac[7:0]);
 */
 
-accumulation ( ph_mod,diff_dval,  rst,  diff_out_0[15:0],  result_sum );
+
 /*
 reg [7:0] temp =0;
 wire [19:0] result_sum_2 =result_sum[19:0]-20'd80;

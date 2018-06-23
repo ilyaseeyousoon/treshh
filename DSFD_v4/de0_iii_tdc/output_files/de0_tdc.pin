@@ -31,7 +31,7 @@
  --					Bank 3:		3.3V
  --					Bank 4:		3.3V
  --					Bank 5:		2.5V
- --					Bank 6:		3.3V
+ --					Bank 6:		2.5V
  --					Bank 7:		2.5V
  --					Bank 8:		2.5V
  -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
@@ -162,7 +162,7 @@ RESERVED_INPUT               : C3        :        :                   :         
 RESERVED_INPUT               : C4        :        :                   :         : 8         :                
 GND                          : C5        : gnd    :                   :         :           :                
 RESERVED_INPUT               : C6        :        :                   :         : 8         :                
-LED[0]                       : C7        : output : 2.5 V             :         : 8         : N              
+LED[1]                       : C7        : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT               : C8        :        :                   :         : 8         :                
 GND                          : C9        : gnd    :                   :         :           :                
 RESERVED_INPUT               : C10       :        :                   :         : 8         :                
@@ -218,7 +218,7 @@ RESERVED_INPUT               : E15       :        :                   :         
 RESERVED_INPUT               : E16       :        :                   :         : 7         :                
 VCCD_PLL2                    : E17       : power  :                   : 1.2V    :           :                
 GNDA2                        : E18       : gnd    :                   :         :           :                
-VCCIO6                       : E19       : power  :                   : 3.3V    : 6         :                
+VCCIO6                       : E19       : power  :                   : 2.5V    : 6         :                
 GND                          : E20       : gnd    :                   :         :           :                
 RESERVED_INPUT               : E21       :        :                   :         : 6         :                
 RESERVED_INPUT               : E22       :        :                   :         : 6         :                
@@ -232,7 +232,7 @@ RESERVED_INPUT               : F7        :        :                   :         
 RESERVED_INPUT               : F8        :        :                   :         : 8         :                
 RESERVED_INPUT               : F9        :        :                   :         : 8         :                
 RESERVED_INPUT               : F10       :        :                   :         : 8         :                
-LED[1]                       : F11       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT               : F11       :        :                   :         : 7         :                
 RESERVED_INPUT               : F12       :        :                   :         : 7         :                
 RESERVED_INPUT               : F13       :        :                   :         : 7         :                
 RESERVED_INPUT               : F14       :        :                   :         : 7         :                
@@ -262,7 +262,7 @@ RESERVED_INPUT               : G15       :        :                   :         
 RESERVED_INPUT               : G16       :        :                   :         : 7         :                
 RESERVED_INPUT               : G17       :        :                   :         : 6         :                
 RESERVED_INPUT               : G18       :        :                   :         : 6         :                
-VCCIO6                       : G19       : power  :                   : 3.3V    : 6         :                
+VCCIO6                       : G19       : power  :                   : 2.5V    : 6         :                
 GND                          : G20       : gnd    :                   :         :           :                
 CLOCK_50                     : G21       : input  : 3.3-V LVTTL       :         : 6         : Y              
 GND+                         : G22       :        :                   :         : 6         :                
@@ -276,7 +276,7 @@ SW[6]                        : H7        : input  : 3.3-V LVTTL       :         
 GND                          : H8        : gnd    :                   :         :           :                
 RESERVED_INPUT               : H9        :        :                   :         : 8         :                
 RESERVED_INPUT               : H10       :        :                   :         : 8         :                
-LED[2]                       : H11       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT               : H11       :        :                   :         : 8         :                
 RESERVED_INPUT               : H12       :        :                   :         : 7         :                
 RESERVED_INPUT               : H13       :        :                   :         : 7         :                
 RESERVED_INPUT               : H14       :        :                   :         : 7         :                
@@ -307,7 +307,7 @@ RESERVED_INPUT               : J16       :        :                   :         
 RESERVED_INPUT               : J17       :        :                   :         : 6         :                
 RESERVED_INPUT               : J18       :        :                   :         : 6         :                
 GND                          : J19       : gnd    :                   :         :           :                
-VCCIO6                       : J20       : power  :                   : 3.3V    : 6         :                
+VCCIO6                       : J20       : power  :                   : 2.5V    : 6         :                
 RESERVED_INPUT               : J21       :        :                   :         : 6         :                
 RESERVED_INPUT               : J22       :        :                   :         : 6         :                
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : K1        : input  : 3.3-V LVTTL       :         : 1         : N              
@@ -331,7 +331,7 @@ RESERVED_INPUT               : K18       :        :                   :         
 RESERVED_INPUT               : K19       :        :                   :         : 6         :                
 MSEL3                        : K20       :        :                   :         : 6         :                
 RESERVED_INPUT               : K21       :        :                   :         : 6         :                
-~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : K22       : output : 3.3-V LVTTL       :         : 6         : N              
+~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : K22       : output : 2.5 V             :         : 6         : N              
 TMS                          : L1        : input  :                   :         : 1         :                
 TCK                          : L2        : input  :                   :         : 1         :                
 nCE                          : L3        :        :                   :         : 1         :                
@@ -350,10 +350,10 @@ RESERVED_INPUT               : L15       :        :                   :         
 RESERVED_INPUT               : L16       :        :                   :         : 6         :                
 MSEL2                        : L17       :        :                   :         : 6         :                
 MSEL1                        : L18       :        :                   :         : 6         :                
-VCCIO6                       : L19       : power  :                   : 3.3V    : 6         :                
+VCCIO6                       : L19       : power  :                   : 2.5V    : 6         :                
 GND                          : L20       : gnd    :                   :         :           :                
 RESERVED_INPUT               : L21       :        :                   :         : 6         :                
-RESERVED_INPUT               : L22       :        :                   :         : 6         :                
+LED[0]                       : L22       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT               : M1        :        :                   :         : 2         :                
 RESERVED_INPUT               : M2        :        :                   :         : 2         :                
 RESERVED_INPUT               : M3        :        :                   :         : 2         :                
@@ -413,7 +413,7 @@ VCCINT                       : P12       : power  :                   : 1.2V    
 VCCINT                       : P13       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT               : P14       :        :                   :         : 5         :                
 RESERVED_INPUT               : P15       :        :                   :         : 5         :                
-RESERVED_INPUT               : P16       :        :                   :         : 5         :                
+LED[2]                       : P16       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT               : P17       :        :                   :         : 5         :                
 VCCIO5                       : P18       : power  :                   : 2.5V    : 5         :                
 GND                          : P19       : gnd    :                   :         :           :                

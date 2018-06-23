@@ -18,12 +18,12 @@ reg [9:0] main_counter = 10'd0;
 			if((main_counter < 9)&&(valid_data==1)) begin
 			
 			main_counter<=main_counter+1;
-			main_summ<=main_summ+input_signal;
+			main_summ<=main_summ+input_signal+16'd18;
 			//main_summ_buf<=0;
 			end
 			else begin
 			if((main_counter >= 9)) begin
-			main_summ_buf<=main_summ;
+			main_summ_buf<=main_summ;//-20'd230;
 			main_counter<=0;
 			main_summ<=0;
 			end

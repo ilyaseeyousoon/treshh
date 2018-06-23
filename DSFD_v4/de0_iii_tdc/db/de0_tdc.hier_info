@@ -35,7 +35,38 @@ DAC2_DB[7] << singen:singen1.port2
 DAC2_WR << pll_clk[9].DB_MAX_OUTPUT_PORT_TYPE
 SW[0] => ~NO_FANOUT~
 SW[1] => ~NO_FANOUT~
-SW[2] => ~NO_FANOUT~
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => comb.OUTPUTSELECT
+SW[2] => diff_out_spi[15].OUTPUTSELECT
+SW[2] => diff_out_spi[14].OUTPUTSELECT
+SW[2] => diff_out_spi[13].OUTPUTSELECT
+SW[2] => diff_out_spi[12].OUTPUTSELECT
+SW[2] => diff_out_spi[11].OUTPUTSELECT
+SW[2] => diff_out_spi[10].OUTPUTSELECT
+SW[2] => diff_out_spi[9].OUTPUTSELECT
+SW[2] => diff_out_spi[8].OUTPUTSELECT
+SW[2] => diff_out_spi[7].OUTPUTSELECT
+SW[2] => diff_out_spi[6].OUTPUTSELECT
+SW[2] => diff_out_spi[5].OUTPUTSELECT
+SW[2] => diff_out_spi[4].OUTPUTSELECT
+SW[2] => diff_out_spi[3].OUTPUTSELECT
+SW[2] => diff_out_spi[2].OUTPUTSELECT
+SW[2] => diff_out_spi[1].OUTPUTSELECT
+SW[2] => diff_out_spi[0].OUTPUTSELECT
 SW[3] => ~NO_FANOUT~
 SW[4] => ~NO_FANOUT~
 SW[5] => ~NO_FANOUT~
@@ -45,11 +76,11 @@ SW[8] => SW[8].IN1
 SW[9] => ~NO_FANOUT~
 TEST_SIGNAL << tdc_input_signal.DB_MAX_OUTPUT_PORT_TYPE
 TEST_SIGNAL2 << clk_10k.DB_MAX_OUTPUT_PORT_TYPE
-SPI3_CLK << spi_data_transm:spi_data_transm2.port4
-SPI3_MOSI << spi_data_transm:spi_data_transm2.port3
-SPI3_SS << spi_data_transm:spi_data_transm2.port5
-SPI1_MOSI << <GND>
-SPI1_SS << <GND>
+SPI3_CLK << spi_data_transm:spi_data_transm.port4
+SPI3_MOSI << spi_data_transm:spi_data_transm.port3
+SPI3_SS << spi_data_transm:spi_data_transm.port5
+SPI1_MOSI << spi_data_transm:spi_data_transm1.port3
+SPI1_SS << spi_data_transm:spi_data_transm1.port5
 
 
 |DE0_TDC|phase_controller:ph_ctl
@@ -23361,7 +23392,7 @@ q_a[6] <= ram_block1a6.PORTADATAOUT
 q_a[7] <= ram_block1a7.PORTADATAOUT
 
 
-|DE0_TDC|spi_data_transm:spi_data_transm2
+|DE0_TDC|spi_data_transm:spi_data_transm
 clk => spi_write.CLK
 clk => clkout.CLK
 clk => clkout_prev.CLK
@@ -23392,7 +23423,7 @@ diffout[14] => Selector17.IN3
 diffout[15] => Selector17.IN2
 
 
-|DE0_TDC|accumulation:comb_386
+|DE0_TDC|accumulation:comb_428
 clk => main_summ_buf[0].CLK
 clk => main_summ_buf[1].CLK
 clk => main_summ_buf[2].CLK
@@ -23530,5 +23561,36 @@ result[16] <= main_summ_buf[16].DB_MAX_OUTPUT_PORT_TYPE
 result[17] <= main_summ_buf[17].DB_MAX_OUTPUT_PORT_TYPE
 result[18] <= main_summ_buf[18].DB_MAX_OUTPUT_PORT_TYPE
 result[19] <= main_summ_buf[19].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TDC|spi_data_transm:spi_data_transm1
+clk => spi_write.CLK
+clk => clkout.CLK
+clk => clkout_prev.CLK
+spi_clk_i => spi_clk.DATAIN
+spi_clk_i => spi_ss~reg0.CLK
+spi_clk_i => spi_mosi~reg0.CLK
+spi_clk_i => spi_write_prev.CLK
+spi_clk_i => spi_state~19.DATAIN
+clk_20k => clkout.ENA
+spi_mosi <= spi_mosi~reg0.DB_MAX_OUTPUT_PORT_TYPE
+spi_clk <= spi_clk_i.DB_MAX_OUTPUT_PORT_TYPE
+spi_ss <= spi_ss~reg0.DB_MAX_OUTPUT_PORT_TYPE
+diffout[0] => Selector17.IN17
+diffout[1] => Selector17.IN16
+diffout[2] => Selector17.IN15
+diffout[3] => Selector17.IN14
+diffout[4] => Selector17.IN13
+diffout[5] => Selector17.IN12
+diffout[6] => Selector17.IN11
+diffout[7] => Selector17.IN10
+diffout[8] => Selector17.IN9
+diffout[9] => Selector17.IN8
+diffout[10] => Selector17.IN7
+diffout[11] => Selector17.IN6
+diffout[12] => Selector17.IN5
+diffout[13] => Selector17.IN4
+diffout[14] => Selector17.IN3
+diffout[15] => Selector17.IN2
 
 
