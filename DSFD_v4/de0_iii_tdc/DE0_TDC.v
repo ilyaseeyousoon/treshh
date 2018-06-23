@@ -221,7 +221,7 @@ singen  singen1 ( address_to_sin,pll_clk[9],sin_to_dac );
 //wire [15:0] h={diff_out_0[7:0],temp[7:0] };
 
 //spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_20k,SPI3_MOSI,SPI3_CLK,SPI3_SS,result_sum[15:0]);
-spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,SPI3_CLK,SPI3_SS,temp2[15:0]);
+spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_20k,SPI3_MOSI,SPI3_CLK,SPI3_SS,diff_out_0[15:0]);
 
 /*
 reg [7:0] temp =0;
@@ -237,11 +237,11 @@ spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,gg,SPI3
 */
 
 accumulation ( ph_mod,diff_dval,  rst,  diff_out_0[15:0],  result_sum );
-
+/*
 reg [7:0] temp =0;
-wire [19:0] result_sum_2 =result_sum[19:0]-20'd2100;
-wire [15:0]temp2= {result_sum[7:0],temp[7:0]};
-
+wire [19:0] result_sum_2 =result_sum[19:0]-20'd80;
+wire [15:0]temp2= {result_sum_2[7:0],temp[7:0]};
+*/
 /*
 //проверка шума
 reg [7:0] temp =0;
