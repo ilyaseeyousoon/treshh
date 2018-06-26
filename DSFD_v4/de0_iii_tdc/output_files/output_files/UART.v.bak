@@ -1,0 +1,220 @@
+module UART ( clk,ext_sync, TxD, TxD_busy, baudout);
+
+
+		// UART Interface
+	input	clk;
+	input ext_sync; 
+	output TxD;
+	output TxD_busy;
+	output baudout;
+
+// UART 
+
+//module async_transmitter(clk, TxD_start, strb, frq_data, DAC_data, TxD, TxD_busy, baudout, TxD_display, load_out,show_start);
+
+parameter ClkFrequency = 200_000_000;	// 50MHz
+parameter Baud = 500_000;
+parameter UART_SIZE = 1000;
+parameter RegisterInputData = 1;	// in RegisterInputData mode, the input doesn't have to stay valid while the character is been transmitted
+localparam AVG = 20; // not more then 128 because of frq_accumulator size
+
+// Baud generator
+parameter BaudGeneratorAccWidth = 16;
+reg [BaudGeneratorAccWidth:0] BaudGeneratorAcc;
+// synthesis translate_off
+	initial BaudGeneratorAcc=0;
+// synthesis translate_on
+`ifdef DEBUG
+wire [BaudGeneratorAccWidth:0] BaudGeneratorInc = 17'h10000;
+`else
+wire [BaudGeneratorAccWidth:0] BaudGeneratorInc = ((Baud<<(BaudGeneratorAccWidth-4))+(ClkFrequency>>5))/(ClkFrequency>>4);
+`endif
+
+wire BaudTick = BaudGeneratorAcc[BaudGeneratorAccWidth];
+assign baudout = BaudTick;
+wire TxD_busy, strb;
+
+always @(posedge clk) 
+if(TxD_busy) BaudGeneratorAcc <= BaudGeneratorAcc[BaudGeneratorAccWidth-1:0] + BaudGeneratorInc;
+
+// 24-bit freq data distribution
+// inner variables and nets
+
+reg [3:0] load = 0,
+			 load_prev = 0;
+			 
+//wire[3:0] load_out = load; // additional output to monitor real data frequency
+//wire [10:0] frq_data;
+//reg [7:0] DAC_data_reg = 8'h00;
+//wire [23:0] DAC_data = DAC_data_reg;
+reg [7:0] freq0 = 8'b00000000, 
+			 freq1 = 8'b00000000, 
+			 freq2 = 8'b00000000, 
+			 freq3 = 8'b00000000,
+			 freq4 = 8'b00000000; // terminator byte
+reg [7:0] TxD_data;
+
+reg [15:0] uart_num = 0;
+
+// synthesis translate_off
+	initial begin 
+	load=0; TxD_data=0; 
+	end
+// synthesis translate_on
+	
+		
+// renew main counter value on positive edge of STROBE
+reg [7:0] average_count = 0; // maximum - 256 points of averaging
+reg [10:0] frq_accumulator = 0;
+
+always @ (posedge spi_write)
+		//if(average_count < AVG)	begin 	// current avering points quantity
+		//	frq_accumulator <= frq_accumulator + frq_data;
+		//	average_count <= average_count+1;
+		//end
+		//else 
+		begin
+			//frq_accumulator <= frq_accumulator/average_count;
+			if (load == 0)	begin
+				//freq0[7:4] <= 4'hF;
+				freq0[7:0] <= 8'hFF; // 8'h99; 
+				freq1[7:0] <= 8'h03;//diffout_raw[15:8]; //8'h03;
+				freq2[7:0] <= 8'h55;//diffout_raw[7:0]; // 8'h02;				
+				freq3[7:0] <= 8'h00;// 8'h99;
+				freq4[7:0] <= 8'h0F;
+				// 5 bytes queue organisation by means of reg LOAD
+			end
+			
+			//frq_accumulator <= 0;
+			//average_count <= 0;	
+		end
+
+// Transmitter state machine
+
+reg [3:0] state=0;
+reg [7:0] TxD_dataReg;
+reg [15:0] packet = 0;
+wire [7:0] TxD_dataD = TxD_dataReg;						
+//wire [7:0] TxD_dataD = RegisterInputData ? TxD_dataReg : TxD_data;
+//wire [7:0] TxD_display = TxD_dataReg;
+
+// synthesis translate_off
+	initial begin 
+	state=0; TxD_dataReg=0; 
+	end
+// synthesis translate_on
+
+wire load_negedge;
+wire TxD_ready = (state==0);
+assign TxD_busy = ~TxD_ready;
+always @(posedge clk) if(TxD_ready & (load != 0) ) TxD_dataReg <= TxD_data; // renew data to transmit
+ 
+//always @ (posedge clk) TxD_start_prev <= TxD_start;
+//assign TxD_start_posedge = (TxD_start & ~TxD_start_prev);  // pulse instead of port
+
+always @ (posedge clk) load_prev <= load;
+assign load_negedge = ( (load == 0) & (load_prev != 0) );  // pulse instead of level on LOAD
+	
+always @ (posedge clk)
+	begin
+		if ((load_negedge) & (packet > 0)) packet <= packet-1;
+		if ((spi_write_posedge) & (packet == 0)) packet <= 16'h0400;
+	end
+
+
+	
+// uart_num control sequence
+
+// UART Data Burst launch
+
+reg ext_sync_reg = 0; 
+reg ext_sync_prev = 0;
+wire ext_sync_posedge = ext_sync & ~ext_sync_prev;
+
+always @(posedge clk) begin
+	ext_sync_prev = ext_sync;
+	if (ext_sync_posedge == 1) ext_sync_reg = 1;
+		else if ( (ext_sync_reg == 1) & (spi_write_negedge == 1) )ext_sync_reg = 0;
+end
+
+
+always@(posedge spi_write)
+		if (uart_num > 0) uart_num <= uart_num - 1;
+		else if (ext_sync_reg == 1) uart_num = UART_SIZE;
+
+	
+// State Machine declaration 
+//  blocking transmitting after 5 bytes by means of TxD_start edges
+		
+always @(posedge clk)
+	case(load)
+		0: begin if( TxD_ready  & (spi_write == 1) & (uart_num > 0))
+					begin load <= 1; TxD_data <= freq0;  end
+			end
+		1: begin if (TxD_ready) 
+					begin load <= 2; TxD_data <= freq1; end
+			end
+		2: begin if (TxD_ready)
+					begin load <= 3; TxD_data <= freq2;	end
+			end
+		3: begin if (TxD_ready)
+					begin load <= 0; TxD_data <= freq3; end
+			end
+		4: begin if (TxD_ready)
+					begin load <= 5; TxD_data <= freq4; end
+			end
+		5: begin if (TxD_ready)
+					begin load <= 0; 
+					//TxD_data <= 8'hFF; 
+					end
+			end
+		default: ;//if(state == 0) load = 3'b000;
+	endcase
+
+
+reg TxD = 1'b1; // start from high logic level according to RS-232C rules
+reg muxbit;
+// synthesis translate_off
+	initial muxbit = 0; 
+// synthesis translate_on
+
+always @(posedge clk)
+begin
+	case(state)
+		4'b0000: begin if(load != 0) state = 4'b0100; end
+		4'b0100: begin if(BaudTick)  state = 4'b0001; end	// start
+		4'b0001: begin if(BaudTick)  state = 4'b1000; end // unusual HIGH bit, but it WORKS!!
+		4'b1000: begin if(BaudTick)  state = 4'b1001; end // bit 0
+		4'b1001: begin if(BaudTick)  state = 4'b1010; end // bit 1
+		4'b1010: begin if(BaudTick)  state = 4'b1011; end // bit 2
+		4'b1011: begin if(BaudTick)  state = 4'b1100; end // bit 3
+		4'b1100: begin if(BaudTick)  state = 4'b1101; end // bit 4
+		4'b1101: begin if(BaudTick)  state = 4'b1110; end // bit 5
+		4'b1110: begin if(BaudTick)  state = 4'b1111; end // bit 6
+		4'b1111: begin if(BaudTick)  state = 4'b0010; end // bit 7
+		4'b0010: begin if(BaudTick)  state = 4'b0000; end // stop1
+//		4'b0011: begin if(BaudTick)  state = 4'b0000; end // stop2
+		default: begin if(BaudTick)  state = 4'b0000; end
+	endcase
+
+// Output mux
+	case(state[3:0])
+		4'b1000: muxbit <= TxD_dataD[0];
+		4'b1001: muxbit <= TxD_dataD[1];
+		4'b1010: muxbit <= TxD_dataD[2];
+		4'b1011: muxbit <= TxD_dataD[3];
+		4'b1100: muxbit <= TxD_dataD[4];
+		4'b1101: muxbit <= TxD_dataD[5];
+		4'b1110: muxbit <= TxD_dataD[6];
+		4'b1111: muxbit <= TxD_dataD[7];
+		default: ;//muxbit <= TxD_dataD[0];
+	endcase
+
+// Put together the start, data and stop bits
+TxD = (state<4)| (state[3] & ~muxbit);
+// register the output to make it glitch free
+end
+
+
+
+endmodule

@@ -4,10 +4,10 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EPCS4) Path("C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/output_files/output_files/") File("output_file.pof") MfrSpec(OpMask(1) Child_OpMask(1 1));
+		Device PartName(EP3C16F484) Path("C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/output_files/") File("de0_tdc.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
 AlteraBegin;
-	ChainType(asc);
+	ChainType(JTAG);
 AlteraEnd;

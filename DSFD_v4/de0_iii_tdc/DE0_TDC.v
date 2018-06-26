@@ -29,7 +29,8 @@ module DE0_TDC(
 	SPI3_MOSI,
 	SPI3_SS,
 	SPI1_MOSI,
-	SPI1_SS
+	SPI1_SS,
+	TxD
 );
 
 //=======================================================
@@ -64,6 +65,8 @@ output SPI1_SS;
 output SPI3_CLK;
 output SPI1_MOSI;
 
+output TxD;
+
 output[7:0] DAC_OUT,DAC2_DB;
 output DAC_WR;
 output DAC2_WR;
@@ -97,7 +100,7 @@ wire [19:0]result_sum;
 
 wire signal, mod, mod_d, dm_clk, diff_dval, tdc_input_signal, ph_mod;
 
-assign TEST_SIGNAL=SIGNAL;
+assign TEST_SIGNAL=ph_mod;
 assign TEST_SIGNAL2=clk_10k;
 
 
@@ -194,9 +197,92 @@ always @ (posedge pll_clk[0] or negedge rst)
 			end
 	end
 	
+	reg [7:0] temp =0;
+		reg [4:0] horrible_counter,horrible_counter_2= 5'd0;
+	reg key_flag,key_flag_2=0;
+	reg [15:0] result_biass,result_biass_2,diff_out_temp=0;
+	
+			always @ (posedge clk_10k or negedge rst)
+	begin
+		if(!rst)
+			begin
+				horrible_counter <= 5'd0;
+				key_flag<=0;
+				horrible_counter_2 <= 5'd0;
+				key_flag_2<=0;
+			end
+		else
+			begin	
+				if(SW[3]==1 && key_flag==0) begin
+				  horrible_counter<=horrible_counter+1;
+				  key_flag<=1;
+				  end
+				  else begin
+				  if(SW[3]==0)
+				  key_flag<=0;
+				  
+				  if(horrible_counter>8)
+				  horrible_counter<=0;
+				  
+				  end 
+				  // второй
+				  if(SW[4]==1 && key_flag_2==0) begin
+				  horrible_counter_2<=horrible_counter_2+1;
+				  key_flag_2<=1;
+				  end
+				  else begin
+				  if(SW[4]==0)
+				  key_flag_2<=0;
+				  
+				  if(horrible_counter_2>8)
+				  horrible_counter_2<=0;
+				  
+				  end 
+				  
+				  
+				  
+				  	case(horrible_counter[4:0])
+	0: 	begin result_biass=result_sum[15:0]; end
+	1:		begin result_biass={result_sum[14:0],temp[0]};   end
+	2:		begin result_biass={result_sum[13:0],temp[1:0]}; end
+	3:		begin result_biass={result_sum[12:0],temp[2:0]}; end
+	4:		begin result_biass={result_sum[11:0],temp[3:0]}; end
+	5:		begin result_biass={result_sum[10:0],temp[4:0]}; end
+	6:		begin result_biass={result_sum[9:0],temp[5:0]}; end
+	7:		begin result_biass={result_sum[8:0],temp[6:0]}; end
+	8:		begin result_biass={result_sum[7:0],temp[7:0]}; end
+	9:		begin result_biass={result_sum[7:0],temp[7:0]}; end
+	endcase
+				
+				case(horrible_counter_2[4:0])
+   0:		begin result_biass_2=diff_out_0[15:0]+16'd30000; end
+	1:		begin diff_out_temp=diff_out_0[15:0]+16'd16383;   
+	result_biass_2={diff_out_temp[14:0],temp[0]};   end
+	2:		begin diff_out_temp=diff_out_0[15:0]+16'd8191;   
+	result_biass_2={diff_out_temp[13:0],temp[1:0]};   end
+	3:		begin diff_out_temp=diff_out_0[15:0]+16'd4095;   
+	result_biass_2={diff_out_temp[12:0],temp[2:0]};   end
+	4:		begin diff_out_temp=diff_out_0[15:0]+16'd2047;   
+	result_biass_2={diff_out_temp[11:0],temp[3:0]};   end	
+	5:		begin diff_out_temp=diff_out_0[15:0]+16'd1023;   
+	result_biass_2={diff_out_temp[10:0],temp[4:0]};   end	
+	6:		begin diff_out_temp=diff_out_0[15:0]+16'd511;   
+	result_biass_2={diff_out_temp[9:0],temp[5:0]};   end	
+	7:		begin diff_out_temp=diff_out_0[15:0]+16'd255;   
+	result_biass_2={diff_out_temp[8:0],temp[6:0]};   end	
+	8:		begin diff_out_temp=diff_out_0[15:0]+16'd125;   
+	result_biass_2={diff_out_temp[7:0],temp[7:0]};   end
+	9:		begin diff_out_temp=diff_out_0[15:0]+16'd125;   
+	result_biass_2={diff_out_temp[7:0],temp[7:0]};   end	
+	endcase
+	
+			end
+	end
+	
+
 	
 //phase_controller ph_ctl(pll_clk[0], 1, KEY[1:0], SW[0], ph_mod);
-  phase_controller ph_ctl(pll_clk[0], 1, KEY[1:0], 1, ph_mod);
+  phase_controller ph_ctl(pll_clk[0], 1, KEY[1:0], SW[0], ph_mod);
 
 //signal_pll pll_sg (.areset(~pll_rst), .inclk0(CLOCK_50), .c0(dm_clk), .c1(mod));
 
@@ -219,16 +305,22 @@ singen  singen1 ( address_to_sin,pll_clk[9],sin_to_dac );
 
 //reg [7:0] temp =0;
 //wire [15:0] h={diff_out_0[7:0],temp[7:0] };
+ 
 
+/*
 reg [7:0] temp =0;
 wire [15:0]  data_to_spi = SW[2] ? {diff_out_spi[7:0],temp[7:0]} : diff_out_spi[19:0];
 wire [19:0] diff_out_spi= SW[2]	? diff_out_0+ 20'd125 : diff_out_0+ 20'd30000;
-spi_data_transm spi_data_transm(pll_clk[0],pll_clk[8],clk_20k,SPI3_MOSI,SPI3_CLK,SPI3_SS,data_to_spi[15:0]);
+*/
+spi_data_transm spi_data_transm(pll_clk[0],pll_clk[8],clk_20k,SPI3_MOSI,SPI3_CLK,SPI3_SS,result_biass_2[15:0]);
 
 accumulation ( ph_mod,diff_dval,  rst,  diff_out_0[15:0],  result_sum );
-wire [15:0] h={result_sum[7:0],temp[7:0] };
+//wire [15:0] h={result_sum[7:0],temp[7:0] };
 wire gg;
-spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_20k,SPI1_MOSI,gg,SPI1_SS,h[15:0]);
+spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_20k,SPI1_MOSI,gg,SPI1_SS,result_biass[15:0]);
+
+wire ff;
+ UART uart_test( CLOCK_50,result_biass, clk_10k, TxD, ff);
 
 //spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,SPI3_CLK,SPI3_SS,h);
 

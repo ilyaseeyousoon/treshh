@@ -1,5 +1,5 @@
 Analysis & Synthesis report for de0_tdc
-Sat Jun 23 20:41:32 2018
+Tue Jun 26 20:24:22 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -15,59 +15,62 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |DE0_TDC|spi_data_transm:spi_data_transm1|spi_state
- 11. State Machine - |DE0_TDC|spi_data_transm:spi_data_transm|spi_state
- 12. State Machine - |DE0_TDC|tdc:tdc_inst_0|int_sync:i_sync|state
- 13. State Machine - |DE0_TDC|tdc:tdc_inst_0|frac_sync:fr_sync|state
- 14. State Machine - |DE0_TDC|dm_min:dm_inst|state
- 15. Registers Removed During Synthesis
- 16. Removed Registers Triggering Further Register Optimizations
- 17. General Register Statistics
- 18. Inverted Register Statistics
- 19. Multiplexer Restructuring Statistics (Restructuring Performed)
- 20. Source assignments for singen:singen1|altsyncram:altsyncram_component|altsyncram_9v91:auto_generated
- 21. Parameter Settings for User Entity Instance: clock_block:cb_inst|tdc_pll:pll_inst|altpll:altpll_component
- 22. Parameter Settings for User Entity Instance: clock_block:cb_inst|pll_spi:pll_inst2|altpll:altpll_component
- 23. Parameter Settings for User Entity Instance: tdc:tdc_inst_0
- 24. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component
- 25. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[1].mlt_inst|lpm_mult:lpm_mult_component
- 26. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[2].mlt_inst|lpm_mult:lpm_mult_component
- 27. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[3].mlt_inst|lpm_mult:lpm_mult_component
- 28. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[4].mlt_inst|lpm_mult:lpm_mult_component
- 29. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[5].mlt_inst|lpm_mult:lpm_mult_component
- 30. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[6].mlt_inst|lpm_mult:lpm_mult_component
- 31. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[7].mlt_inst|lpm_mult:lpm_mult_component
- 32. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[8].mlt_inst|lpm_mult:lpm_mult_component
- 33. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[9].mlt_inst|lpm_mult:lpm_mult_component
- 34. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[10].mlt_inst|lpm_mult:lpm_mult_component
- 35. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[11].mlt_inst|lpm_mult:lpm_mult_component
- 36. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[12].mlt_inst|lpm_mult:lpm_mult_component
- 37. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[13].mlt_inst|lpm_mult:lpm_mult_component
- 38. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[14].mlt_inst|lpm_mult:lpm_mult_component
- 39. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[15].mlt_inst|lpm_mult:lpm_mult_component
- 40. Parameter Settings for User Entity Instance: sin_addr:sin_addr1|lpm_counter:LPM_COUNTER_component
- 41. Parameter Settings for User Entity Instance: singen:singen1|altsyncram:altsyncram_component
- 42. altpll Parameter Settings by Entity Instance
- 43. lpm_mult Parameter Settings by Entity Instance
- 44. altsyncram Parameter Settings by Entity Instance
- 45. Port Connectivity Checks: "spi_data_transm:spi_data_transm1"
- 46. Port Connectivity Checks: "accumulation:comb_428"
- 47. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[15].mlt_inst"
- 48. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[14].mlt_inst"
- 49. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[13].mlt_inst"
- 50. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[12].mlt_inst"
- 51. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[11].mlt_inst"
- 52. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[10].mlt_inst"
- 53. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[9].mlt_inst"
- 54. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[8].mlt_inst"
- 55. Port Connectivity Checks: "dm_min:dm_inst"
- 56. Port Connectivity Checks: "clock_block:cb_inst|pll_spi:pll_inst2"
- 57. Port Connectivity Checks: "clock_block:cb_inst|tdc_pll:pll_inst"
- 58. Port Connectivity Checks: "clock_block:cb_inst"
- 59. Port Connectivity Checks: "phase_controller:ph_ctl"
- 60. Elapsed Time Per Partition
- 61. Analysis & Synthesis Messages
- 62. Analysis & Synthesis Suppressed Messages
+ 10. State Machine - |DE0_TDC|UART:uart_test|state
+ 11. State Machine - |DE0_TDC|spi_data_transm:spi_data_transm1|spi_state
+ 12. State Machine - |DE0_TDC|spi_data_transm:spi_data_transm|spi_state
+ 13. State Machine - |DE0_TDC|tdc:tdc_inst_0|int_sync:i_sync|state
+ 14. State Machine - |DE0_TDC|tdc:tdc_inst_0|frac_sync:fr_sync|state
+ 15. State Machine - |DE0_TDC|dm_min:dm_inst|state
+ 16. Registers Removed During Synthesis
+ 17. Removed Registers Triggering Further Register Optimizations
+ 18. General Register Statistics
+ 19. Inverted Register Statistics
+ 20. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 21. Source assignments for singen:singen1|altsyncram:altsyncram_component|altsyncram_9v91:auto_generated
+ 22. Parameter Settings for User Entity Instance: clock_block:cb_inst|tdc_pll:pll_inst|altpll:altpll_component
+ 23. Parameter Settings for User Entity Instance: clock_block:cb_inst|pll_spi:pll_inst2|altpll:altpll_component
+ 24. Parameter Settings for User Entity Instance: tdc:tdc_inst_0
+ 25. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component
+ 26. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[1].mlt_inst|lpm_mult:lpm_mult_component
+ 27. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[2].mlt_inst|lpm_mult:lpm_mult_component
+ 28. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[3].mlt_inst|lpm_mult:lpm_mult_component
+ 29. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[4].mlt_inst|lpm_mult:lpm_mult_component
+ 30. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[5].mlt_inst|lpm_mult:lpm_mult_component
+ 31. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[6].mlt_inst|lpm_mult:lpm_mult_component
+ 32. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[7].mlt_inst|lpm_mult:lpm_mult_component
+ 33. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[8].mlt_inst|lpm_mult:lpm_mult_component
+ 34. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[9].mlt_inst|lpm_mult:lpm_mult_component
+ 35. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[10].mlt_inst|lpm_mult:lpm_mult_component
+ 36. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[11].mlt_inst|lpm_mult:lpm_mult_component
+ 37. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[12].mlt_inst|lpm_mult:lpm_mult_component
+ 38. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[13].mlt_inst|lpm_mult:lpm_mult_component
+ 39. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[14].mlt_inst|lpm_mult:lpm_mult_component
+ 40. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[15].mlt_inst|lpm_mult:lpm_mult_component
+ 41. Parameter Settings for User Entity Instance: sin_addr:sin_addr1|lpm_counter:LPM_COUNTER_component
+ 42. Parameter Settings for User Entity Instance: singen:singen1|altsyncram:altsyncram_component
+ 43. Parameter Settings for User Entity Instance: UART:uart_test
+ 44. altpll Parameter Settings by Entity Instance
+ 45. lpm_mult Parameter Settings by Entity Instance
+ 46. altsyncram Parameter Settings by Entity Instance
+ 47. Port Connectivity Checks: "UART:uart_test"
+ 48. Port Connectivity Checks: "spi_data_transm:spi_data_transm1"
+ 49. Port Connectivity Checks: "accumulation:comb_665"
+ 50. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[15].mlt_inst"
+ 51. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[14].mlt_inst"
+ 52. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[13].mlt_inst"
+ 53. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[12].mlt_inst"
+ 54. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[11].mlt_inst"
+ 55. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[10].mlt_inst"
+ 56. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[9].mlt_inst"
+ 57. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[8].mlt_inst"
+ 58. Port Connectivity Checks: "dm_min:dm_inst"
+ 59. Port Connectivity Checks: "clock_block:cb_inst|pll_spi:pll_inst2"
+ 60. Port Connectivity Checks: "clock_block:cb_inst|tdc_pll:pll_inst"
+ 61. Port Connectivity Checks: "clock_block:cb_inst"
+ 62. Port Connectivity Checks: "phase_controller:ph_ctl"
+ 63. Elapsed Time Per Partition
+ 64. Analysis & Synthesis Messages
+ 65. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -93,16 +96,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jun 23 20:41:32 2018      ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 26 20:24:22 2018      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; de0_tdc                                    ;
 ; Top-level Entity Name              ; DE0_TDC                                    ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 3,117                                      ;
-;     Total combinational functions  ; 2,020                                      ;
-;     Dedicated logic registers      ; 2,525                                      ;
-; Total registers                    ; 2525                                       ;
-; Total pins                         ; 51                                         ;
+; Total logic elements               ; 3,409                                      ;
+;     Total combinational functions  ; 2,302                                      ;
+;     Dedicated logic registers      ; 2,609                                      ;
+; Total registers                    ; 2609                                       ;
+; Total pins                         ; 52                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 4,096                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -208,81 +211,82 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                         ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                           ; Library ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------+---------+
-; time_counter.sv                  ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/time_counter.sv                ;         ;
-; tdc.sv                           ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/tdc.sv                         ;         ;
-; tail_counter.sv                  ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/tail_counter.sv                ;         ;
-; mlt_x400.sv                      ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/mlt_x400.sv                    ;         ;
-; integer_counter.sv               ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/integer_counter.sv             ;         ;
-; int_sync.sv                      ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/int_sync.sv                    ;         ;
-; head_counter.sv                  ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/head_counter.sv                ;         ;
-; frac_sync.sv                     ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/frac_sync.sv                   ;         ;
-; dm_min.sv                        ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/dm_min.sv                      ;         ;
-; DE0_TDC.v                        ; yes             ; User Verilog HDL File                  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/DE0_TDC.v                      ;         ;
-; clock_block.sv                   ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/clock_block.sv                 ;         ;
-; mult_x50.v                       ; yes             ; User Wizard-Generated File             ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/mult_x50.v                     ;         ;
-; tdc_pll.v                        ; yes             ; User Wizard-Generated File             ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/tdc_pll.v                      ;         ;
-; diff.sv                          ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/diff.sv                        ;         ;
-; phase_controller.sv              ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/phase_controller.sv            ;         ;
-; output_files/byass_data.v        ; yes             ; User Verilog HDL File                  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/output_files/byass_data.v      ;         ;
-; singen.v                         ; yes             ; User Wizard-Generated File             ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/singen.v                       ;         ;
-; sin_addr.v                       ; yes             ; User Wizard-Generated File             ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/sin_addr.v                     ;         ;
-; pll_spi.v                        ; yes             ; User Wizard-Generated File             ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/pll_spi.v                      ;         ;
-; spi_data_transm.v                ; yes             ; User Verilog HDL File                  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/spi_data_transm.v              ;         ;
-; accumulation.v                   ; yes             ; User Verilog HDL File                  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/accumulation.v                 ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altpll.tdf              ;         ;
-; aglobal131.inc                   ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc          ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_pll.inc         ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/stratixii_pll.inc       ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/cycloneii_pll.inc       ;         ;
-; db/tdc_pll_altpll.v              ; yes             ; Auto-Generated Megafunction            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/db/tdc_pll_altpll.v            ;         ;
-; db/pll_spi_altpll.v              ; yes             ; Auto-Generated Megafunction            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/db/pll_spi_altpll.v            ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
-; multcore.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/multcore.inc            ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
-; altshift.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; multcore.tdf                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/multcore.tdf            ;         ;
-; csa_add.inc                      ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/csa_add.inc             ;         ;
-; mpar_add.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/mpar_add.inc            ;         ;
-; muleabz.inc                      ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/muleabz.inc             ;         ;
-; mul_lfrg.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/mul_lfrg.inc            ;         ;
-; mul_boothc.inc                   ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/mul_boothc.inc          ;         ;
-; alt_ded_mult.inc                 ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/alt_ded_mult.inc        ;         ;
-; alt_ded_mult_y.inc               ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc      ;         ;
-; dffpipe.inc                      ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/dffpipe.inc             ;         ;
-; mpar_add.tdf                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/mpar_add.tdf            ;         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
-; addcore.inc                      ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/addcore.inc             ;         ;
-; look_add.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/look_add.inc            ;         ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
-; db/add_sub_60j.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/db/add_sub_60j.tdf             ;         ;
-; db/add_sub_efh.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/db/add_sub_efh.tdf             ;         ;
-; altshift.tdf                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altshift.tdf            ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
-; db/cntr_95j.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/db/cntr_95j.tdf                ;         ;
-; db/cmpr_mfc.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/db/cmpr_mfc.tdf                ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altram.inc              ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
-; db/altsyncram_9v91.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/db/altsyncram_9v91.tdf         ;         ;
-; sin8bit.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/sin8bit.mif                    ;         ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------+---------+
+; time_counter.sv                  ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/time_counter.sv                  ;         ;
+; tdc.sv                           ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/tdc.sv                           ;         ;
+; tail_counter.sv                  ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/tail_counter.sv                  ;         ;
+; mlt_x400.sv                      ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/mlt_x400.sv                      ;         ;
+; integer_counter.sv               ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/integer_counter.sv               ;         ;
+; int_sync.sv                      ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/int_sync.sv                      ;         ;
+; head_counter.sv                  ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/head_counter.sv                  ;         ;
+; frac_sync.sv                     ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/frac_sync.sv                     ;         ;
+; dm_min.sv                        ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/dm_min.sv                        ;         ;
+; DE0_TDC.v                        ; yes             ; User Verilog HDL File                  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/DE0_TDC.v                        ;         ;
+; clock_block.sv                   ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/clock_block.sv                   ;         ;
+; mult_x50.v                       ; yes             ; User Wizard-Generated File             ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/mult_x50.v                       ;         ;
+; tdc_pll.v                        ; yes             ; User Wizard-Generated File             ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/tdc_pll.v                        ;         ;
+; diff.sv                          ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/diff.sv                          ;         ;
+; phase_controller.sv              ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/phase_controller.sv              ;         ;
+; output_files/byass_data.v        ; yes             ; User Verilog HDL File                  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/output_files/byass_data.v        ;         ;
+; singen.v                         ; yes             ; User Wizard-Generated File             ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/singen.v                         ;         ;
+; sin_addr.v                       ; yes             ; User Wizard-Generated File             ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/sin_addr.v                       ;         ;
+; pll_spi.v                        ; yes             ; User Wizard-Generated File             ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/pll_spi.v                        ;         ;
+; spi_data_transm.v                ; yes             ; User Verilog HDL File                  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/spi_data_transm.v                ;         ;
+; accumulation.v                   ; yes             ; User Verilog HDL File                  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/accumulation.v                   ;         ;
+; output_files/output_files/UART.v ; yes             ; User Verilog HDL File                  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/output_files/output_files/UART.v ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altpll.tdf                ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc            ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_pll.inc           ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/stratixii_pll.inc         ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/cycloneii_pll.inc         ;         ;
+; db/tdc_pll_altpll.v              ; yes             ; Auto-Generated Megafunction            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/db/tdc_pll_altpll.v              ;         ;
+; db/pll_spi_altpll.v              ; yes             ; Auto-Generated Megafunction            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/db/pll_spi_altpll.v              ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mult.tdf              ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_add_sub.inc           ;         ;
+; multcore.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/multcore.inc              ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/bypassff.inc              ;         ;
+; altshift.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altshift.inc              ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/multcore.tdf              ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/csa_add.inc               ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/mpar_add.inc              ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/muleabz.inc               ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/mul_lfrg.inc              ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/mul_boothc.inc            ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/alt_ded_mult.inc          ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc        ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/dffpipe.inc               ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/mpar_add.tdf              ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_add_sub.tdf           ;         ;
+; addcore.inc                      ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/addcore.inc               ;         ;
+; look_add.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/look_add.inc              ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc   ;         ;
+; db/add_sub_60j.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/db/add_sub_60j.tdf               ;         ;
+; db/add_sub_efh.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/db/add_sub_efh.tdf               ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altshift.tdf              ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.tdf           ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_constant.inc          ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc            ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/cmpconst.inc              ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_compare.inc           ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.inc           ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/dffeea.inc                ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/alt_counter_stratix.inc   ;         ;
+; db/cntr_95j.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/db/cntr_95j.tdf                  ;         ;
+; db/cmpr_mfc.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/db/cmpr_mfc.tdf                  ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf            ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc     ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc               ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/a_rdenreg.inc             ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altrom.inc                ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altram.inc                ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altdpram.inc              ;         ;
+; db/altsyncram_9v91.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/db/altsyncram_9v91.tdf           ;         ;
+; sin8bit.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/sin8bit.mif                      ;         ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -290,32 +294,32 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                       ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 3,117                                                                                                       ;
+; Estimated Total logic elements              ; 3,409                                                                                                       ;
 ;                                             ;                                                                                                             ;
-; Total combinational functions               ; 2020                                                                                                        ;
+; Total combinational functions               ; 2302                                                                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                                                                             ;
-;     -- 4 input functions                    ; 552                                                                                                         ;
-;     -- 3 input functions                    ; 610                                                                                                         ;
-;     -- <=2 input functions                  ; 858                                                                                                         ;
+;     -- 4 input functions                    ; 660                                                                                                         ;
+;     -- 3 input functions                    ; 656                                                                                                         ;
+;     -- <=2 input functions                  ; 986                                                                                                         ;
 ;                                             ;                                                                                                             ;
 ; Logic elements by mode                      ;                                                                                                             ;
-;     -- normal mode                          ; 1272                                                                                                        ;
-;     -- arithmetic mode                      ; 748                                                                                                         ;
+;     -- normal mode                          ; 1442                                                                                                        ;
+;     -- arithmetic mode                      ; 860                                                                                                         ;
 ;                                             ;                                                                                                             ;
-; Total registers                             ; 2525                                                                                                        ;
-;     -- Dedicated logic registers            ; 2525                                                                                                        ;
+; Total registers                             ; 2609                                                                                                        ;
+;     -- Dedicated logic registers            ; 2609                                                                                                        ;
 ;     -- I/O registers                        ; 0                                                                                                           ;
 ;                                             ;                                                                                                             ;
-; I/O pins                                    ; 51                                                                                                          ;
+; I/O pins                                    ; 52                                                                                                          ;
 ; Total memory bits                           ; 4096                                                                                                        ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                                           ;
 ; Total PLLs                                  ; 2                                                                                                           ;
 ;     -- PLLs                                 ; 2                                                                                                           ;
 ;                                             ;                                                                                                             ;
 ; Maximum fan-out node                        ; clock_block:cb_inst|tdc_pll:pll_inst|altpll:altpll_component|tdc_pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 1868                                                                                                        ;
-; Total fan-out                               ; 12783                                                                                                       ;
-; Average fan-out                             ; 2.74                                                                                                        ;
+; Maximum fan-out                             ; 1871                                                                                                        ;
+; Total fan-out                               ; 13901                                                                                                       ;
+; Average fan-out                             ; 2.77                                                                                                        ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------------+
 
 
@@ -324,8 +328,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                         ; Library Name ;
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |DE0_TDC                                                ; 2020 (74)         ; 2525 (32)    ; 4096        ; 0            ; 0       ; 0         ; 51   ; 0            ; |DE0_TDC                                                                                                                                                                                                    ; work         ;
-;    |accumulation:comb_428|                              ; 41 (41)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|accumulation:comb_428                                                                                                                                                                              ; work         ;
+; |DE0_TDC                                                ; 2302 (299)        ; 2609 (76)    ; 4096        ; 0            ; 0       ; 0         ; 52   ; 0            ; |DE0_TDC                                                                                                                                                                                                    ; work         ;
+;    |UART:uart_test|                                     ; 40 (40)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|UART:uart_test                                                                                                                                                                                     ; work         ;
+;    |accumulation:comb_665|                              ; 57 (57)           ; 42 (42)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|accumulation:comb_665                                                                                                                                                                              ; work         ;
 ;    |byass_data:byass_data1|                             ; 72 (72)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|byass_data:byass_data1                                                                                                                                                                             ; work         ;
 ;    |clock_block:cb_inst|                                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|clock_block:cb_inst                                                                                                                                                                                ; work         ;
 ;       |pll_spi:pll_inst2|                               ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|clock_block:cb_inst|pll_spi:pll_inst2                                                                                                                                                              ; work         ;
@@ -335,7 +340,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |altpll:altpll_component|                      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|clock_block:cb_inst|tdc_pll:pll_inst|altpll:altpll_component                                                                                                                                       ; work         ;
 ;             |tdc_pll_altpll:auto_generated|             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|clock_block:cb_inst|tdc_pll:pll_inst|altpll:altpll_component|tdc_pll_altpll:auto_generated                                                                                                         ; work         ;
 ;    |diff:diff_inst|                                     ; 31 (31)           ; 94 (94)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|diff:diff_inst                                                                                                                                                                                     ; work         ;
-;    |phase_controller:ph_ctl|                            ; 31 (31)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|phase_controller:ph_ctl                                                                                                                                                                            ; work         ;
+;    |phase_controller:ph_ctl|                            ; 38 (38)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|phase_controller:ph_ctl                                                                                                                                                                            ; work         ;
 ;    |sin_addr:sin_addr1|                                 ; 13 (0)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|sin_addr:sin_addr1                                                                                                                                                                                 ; work         ;
 ;       |lpm_counter:LPM_COUNTER_component|               ; 13 (0)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|sin_addr:sin_addr1|lpm_counter:LPM_COUNTER_component                                                                                                                                               ; work         ;
 ;          |cntr_95j:auto_generated|                      ; 13 (11)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|sin_addr:sin_addr1|lpm_counter:LPM_COUNTER_component|cntr_95j:auto_generated                                                                                                                       ; work         ;
@@ -343,8 +348,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |singen:singen1|                                     ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|singen:singen1                                                                                                                                                                                     ; work         ;
 ;       |altsyncram:altsyncram_component|                 ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|singen:singen1|altsyncram:altsyncram_component                                                                                                                                                     ; work         ;
 ;          |altsyncram_9v91:auto_generated|               ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|singen:singen1|altsyncram:altsyncram_component|altsyncram_9v91:auto_generated                                                                                                                      ; work         ;
-;    |spi_data_transm:spi_data_transm1|                   ; 11 (11)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|spi_data_transm:spi_data_transm1                                                                                                                                                                   ; work         ;
-;    |spi_data_transm:spi_data_transm|                    ; 22 (22)           ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|spi_data_transm:spi_data_transm                                                                                                                                                                    ; work         ;
+;    |spi_data_transm:spi_data_transm1|                   ; 16 (16)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|spi_data_transm:spi_data_transm1                                                                                                                                                                   ; work         ;
+;    |spi_data_transm:spi_data_transm|                    ; 11 (11)           ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|spi_data_transm:spi_data_transm                                                                                                                                                                    ; work         ;
 ;    |tdc:tdc_inst_0|                                     ; 1725 (1)          ; 2302 (202)   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0                                                                                                                                                                                     ; work         ;
 ;       |frac_sync:fr_sync|                               ; 48 (48)           ; 200 (200)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|frac_sync:fr_sync                                                                                                                                                                   ; work         ;
 ;       |int_sync:i_sync|                                 ; 0 (0)             ; 160 (160)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|int_sync:i_sync                                                                                                                                                                     ; work         ;
@@ -556,6 +561,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Altera ; LPM_MULT     ; 13.1    ; N/A          ; N/A          ; |DE0_TDC|tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[14].mlt_inst ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/mult_x50.v ;
 ; Altera ; LPM_MULT     ; 13.1    ; N/A          ; N/A          ; |DE0_TDC|tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[15].mlt_inst ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/mult_x50.v ;
 +--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------+----------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------+
+; State Machine - |DE0_TDC|UART:uart_test|state ;
++----------+------------------------------------+
+; Name     ; state.01                           ;
++----------+------------------------------------+
+; state.00 ; 0                                  ;
+; state.01 ; 1                                  ;
++----------+------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -788,6 +804,7 @@ Encoding Type:  One-Hot
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][19]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][18]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][17]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; UART:uart_test|shiftData[7]                                                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; diff:diff_inst|in_buf_1[20..36]                                                                                                                          ; Lost fanout                                                                                                                                                    ;
 ; diff:diff_inst|in_buf_2[36]                                                                                                                              ; Lost fanout                                                                                                                                                    ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[36]                                                                                                            ; Lost fanout                                                                                                                                                    ;
@@ -1247,9 +1264,8 @@ Encoding Type:  One-Hot
 ; diff:diff_inst|in_buf_2[18]                                                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; spi_data_transm:spi_data_transm|clkout                                                                                                                   ; Merged with spi_data_transm:spi_data_transm1|clkout                                                                                                            ;
 ; spi_data_transm:spi_data_transm1|clkout_prev                                                                                                             ; Merged with spi_data_transm:spi_data_transm|clkout_prev                                                                                                        ;
-; phase_controller:ph_ctl|clk_max[8,9,12]                                                                                                                  ; Merged with phase_controller:ph_ctl|clk_max[0]                                                                                                                 ;
 ; phase_controller:ph_ctl|clk_max[10,11,13,14]                                                                                                             ; Merged with phase_controller:ph_ctl|clk_max[15]                                                                                                                ;
-; phase_controller:ph_ctl|clk_max[3]                                                                                                                       ; Merged with phase_controller:ph_ctl|clk_max[5]                                                                                                                 ;
+; phase_controller:ph_ctl|clk_max[8,9]                                                                                                                     ; Merged with phase_controller:ph_ctl|clk_max[12]                                                                                                                ;
 ; spi_data_transm:spi_data_transm|spi_write                                                                                                                ; Merged with spi_data_transm:spi_data_transm1|spi_write                                                                                                         ;
 ; spi_data_transm:spi_data_transm|spi_write_prev                                                                                                           ; Merged with spi_data_transm:spi_data_transm1|spi_write_prev                                                                                                    ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[4]       ; Merged with tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[2] ;
@@ -1271,10 +1287,10 @@ Encoding Type:  One-Hot
 ; phase_controller:ph_ctl|clk_max[15]                                                                                                                      ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; diff:diff_inst|diff[18]                                                                                                                                  ; Merged with diff:diff_inst|diff[19]                                                                                                                            ;
 ; diff:diff_inst|diff_1[18]                                                                                                                                ; Merged with diff:diff_inst|diff_1[19]                                                                                                                          ;
-; phase_controller:ph_ctl|clk_max[0]                                                                                                                       ; Stuck at VCC due to stuck port data_in                                                                                                                         ;
+; phase_controller:ph_ctl|clk_max[12]                                                                                                                      ; Stuck at VCC due to stuck port data_in                                                                                                                         ;
 ; phase_controller:ph_ctl|left_hold                                                                                                                        ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; phase_controller:ph_ctl|right_hold                                                                                                                       ; Stuck at GND due to stuck port data_in                                                                                                                         ;
-; phase_controller:ph_ctl|clk_max[1]                                                                                                                       ; Merged with phase_controller:ph_ctl|clk_max[4]                                                                                                                 ;
+; UART:uart_test|shiftData[6]                                                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_pos|wr_en                                                                             ; Merged with tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_pos|wr_en                                                                         ;
 ; tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_neg|wr_en                                                                             ; Merged with tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_neg|wr_en                                                                         ;
 ; tdc:tdc_inst_0|time_counter:gen[1].tc_inst|integer_counter:int_ctr_pos|wr_en                                                                             ; Merged with tdc:tdc_inst_0|time_counter:gen[1].tc_inst|tail_counter:tail_ctr_pos|wr_en                                                                         ;
@@ -1347,6 +1363,7 @@ Encoding Type:  One-Hot
 ; tdc:tdc_inst_0|time_counter:gen[14].tc_inst|n_data_rdy[0]                                                                                                ; Merged with tdc:tdc_inst_0|time_counter:gen[14].tc_inst|n_data_rdy[1]                                                                                          ;
 ; tdc:tdc_inst_0|time_counter:gen[15].tc_inst|p_data_rdy[0]                                                                                                ; Merged with tdc:tdc_inst_0|time_counter:gen[15].tc_inst|p_data_rdy[1]                                                                                          ;
 ; tdc:tdc_inst_0|time_counter:gen[15].tc_inst|n_data_rdy[0]                                                                                                ; Merged with tdc:tdc_inst_0|time_counter:gen[15].tc_inst|n_data_rdy[1]                                                                                          ;
+; UART:uart_test|state~5                                                                                                                                   ; Lost fanout                                                                                                                                                    ;
 ; spi_data_transm:spi_data_transm1|spi_state~20                                                                                                            ; Lost fanout                                                                                                                                                    ;
 ; spi_data_transm:spi_data_transm1|spi_state~21                                                                                                            ; Lost fanout                                                                                                                                                    ;
 ; spi_data_transm:spi_data_transm1|spi_state~22                                                                                                            ; Lost fanout                                                                                                                                                    ;
@@ -1484,7 +1501,7 @@ Encoding Type:  One-Hot
 ; tdc:tdc_inst_0|int_sync:i_sync|lr_clear[15][0]                                                                                                           ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|lr_clear[15][0]                                                                                                   ;
 ; clk_div2[0]                                                                                                                                              ; Merged with clk_div[0]                                                                                                                                         ;
 ; clk_div2[1]                                                                                                                                              ; Merged with clk_div[1]                                                                                                                                         ;
-; phase_controller:ph_ctl|clk_max[2]                                                                                                                       ; Merged with phase_controller:ph_ctl|clk_max[5]                                                                                                                 ;
+; phase_controller:ph_ctl|clk_max[2]                                                                                                                       ; Merged with phase_controller:ph_ctl|clk_max[3]                                                                                                                 ;
 ; Total Number of Removed Registers = 893                                                                                                                  ;                                                                                                                                                                ;
 +----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -1578,18 +1595,20 @@ Encoding Type:  One-Hot
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_4[0][19]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[19], diff:diff_inst|in_buf_1[19], ;
 ;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[19]                                                 ;
 ; dm_min:dm_inst|state~5                                                                                                                             ; Lost Fanouts              ; dm_min:dm_inst|state.st_mf, dm_min:dm_inst|state.st_lf                      ;
+; UART:uart_test|shiftData[7]                                                                                                                        ; Stuck at GND              ; UART:uart_test|shiftData[6]                                                 ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
 ; diff:diff_inst|in_buf_1[35]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[35]                               ;
 ; diff:diff_inst|in_buf_1[34]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[34]                               ;
 ; diff:diff_inst|in_buf_1[33]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[33]                               ;
 ; diff:diff_inst|in_buf_1[32]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[32]                               ;
 ; diff:diff_inst|in_buf_1[31]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[31]                               ;
 ; diff:diff_inst|in_buf_1[30]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[30]                               ;
-; diff:diff_inst|in_buf_1[29]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[29]                               ;
+; diff:diff_inst|in_buf_1[21]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[21]                               ;
 ; diff:diff_inst|in_buf_1[20]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[20]                               ;
-; diff:diff_inst|in_buf_1[22]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[22]                               ;
 ; diff:diff_inst|in_buf_1[23]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[23]                               ;
 ; diff:diff_inst|in_buf_1[24]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[24]                               ;
 ; diff:diff_inst|in_buf_1[25]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[25]                               ;
+; diff:diff_inst|in_buf_1[26]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[26]                               ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[7].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[7] ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[7][15]                            ;
 ;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[6].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[7] ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[6][15]                            ;
@@ -1606,12 +1625,12 @@ Encoding Type:  One-Hot
 ;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[7] ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][15]                            ;
 ;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
-; diff:diff_inst|in_buf_1[26]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[26]                               ;
 ; diff:diff_inst|in_buf_1[27]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[27]                               ;
-; phase_controller:ph_ctl|clk_max[15]                                                                                                                ; Stuck at GND              ; phase_controller:ph_ctl|clk_max[0]                                          ;
-;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
 ; diff:diff_inst|in_buf_1[28]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[28]                               ;
-; diff:diff_inst|in_buf_1[21]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[21]                               ;
+; phase_controller:ph_ctl|clk_max[15]                                                                                                                ; Stuck at GND              ; phase_controller:ph_ctl|clk_max[12]                                         ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; diff:diff_inst|in_buf_1[29]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[29]                               ;
+; diff:diff_inst|in_buf_1[22]                                                                                                                        ; Lost Fanouts              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[22]                               ;
 +----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------+
 
 
@@ -1620,12 +1639,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2525  ;
-; Number of registers using Synchronous Clear  ; 499   ;
-; Number of registers using Synchronous Load   ; 9     ;
+; Total registers                              ; 2609  ;
+; Number of registers using Synchronous Clear  ; 530   ;
+; Number of registers using Synchronous Load   ; 24    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1439  ;
+; Number of registers using Clock Enable       ; 1512  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1648,67 +1667,81 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |DE0_TDC|dm_min:dm_inst|cycle_ctr[5]                                                       ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|fr_sum[4]                              ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[1].tc_inst|int_out[7]                             ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|int_out[7]                             ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[1].tc_inst|int_out[1]                             ;
 ; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[2].tc_inst|int_out[0]                             ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[3].tc_inst|fr_sum[2]                              ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[4].tc_inst|int_out[9]                             ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[5].tc_inst|fr_sum[1]                              ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[6].tc_inst|int_out[8]                             ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[7].tc_inst|fr_sum[5]                              ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_pos|ctr_out[4]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_neg|ctr_out[4]   ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[3].tc_inst|int_out[4]                             ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[4].tc_inst|fr_sum[0]                              ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[5].tc_inst|int_out[5]                             ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[6].tc_inst|int_out[2]                             ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[7].tc_inst|fr_sum[3]                              ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_pos|ctr_out[0]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_neg|ctr_out[1]   ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[1].tc_inst|tail_counter:tail_ctr_pos|ctr_out[2]   ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[1].tc_inst|tail_counter:tail_ctr_neg|ctr_out[3]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[2].tc_inst|tail_counter:tail_ctr_pos|ctr_out[2]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[2].tc_inst|tail_counter:tail_ctr_neg|ctr_out[1]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[3].tc_inst|tail_counter:tail_ctr_pos|ctr_out[4]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[3].tc_inst|tail_counter:tail_ctr_neg|ctr_out[2]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[4].tc_inst|tail_counter:tail_ctr_pos|ctr_out[5]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[2].tc_inst|tail_counter:tail_ctr_pos|ctr_out[5]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[2].tc_inst|tail_counter:tail_ctr_neg|ctr_out[5]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[3].tc_inst|tail_counter:tail_ctr_pos|ctr_out[0]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[3].tc_inst|tail_counter:tail_ctr_neg|ctr_out[0]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[4].tc_inst|tail_counter:tail_ctr_pos|ctr_out[2]   ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[4].tc_inst|tail_counter:tail_ctr_neg|ctr_out[5]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[5].tc_inst|tail_counter:tail_ctr_pos|ctr_out[3]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[5].tc_inst|tail_counter:tail_ctr_pos|ctr_out[2]   ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[5].tc_inst|tail_counter:tail_ctr_neg|ctr_out[4]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[6].tc_inst|tail_counter:tail_ctr_pos|ctr_out[5]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[6].tc_inst|tail_counter:tail_ctr_neg|ctr_out[4]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[7].tc_inst|tail_counter:tail_ctr_pos|ctr_out[4]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[7].tc_inst|tail_counter:tail_ctr_neg|ctr_out[0]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[6].tc_inst|tail_counter:tail_ctr_pos|ctr_out[2]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[6].tc_inst|tail_counter:tail_ctr_neg|ctr_out[1]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[7].tc_inst|tail_counter:tail_ctr_pos|ctr_out[2]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[7].tc_inst|tail_counter:tail_ctr_neg|ctr_out[3]   ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|head_counter:head_ctr_pos|ctr[1]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|head_counter:head_ctr_neg|ctr[4]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|head_counter:head_ctr_neg|ctr[2]       ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[1].tc_inst|head_counter:head_ctr_pos|ctr[1]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[1].tc_inst|head_counter:head_ctr_neg|ctr[1]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[2].tc_inst|head_counter:head_ctr_pos|ctr[1]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[2].tc_inst|head_counter:head_ctr_neg|ctr[1]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[3].tc_inst|head_counter:head_ctr_pos|ctr[4]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[3].tc_inst|head_counter:head_ctr_neg|ctr[3]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[4].tc_inst|head_counter:head_ctr_pos|ctr[0]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[4].tc_inst|head_counter:head_ctr_neg|ctr[4]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[5].tc_inst|head_counter:head_ctr_pos|ctr[5]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[5].tc_inst|head_counter:head_ctr_neg|ctr[5]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[6].tc_inst|head_counter:head_ctr_pos|ctr[1]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[6].tc_inst|head_counter:head_ctr_neg|ctr[2]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[7].tc_inst|head_counter:head_ctr_pos|ctr[3]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[1].tc_inst|head_counter:head_ctr_neg|ctr[3]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[2].tc_inst|head_counter:head_ctr_pos|ctr[3]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[2].tc_inst|head_counter:head_ctr_neg|ctr[2]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[3].tc_inst|head_counter:head_ctr_pos|ctr[5]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[3].tc_inst|head_counter:head_ctr_neg|ctr[1]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[4].tc_inst|head_counter:head_ctr_pos|ctr[2]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[4].tc_inst|head_counter:head_ctr_neg|ctr[5]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[5].tc_inst|head_counter:head_ctr_pos|ctr[4]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[5].tc_inst|head_counter:head_ctr_neg|ctr[4]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[6].tc_inst|head_counter:head_ctr_pos|ctr[0]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[6].tc_inst|head_counter:head_ctr_neg|ctr[5]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[7].tc_inst|head_counter:head_ctr_pos|ctr[4]       ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[7].tc_inst|head_counter:head_ctr_neg|ctr[0]       ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |DE0_TDC|accumulation:comb_428|main_summ[17]                                               ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |DE0_TDC|phase_controller:ph_ctl|clk_max[1]                                                ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |DE0_TDC|horrible_counter_2[3]                                                             ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |DE0_TDC|horrible_counter[1]                                                               ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |DE0_TDC|accumulation:comb_665|main_counter[8]                                             ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DE0_TDC|phase_controller:ph_ctl|clk_max[12]                                               ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DE0_TDC|phase_controller:ph_ctl|clk_max[7]                                                ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE0_TDC|phase_controller:ph_ctl|clk_max[0]                                                ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE0_TDC|byass_data:byass_data1|count_byass[1]                                             ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_pos|counter[2] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_neg|counter[6] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[1].tc_inst|integer_counter:int_ctr_pos|counter[9] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[1].tc_inst|integer_counter:int_ctr_neg|counter[2] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[2].tc_inst|integer_counter:int_ctr_pos|counter[4] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[2].tc_inst|integer_counter:int_ctr_neg|counter[4] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[3].tc_inst|integer_counter:int_ctr_pos|counter[6] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[3].tc_inst|integer_counter:int_ctr_neg|counter[3] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[4].tc_inst|integer_counter:int_ctr_pos|counter[8] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[4].tc_inst|integer_counter:int_ctr_neg|counter[1] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[5].tc_inst|integer_counter:int_ctr_pos|counter[1] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[5].tc_inst|integer_counter:int_ctr_neg|counter[6] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[6].tc_inst|integer_counter:int_ctr_pos|counter[0] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_pos|counter[1] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_neg|counter[1] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[1].tc_inst|integer_counter:int_ctr_pos|counter[6] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[1].tc_inst|integer_counter:int_ctr_neg|counter[4] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[2].tc_inst|integer_counter:int_ctr_pos|counter[9] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[2].tc_inst|integer_counter:int_ctr_neg|counter[0] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[3].tc_inst|integer_counter:int_ctr_pos|counter[9] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[3].tc_inst|integer_counter:int_ctr_neg|counter[8] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[4].tc_inst|integer_counter:int_ctr_pos|counter[0] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[4].tc_inst|integer_counter:int_ctr_neg|counter[7] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[5].tc_inst|integer_counter:int_ctr_pos|counter[6] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[5].tc_inst|integer_counter:int_ctr_neg|counter[4] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[6].tc_inst|integer_counter:int_ctr_pos|counter[7] ;
 ; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[6].tc_inst|integer_counter:int_ctr_neg|counter[8] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[7].tc_inst|integer_counter:int_ctr_pos|counter[8] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[7].tc_inst|integer_counter:int_ctr_neg|counter[5] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[7].tc_inst|integer_counter:int_ctr_pos|counter[1] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[7].tc_inst|integer_counter:int_ctr_neg|counter[0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE0_TDC|UART:uart_test|cntStrobe[1]                                                       ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |DE0_TDC|byass_data:byass_data1|output_buf[3]                                              ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |DE0_TDC|byass_data:byass_data1|output_buf[5]                                              ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |DE0_TDC|byass_data:byass_data1|output_buf[6]                                              ;
+; 32:1               ; 8 bits    ; 168 LEs       ; 48 LEs               ; 120 LEs                ; Yes        ; |DE0_TDC|result_biass_2[8]                                                                 ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |DE0_TDC|result_biass[0]                                                                   ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE0_TDC|result_biass[7]                                                                   ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE0_TDC|result_biass[9]                                                                   ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|result_biass[13]                                                                  ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |DE0_TDC|UART:uart_test|shiftData[2]                                                       ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |DE0_TDC|UART:uart_test|cntBit[3]                                                          ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|result_biass[15]                                                                  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |DE0_TDC|UART:uart_test|state                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 
 
@@ -3127,6 +3160,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:uart_test ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; countOfStrobe  ; 250   ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                                                  ;
 +-------------------------------+---------------------------------------------------------------+
@@ -3357,23 +3400,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "spi_data_transm:spi_data_transm1"                                                            ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; spi_clk       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; diffout[7..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:uart_test"                                                                                                                                                                         ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                           ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data       ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; transm_rdy ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                               ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "accumulation:comb_428"                                                                       ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; result[19..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "spi_data_transm:spi_data_transm1"                                                      ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; spi_clk ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "accumulation:comb_665"                                                                        ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; result[19..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -3488,16 +3540,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "phase_controller:ph_ctl"                                                                                                                                                                ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; rst        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; rst[-1]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; sw_ctl     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; sw_ctl[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "phase_controller:ph_ctl"                                                                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rst     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rst[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -3505,7 +3555,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -3515,7 +3565,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Jun 23 20:41:21 2018
+    Info: Processing started: Tue Jun 26 20:24:09 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de0_tdc -c de0_tdc
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file time_counter.sv
@@ -3578,18 +3628,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file spi_dat
     Info (12023): Found entity 1: spi_data_transm
 Info (12021): Found 1 design units, including 1 entities, in source file accumulation.v
     Info (12023): Found entity 1: accumulation
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/output_files/uart.v
+    Info (12023): Found entity 1: UART
 Warning (10236): Verilog HDL Implicit Net warning at time_counter.sv(16): created implicit net for "mod_posedge"
 Warning (10236): Verilog HDL Implicit Net warning at time_counter.sv(16): created implicit net for "signal_xor"
 Warning (10236): Verilog HDL Implicit Net warning at time_counter.sv(17): created implicit net for "mod_negedge"
-Warning (10236): Verilog HDL Implicit Net warning at DE0_TDC.v(130): created implicit net for "pll_rst"
-Critical Warning (10846): Verilog HDL Instantiation warning at DE0_TDC.v(231): instance has no name
+Warning (10236): Verilog HDL Implicit Net warning at DE0_TDC.v(133): created implicit net for "pll_rst"
+Critical Warning (10846): Verilog HDL Instantiation warning at DE0_TDC.v(317): instance has no name
 Info (12127): Elaborating entity "DE0_TDC" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at DE0_TDC.v(130): object "pll_rst" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(149): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(170): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(191): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(228): truncated value with size 20 to match size of target (16)
-Warning (10034): Output port "LED" at DE0_TDC.v(48) has no driver
+Warning (10036): Verilog HDL or VHDL warning at DE0_TDC.v(133): object "pll_rst" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(152): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(173): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(194): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(217): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(230): truncated value with size 32 to match size of target (5)
+Warning (10034): Output port "LED" at DE0_TDC.v(49) has no driver
 Info (12128): Elaborating entity "phase_controller" for hierarchy "phase_controller:ph_ctl"
 Warning (10230): Verilog HDL assignment warning at phase_controller.sv(32): truncated value with size 32 to match size of target (16)
 Warning (10230): Verilog HDL assignment warning at phase_controller.sv(43): truncated value with size 32 to match size of target (16)
@@ -3872,9 +3925,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_9v91" for hierarchy "singen:singen1|altsyncram:altsyncram_component|altsyncram_9v91:auto_generated"
 Info (12128): Elaborating entity "spi_data_transm" for hierarchy "spi_data_transm:spi_data_transm"
 Warning (10036): Verilog HDL or VHDL warning at spi_data_transm.v(57): object "spi_write_negedge" assigned a value but never read
-Info (12128): Elaborating entity "accumulation" for hierarchy "accumulation:comb_428"
+Info (12128): Elaborating entity "accumulation" for hierarchy "accumulation:comb_665"
 Warning (10230): Verilog HDL assignment warning at accumulation.v(20): truncated value with size 32 to match size of target (10)
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "UART" for hierarchy "UART:uart_test"
+Warning (10230): Verilog HDL assignment warning at UART.v(39): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at UART.v(51): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at UART.v(55): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at UART.v(64): truncated value with size 32 to match size of target (8)
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[0]" is stuck at GND
     Warning (13410): Pin "LED[1]" is stuck at GND
@@ -3885,31 +3943,29 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[6]" is stuck at GND
     Warning (13410): Pin "LED[7]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 139 registers lost all their fanouts during netlist optimizations.
+Info (17049): 140 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/output_files/de0_tdc.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 2 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 9 input pin(s) that do not drive logic
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]"
-    Warning (15610): No output dependent on input pin "SW[0]"
     Warning (15610): No output dependent on input pin "SW[1]"
-    Warning (15610): No output dependent on input pin "SW[3]"
-    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[2]"
     Warning (15610): No output dependent on input pin "SW[5]"
     Warning (15610): No output dependent on input pin "SW[6]"
     Warning (15610): No output dependent on input pin "SW[7]"
     Warning (15610): No output dependent on input pin "SW[9]"
-Info (21057): Implemented 3219 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3512 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 3158 logic cells
+    Info (21059): Implemented 37 output pins
+    Info (21061): Implemented 3450 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 2 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 80 warnings
-    Info: Peak virtual memory: 537 megabytes
-    Info: Processing ended: Sat Jun 23 20:41:32 2018
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:12
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 83 warnings
+    Info: Peak virtual memory: 541 megabytes
+    Info: Processing ended: Tue Jun 26 20:24:22 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +------------------------------------------+
