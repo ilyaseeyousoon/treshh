@@ -1,8 +1,10 @@
 Warning (10268): Verilog HDL information at FRACTIONAL_Counter2.v(59): always construct contains both blocking and non-blocking assignments
 Warning (10268): Verilog HDL information at frac_tb.sv(52): always construct contains both blocking and non-blocking assignments
-Warning (10268): Verilog HDL information at DE0_TDC.v(137): always construct contains both blocking and non-blocking assignments
-Warning (10268): Verilog HDL information at DE0_TDC.v(158): always construct contains both blocking and non-blocking assignments
-Warning (10268): Verilog HDL information at DE0_TDC.v(179): always construct contains both blocking and non-blocking assignments
-Warning (10268): Verilog HDL information at DE0_TDC.v(205): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at DE0_TDC.v(141): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at DE0_TDC.v(162): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at DE0_TDC.v(183): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at DE0_TDC.v(204): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at DE0_TDC.v(233): always construct contains both blocking and non-blocking assignments
 Info (10281): Verilog HDL Declaration information at DE0_TDC.v(54): object "SIGNAL" differs only in case from object "signal" in the same scope
 Info (10281): Verilog HDL Declaration information at DE0_TDC.v(55): object "MOD" differs only in case from object "mod" in the same scope
+Warning (10268): Verilog HDL information at UART.v(23): always construct contains both blocking and non-blocking assignments

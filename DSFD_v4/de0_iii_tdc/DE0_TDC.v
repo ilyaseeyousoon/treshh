@@ -94,14 +94,18 @@ reg[15:0] clk_div3;
 reg[10:0] clk_40k_d;
 reg clk_40k;
 
+reg[15:0] clk_div4;
+reg[10:0] clk_20m_d;
+reg clk_20m;
+
 wire [19:0]result_sum;
 
 
 
 wire signal, mod, mod_d, dm_clk, diff_dval, tdc_input_signal, ph_mod;
 
-assign TEST_SIGNAL=ph_mod;
-assign TEST_SIGNAL2=clk_10k;
+assign TEST_SIGNAL=ff;
+assign TEST_SIGNAL2=TxD;
 
 
 
@@ -197,6 +201,30 @@ always @ (posedge pll_clk[0] or negedge rst)
 			end
 	end
 	
+			always @ (posedge pll_clk[0] or negedge rst)
+	begin
+		if(!rst)
+			begin
+				clk_div4 <= 0;
+				clk_20m <= 0;
+				clk_20m_d <= 0;
+			end
+		else
+			begin	
+				if(clk_div4 == 3) // поменять и протестить работу spi!!!
+					begin																													
+						clk_div4 = 0;
+						clk_20m <= ~clk_20m;
+					end
+				else clk_div4 <= clk_div4 + 1;
+				
+				clk_20m_d <= {clk_20m_d[9:0], clk_20m};
+			end
+	end
+	
+	
+	
+	
 	reg [7:0] temp =0;
 		reg [4:0] horrible_counter,horrible_counter_2= 5'd0;
 	reg key_flag,key_flag_2=0;
@@ -240,7 +268,7 @@ always @ (posedge pll_clk[0] or negedge rst)
 				  end 
 				  
 				  
-				  
+	/*			  
 				  	case(horrible_counter[4:0])
 	0: 	begin result_biass=result_sum[15:0]; end
 	1:		begin result_biass={result_sum[14:0],temp[0]};   end
@@ -253,7 +281,30 @@ always @ (posedge pll_clk[0] or negedge rst)
 	8:		begin result_biass={result_sum[7:0],temp[7:0]}; end
 	9:		begin result_biass={result_sum[7:0],temp[7:0]}; end
 	endcase
-				
+		*/	
+				case(horrible_counter[4:0])
+   0:		begin result_biass=result_sum[15:0]+16'd30000; end
+	1:		begin diff_out_temp=result_sum[15:0]+16'd16383;   
+	result_biass={diff_out_temp[14:0],temp[0]};   end
+	2:		begin diff_out_temp=result_sum[15:0]+16'd8191;   
+	result_biass={diff_out_temp[13:0],temp[1:0]};   end
+	3:		begin diff_out_temp=result_sum[15:0]+16'd4095;   
+	result_biass={diff_out_temp[12:0],temp[2:0]};   end
+	4:		begin diff_out_temp=result_sum[15:0]+16'd2047;   
+	result_biass={diff_out_temp[11:0],temp[3:0]};   end	
+	5:		begin diff_out_temp=result_sum[15:0]+16'd1023;   
+	result_biass={diff_out_temp[10:0],temp[4:0]};   end	
+	6:		begin diff_out_temp=result_sum[15:0]+16'd511;   
+	result_biass={diff_out_temp[9:0],temp[5:0]};   end	
+	7:		begin diff_out_temp=diff_out_0[15:0]+16'd255;   
+	result_biass={diff_out_temp[8:0],temp[6:0]};   end	
+	8:		begin diff_out_temp=result_sum[15:0]+16'd125;   
+	result_biass={diff_out_temp[7:0],temp[7:0]};   end
+	9:		begin diff_out_temp=result_sum[15:0]+16'd125;   
+	result_biass={diff_out_temp[7:0],temp[7:0]};   end	
+	endcase
+	
+	
 				case(horrible_counter_2[4:0])
    0:		begin result_biass_2=diff_out_0[15:0]+16'd30000; end
 	1:		begin diff_out_temp=diff_out_0[15:0]+16'd16383;   
@@ -312,16 +363,25 @@ reg [7:0] temp =0;
 wire [15:0]  data_to_spi = SW[2] ? {diff_out_spi[7:0],temp[7:0]} : diff_out_spi[19:0];
 wire [19:0] diff_out_spi= SW[2]	? diff_out_0+ 20'd125 : diff_out_0+ 20'd30000;
 */
-spi_data_transm spi_data_transm(pll_clk[0],pll_clk[8],clk_20k,SPI3_MOSI,SPI3_CLK,SPI3_SS,result_biass_2[15:0]);
+spi_data_transm spi_data_transm(pll_clk[0],pll_clk[8],clk_10k,SPI3_MOSI,SPI3_CLK,SPI3_SS,diff_out_0[15:0]);
 
-accumulation ( ph_mod,diff_dval,  rst,  diff_out_0[15:0],  result_sum );
+//accumulation ( ph_mod,diff_dval,  rst,  diff_out_0[15:0],  result_sum );
 //wire [15:0] h={result_sum[7:0],temp[7:0] };
 wire gg;
-spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_20k,SPI1_MOSI,gg,SPI1_SS,result_biass[15:0]);
+spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_10k,SPI1_MOSI,gg,SPI1_SS,diff_out_0[15:0]);
 
-wire ff;
- UART uart_test( CLOCK_50,result_biass, clk_10k, TxD, ff);
+wire ff,ff_2;
+ UART uart_test( clk_20m,24'd66, ~diff_dval, Tdx_temp, ff);
+ wire Tdx_temp;
+ assign TxD=~Tdx_temp;
 
+//async_transmitter async_transmitter_1(clk_20m,~diff_dval, 24'd66, Tdx_temp, ff );
+
+
+
+
+
+//BaudTickGen BaudTickGen_1 (clk_20m,1,ff_2);
 //spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,SPI3_CLK,SPI3_SS,h);
 
 /*

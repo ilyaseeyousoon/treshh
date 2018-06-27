@@ -1,9 +1,4 @@
 
-State Machine - |DE0_TDC|UART:uart_test|state
-Name state.01 
-state.00 0 
-state.01 1 
-
 State Machine - |DE0_TDC|spi_data_transm:spi_data_transm1|spi_state
 Name spi_state.10001 spi_state.10000 spi_state.01111 spi_state.01110 spi_state.01101 spi_state.01100 spi_state.01011 spi_state.01010 spi_state.01001 spi_state.01000 spi_state.00111 spi_state.00110 spi_state.00101 spi_state.00100 spi_state.00011 spi_state.00010 spi_state.00001 spi_state.00000 
 spi_state.00000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 

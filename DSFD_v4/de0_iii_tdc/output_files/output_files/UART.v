@@ -1,79 +1,164 @@
-module UART #(
+module UART 
 //сountOfStrobe = Fclk(Гц)/Vuart(бит/c) = 200*10^6 / 500000 = 400
-                            parameter countOfStrobe = 100    // Параметр, который высчитывается из соотношения Fclk[Гц] / V[бит/c]
-                                                            // соответствует тому, сколько тактов приходится на передачу одного
-                                                            // бита данных при выбраной скорости UART(бит/с) и тактовой частоте CLK (Гц)
-                            )(
-                            input clk,                       // Тактовая частота
-                            input [7:0] data,              // Данные, которые собираемся передать по TX
+                            
+                            (
+									 input clk_20m,
+                            input [23:0] data,              // Данные, которые собираемся передать по TX
                             input data_rdy,                // Строб, который соответствует тому, что данные валидные и их нужно передать
-                            output reg tx = 1,          // Выходной порт, передает данные по последовательному интерфейсу
-                            output reg transm_rdy = 1   // Строб, который сигнализирует о том, что данные переданы и блок готов к передаче новых данных
+                            output  tx = 1,          // Выходной порт, передает данные по последовательному интерфейсу
+                            output  transm_rdy = 1   // Строб, который сигнализирует о том, что данные переданы и блок готов к передаче новых данных
                             );
      
-    reg [1:0] state = 2'b00;     // Регистр, который будет менять значение в зависимости от состояния нашего модуля
-    reg [7:0] cntStrobe = 0;     // Регистр - счетчик, который будет накапливаться до необходимого числа стробов (до countOfStrobe)
-    reg [4:0] cntBit = 0;         // Регистр - счетчик, указываюший на номер передаваемого бита из data
-    reg [7:0] shiftData;         // Сдвиговый регистр, в который мы записываем входные данные (data), а затем последовательно, побитово
-                                 // передаем по TX
+
+	  
+	  
+	  reg enb_flag,data_rdy_flag,data_rdy_wait,wait_enb=0;
+	  reg [3:0] data_count=4'd0;
+	  reg [7:0] data_temp_case=8'd0;
+	  wire [7:0] data_temp;
+	  assign data_temp=data_temp_case;
+	  
+	  
+	  
+	  always @(posedge clk_20m)
+begin
      
-    always @(posedge clk)
-    begin
+	  if(data_rdy && data_rdy_flag==0 && data_rdy_wait==0) 
+	 begin
+	 data_rdy_flag<=1;
+	 data_count<=0;
+	 end
+	 else
+	 begin
+	 if(data_rdy==0 && data_rdy_flag==1 && data_rdy_wait==0)
+	 data_rdy_flag<=0;
+	 end
 	 
 	 
 	 
-        case(state)
-            2'b00 :    begin
-                        if (data_rdy)
-                        begin
-                            state <= 2'b01;
-                            shiftData <= data;
-                            transm_rdy <= 0;         
-                            tx <= 0;
-                        end
-                    end
-            2'b01 :    begin
-                        if (cntBit == 0)
-                        begin
-                            if (cntStrobe < countOfStrobe)
-                                cntStrobe <= cntStrobe + 1;
-                            else
-                            begin
-                                cntStrobe <= 0;
-                                cntBit <= 1;
-                                tx <= shiftData[0];
-                                shiftData[6:0] <= shiftData[7:1];
-                            end
-                        end
-                        if (cntBit > 0 && cntBit < 9)
-                        begin
-                            if (cntStrobe < countOfStrobe)
-                                cntStrobe <= cntStrobe + 1;
-                            else
-                            begin
-                                cntStrobe <= 0;
-                                cntBit <= cntBit + 1;
-                                tx <= shiftData[0];
-                                shiftData[6:0] <= shiftData[7:1];
-                            end
-                        end
-                        if (cntBit == 9)
-                        begin
-                            if (cntStrobe < countOfStrobe)
-                            begin
-                                cntStrobe <= cntStrobe + 1;                             
-                                tx <= 1;
-                            end
-                            else
-                            begin
-                                cntStrobe <= 0;
-                                cntBit <= 0;
-                                transm_rdy <= 1;
-                                state <= 2'b00;
-                            end
-                        end
-                    end
-             
-        endcase
+	 
+	 case(data_count)
+	 
+	 4'd0: begin   
+	 if (data_rdy_flag==1 && transm_rdy==0 && enb_flag==0)
+	 begin
+	 enb_flag=1;
+	 data_temp_case<=8'd123;
+	 data_count<=data_count+1;
+	 data_rdy_wait=1;
+	 end
     end
+	 
+	 4'd1: begin   
+    if(enb_flag==1)
+	 begin
+	 wait_enb<=1;
+	 end
+	 else begin
+	 if(wait_enb==1 ) begin
+	 enb_flag=0;
+	 data_count<=data_count+1;
+	 wait_enb<=0;
+	 end
+	 end
+	 end
+	 
+	 
+	 4'd2: begin   
+	  if (transm_rdy==0 && enb_flag==0)
+	 begin
+	  data_temp_case<=8'd124;
+	 //data_temp_case< = data[23:16];
+	 enb_flag=1;
+	 data_count<=data_count+1;
+	 end
+	 end
+	 
+	 4'd3: begin   
+    if(enb_flag==1)
+	 begin
+	 wait_enb<=1;
+	 end
+	 if(wait_enb==1 ) begin
+	 enb_flag=0;
+	 data_count<=data_count+1;
+	 wait_enb<=0;
+	 end
+	 end
+	 
+
+	 4'd4: begin   
+	 if (transm_rdy==0 && enb_flag==0)
+	 begin
+	 enb_flag=1;
+	 //data_temp_case <= data[15:8];
+	 data_temp_case<=8'd125;
+	 data_count<=data_count+1;
+	 end
+	 end
+	 
+	 4'd5: begin   
+	    if(enb_flag==1)
+	 begin
+	 wait_enb<=1;
+	 end
+	 if(wait_enb==1) begin
+	 enb_flag=0;
+	 data_count<=data_count+1;
+	 wait_enb<=0;
+	 end
+	 end
+	 
+	 4'd6: begin   
+	 if (transm_rdy==0 && enb_flag==0)
+	 begin
+	 enb_flag=1;
+	 //data_temp_case <= data[15:8];
+	 data_temp_case<=8'd125;
+	 data_count<=data_count+1;
+	 end
+	 end
+	 
+	 4'd7: begin   
+	    if(enb_flag==1)
+	 begin
+	 wait_enb<=1;
+	 end
+	 if(wait_enb==1 ) begin
+	 enb_flag=0;
+	 data_count<=data_count+1;
+	 wait_enb<=0;
+	 end
+	 end
+	 
+	 4'd8: begin   
+	 if (transm_rdy==0 && enb_flag==0)
+	 begin
+	 enb_flag=1;
+	 data_temp_case<=8'd126;
+	 //data_temp_case <= data[7:0];
+	 data_count<=0;
+	 data_rdy_wait=0;
+	 end
+	 end
+	 
+
+		endcase
+		
+		
+end
+
+
+
+	  
+async_transmitter async_transmitter_1(clk_20m,enb_flag, data_temp_case, tx, transm_rdy );
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 endmodule

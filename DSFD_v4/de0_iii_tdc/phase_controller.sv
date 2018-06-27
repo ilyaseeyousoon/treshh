@@ -1,9 +1,9 @@
 module phase_controller (input clk, input rst, input [1:0] key_ctl, input sw_ctl, output mod);
 
-//localparam clk_right_fine = 10000, clk_left_fine = 9998, clk_right_coarse = 10049, clk_left_coarse = 9949, 
-//		  clk_base = 9999;
-localparam clk_right_fine = 5000, clk_left_fine = 4998, clk_right_coarse = 5049, clk_left_coarse = 4949, 
-		  clk_base = 4999;		
+localparam clk_right_fine = 10000, clk_left_fine = 9998, clk_right_coarse = 10049, clk_left_coarse = 9949, 
+	  clk_base = 9999;
+//localparam clk_right_fine = 5000, clk_left_fine = 4998, clk_right_coarse = 5049, clk_left_coarse = 4949, 
+//		  clk_base = 4999;		
 	  
 /*
 localparam clk_right_fine = 100000, clk_left_fine = 99998, clk_right_coarse = 100049, clk_left_coarse = 99949, 
