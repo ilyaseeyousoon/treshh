@@ -54,12 +54,12 @@ begin
 	 begin
 	 wait_enb<=1;
 	 end
-	 else begin
+	 
 	 if(wait_enb==1 ) begin
 	 enb_flag=0;
 	 data_count<=data_count+1;
 	 wait_enb<=0;
-	 end
+	 
 	 end
 	 end
 	 
@@ -67,7 +67,7 @@ begin
 	 4'd2: begin   
 	  if (transm_rdy==0 && enb_flag==0)
 	 begin
-	  data_temp_case<=8'd124;
+	  data_temp_case<=data[23:16];
 	 //data_temp_case< = data[23:16];
 	 enb_flag=1;
 	 data_count<=data_count+1;
@@ -92,7 +92,7 @@ begin
 	 begin
 	 enb_flag=1;
 	 //data_temp_case <= data[15:8];
-	 data_temp_case<=8'd125;
+	 data_temp_case<=data[15:8];
 	 data_count<=data_count+1;
 	 end
 	 end
@@ -114,10 +114,12 @@ begin
 	 begin
 	 enb_flag=1;
 	 //data_temp_case <= data[15:8];
-	 data_temp_case<=8'd125;
+	 data_temp_case<=data[7:0];
 	 data_count<=data_count+1;
 	 end
 	 end
+	 
+	 
 	 
 	 4'd7: begin   
 	    if(enb_flag==1)
@@ -126,19 +128,9 @@ begin
 	 end
 	 if(wait_enb==1 ) begin
 	 enb_flag=0;
-	 data_count<=data_count+1;
 	 wait_enb<=0;
-	 end
-	 end
-	 
-	 4'd8: begin   
-	 if (transm_rdy==0 && enb_flag==0)
-	 begin
-	 enb_flag=1;
-	 data_temp_case<=8'd126;
-	 //data_temp_case <= data[7:0];
-	 data_count<=0;
 	 data_rdy_wait=0;
+	 data_count<=0;
 	 end
 	 end
 	 

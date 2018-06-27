@@ -365,29 +365,32 @@ wire [19:0] diff_out_spi= SW[2]	? diff_out_0+ 20'd125 : diff_out_0+ 20'd30000;
 */
 spi_data_transm spi_data_transm(pll_clk[0],pll_clk[8],clk_10k,SPI3_MOSI,SPI3_CLK,SPI3_SS,diff_out_0[15:0]);
 
-//accumulation ( ph_mod,diff_dval,  rst,  diff_out_0[15:0],  result_sum );
+accumulation ( ph_mod,diff_dval,  rst,  diff_out_0[15:0],  result_sum );
 //wire [15:0] h={result_sum[7:0],temp[7:0] };
 wire gg;
 spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_10k,SPI1_MOSI,gg,SPI1_SS,diff_out_0[15:0]);
 
 wire ff,ff_2;
- UART uart_test( clk_20m,24'd66, ~diff_dval, Tdx_temp, ff);
+
+//*********************************************//
+
+//TEST ВЕРСИЯ МОДУЛЯ ДЛЯ ПРОВЕРКИ В МАТЛАБЕ
+// UART uart_test( clk_20m,24'd10785957, clk_10k, Tdx_temp, ff);
+
+ // Рабочая версия uart
+ UART uart_test( clk_20m,{temp[7:0],result_biass_2[15:0]}, clk_10k, Tdx_temp, ff);
+ 
  wire Tdx_temp;
  assign TxD=~Tdx_temp;
-
-//async_transmitter async_transmitter_1(clk_20m,~diff_dval, 24'd66, Tdx_temp, ff );
-
-
-
-
-
-//BaudTickGen BaudTickGen_1 (clk_20m,1,ff_2);
-//spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,SPI3_CLK,SPI3_SS,h);
-
+ 
 /*
-spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_40k,SPI1_MOSI,SPI3_CLK,SPI1_SS,sin_to_dac[7:0]);
-wire gg;
-spi_data_transm spi_data_transm2(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,gg,SPI3_SS,sin_to_dac[7:0]);
+reg  [23:0]count_test=24'd0;
+always @ (posedge clk_20k )
+begin
+
+
+count_test<=count_test+1;
+end
 */
 
 

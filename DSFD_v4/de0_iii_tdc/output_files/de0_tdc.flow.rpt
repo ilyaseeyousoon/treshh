@@ -1,5 +1,5 @@
 Flow report for de0_tdc
-Wed Jun 27 21:54:42 2018
+Thu Jun 28 01:57:35 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Wed Jun 27 21:54:42 2018      ;
+; Flow Status                        ; Successful - Thu Jun 28 01:57:35 2018      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; de0_tdc                                    ;
 ; Top-level Entity Name              ; DE0_TDC                                    ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F484C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 1,066 / 15,408 ( 7 % )                     ;
-;     Total combinational functions  ; 763 / 15,408 ( 5 % )                       ;
-;     Dedicated logic registers      ; 906 / 15,408 ( 6 % )                       ;
-; Total registers                    ; 906                                        ;
+; Total logic elements               ; 1,240 / 15,408 ( 8 % )                     ;
+;     Total combinational functions  ; 932 / 15,408 ( 6 % )                       ;
+;     Dedicated logic registers      ; 923 / 15,408 ( 6 % )                       ;
+; Total registers                    ; 923                                        ;
 ; Total pins                         ; 52 / 347 ( 15 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 4,096 / 516,096 ( < 1 % )                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/27/2018 21:53:56 ;
+; Start date & time ; 06/28/2018 01:56:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; de0_tdc             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 246320234796001.153012563501612 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 1098294939155.153014021405844   ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; tdc_tb         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; ph_tb          ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tdc_tb                          ; --            ; --          ; eda_simulation ;
@@ -122,7 +122,6 @@ applicable agreement for further details.
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING           ; --            ; DE0_TDC     ; Top            ;
 ; PARTITION_NETLIST_TYPE               ; SOURCE                          ; --            ; DE0_TDC     ; Top            ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                    ; --            ; --          ; --             ;
-; SLD_FILE                             ; db/2_auto_stripped.stp          ; --            ; --          ; --             ;
 ; USE_SIGNALTAP_FILE                   ; output_files/2.stp              ; --            ; --          ; --             ;
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
 
@@ -132,12 +131,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 517 MB              ; 00:00:08                           ;
-; Fitter                    ; 00:00:16     ; 1.0                     ; 767 MB              ; 00:00:16                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 457 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 494 MB              ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 416 MB              ; 00:00:05                           ;
-; Total                     ; 00:00:40     ; --                      ; --                  ; 00:00:40                           ;
+; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 530 MB              ; 00:00:06                           ;
+; Fitter                    ; 00:00:13     ; 1.0                     ; 771 MB              ; 00:00:13                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 475 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 504 MB              ; 00:00:06                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 429 MB              ; 00:00:04                           ;
+; Total                     ; 00:00:34     ; --                      ; --                  ; 00:00:32                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -146,11 +145,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; ЛабораторияФКВ   ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; ЛабораторияФКВ   ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; ЛабораторияФКВ   ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; ЛабораторияФКВ   ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; ЛабораторияФКВ   ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; ilya             ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; ilya             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; ilya             ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; ilya             ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; ilya             ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
