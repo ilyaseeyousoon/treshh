@@ -3,7 +3,7 @@ module UART
                             
                             (
 									 input clk_20m,
-                            input [23:0] data,              // Данные, которые собираемся передать по TX
+                            input [15:0] data,              // Данные, которые собираемся передать по TX
                             input data_rdy,                // Строб, который соответствует тому, что данные валидные и их нужно передать
                             output  tx = 1,          // Выходной порт, передает данные по последовательному интерфейсу
                             output  transm_rdy = 1   // Строб, который сигнализирует о том, что данные переданы и блок готов к передаче новых данных
@@ -64,30 +64,8 @@ begin
 	 end
 	 
 	 
-	 4'd2: begin   
-	  if (transm_rdy==0 && enb_flag==0)
-	 begin
-	  data_temp_case<=data[23:16];
-	 //data_temp_case< = data[23:16];
-	 enb_flag=1;
-	 data_count<=data_count+1;
-	 end
-	 end
-	 
-	 4'd3: begin   
-    if(enb_flag==1)
-	 begin
-	 wait_enb<=1;
-	 end
-	 if(wait_enb==1 ) begin
-	 enb_flag=0;
-	 data_count<=data_count+1;
-	 wait_enb<=0;
-	 end
-	 end
-	 
 
-	 4'd4: begin   
+	 4'd2: begin   
 	 if (transm_rdy==0 && enb_flag==0)
 	 begin
 	 enb_flag=1;
@@ -97,7 +75,7 @@ begin
 	 end
 	 end
 	 
-	 4'd5: begin   
+	 4'd3: begin   
 	    if(enb_flag==1)
 	 begin
 	 wait_enb<=1;
@@ -109,7 +87,7 @@ begin
 	 end
 	 end
 	 
-	 4'd6: begin   
+	 4'd4: begin   
 	 if (transm_rdy==0 && enb_flag==0)
 	 begin
 	 enb_flag=1;
@@ -121,7 +99,7 @@ begin
 	 
 	 
 	 
-	 4'd7: begin   
+	 4'd5: begin   
 	    if(enb_flag==1)
 	 begin
 	 wait_enb<=1;

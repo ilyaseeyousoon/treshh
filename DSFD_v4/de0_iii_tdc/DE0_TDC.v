@@ -375,10 +375,10 @@ wire ff,ff_2;
 //*********************************************//
 
 //TEST ВЕРСИЯ МОДУЛЯ ДЛЯ ПРОВЕРКИ В МАТЛАБЕ
- UART uart_test( clk_20m,24'd10785957, clk_10k, Tdx_temp, ff);
+ //UART uart_test( clk_20m,24'd10785957, clk_10k, Tdx_temp, ff);
 
  // Рабочая версия uart
- //UART uart_test( clk_20m,{temp[7:0],result_biass_2[15:0]}, clk_10k, Tdx_temp, ff);
+ UART uart_test( clk_20m,{temp[7:0],result_biass_2[15:0]}, clk_10k, Tdx_temp, ff);
  
  wire Tdx_temp;
  assign TxD=~Tdx_temp;
