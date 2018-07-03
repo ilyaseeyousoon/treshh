@@ -296,7 +296,7 @@ always @ (posedge pll_clk[0] or negedge rst)
 	result_biass={diff_out_temp[10:0],temp[4:0]};   end	
 	6:		begin diff_out_temp=result_sum[15:0]+16'd511;   
 	result_biass={diff_out_temp[9:0],temp[5:0]};   end	
-	7:		begin diff_out_temp=diff_out_0[15:0]+16'd255;   
+	7:		begin diff_out_temp=result_sum[15:0]+16'd255;   
 	result_biass={diff_out_temp[8:0],temp[6:0]};   end	
 	8:		begin diff_out_temp=result_sum[15:0]+16'd125;   
 	result_biass={diff_out_temp[7:0],temp[7:0]};   end
@@ -333,7 +333,7 @@ always @ (posedge pll_clk[0] or negedge rst)
 
 	
 //phase_controller ph_ctl(pll_clk[0], 1, KEY[1:0], SW[0], ph_mod);
-  phase_controller ph_ctl(pll_clk[0], 1, KEY[1:0], SW[0], ph_mod);
+  phase_controller ph_ctl(pll_clk[0], 1, KEY[1:0], SW[1:0], ph_mod);
 
 //signal_pll pll_sg (.areset(~pll_rst), .inclk0(CLOCK_50), .c0(dm_clk), .c1(mod));
 
@@ -363,22 +363,22 @@ reg [7:0] temp =0;
 wire [15:0]  data_to_spi = SW[2] ? {diff_out_spi[7:0],temp[7:0]} : diff_out_spi[19:0];
 wire [19:0] diff_out_spi= SW[2]	? diff_out_0+ 20'd125 : diff_out_0+ 20'd30000;
 */
-spi_data_transm spi_data_transm(pll_clk[0],pll_clk[8],clk_10k,SPI3_MOSI,SPI3_CLK,SPI3_SS,diff_out_0[15:0]);
+spi_data_transm spi_data_transm(pll_clk[0],pll_clk[8],clk_10k,SPI3_MOSI,SPI3_CLK,SPI3_SS,result_biass[15:0]);
 
 accumulation ( ph_mod,diff_dval,  rst,  diff_out_0[15:0],  result_sum );
 //wire [15:0] h={result_sum[7:0],temp[7:0] };
 wire gg;
-spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_10k,SPI1_MOSI,gg,SPI1_SS,diff_out_0[15:0]);
+spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_10k,SPI1_MOSI,gg,SPI1_SS,result_biass_2[15:0]);
 
 wire ff,ff_2;
 
 //*********************************************//
 
 //TEST ВЕРСИЯ МОДУЛЯ ДЛЯ ПРОВЕРКИ В МАТЛАБЕ
-// UART uart_test( clk_20m,24'd10785957, clk_10k, Tdx_temp, ff);
+ UART uart_test( clk_20m,24'd10785957, clk_10k, Tdx_temp, ff);
 
  // Рабочая версия uart
- UART uart_test( clk_20m,{temp[7:0],result_biass_2[15:0]}, clk_10k, Tdx_temp, ff);
+ //UART uart_test( clk_20m,{temp[7:0],result_biass_2[15:0]}, clk_10k, Tdx_temp, ff);
  
  wire Tdx_temp;
  assign TxD=~Tdx_temp;

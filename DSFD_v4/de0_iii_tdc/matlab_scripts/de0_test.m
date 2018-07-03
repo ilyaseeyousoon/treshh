@@ -6,9 +6,9 @@ close all;
 %% 
 buf_size=50000;
 
-s1 = serial('COM4','DataBits',8); 
+s1 = serial('COM17','DataBits',8); 
 s1.InputBufferSize = buf_size; 
-s1.BaudRate = 781250; 
+s1.BaudRate = 500000; 
 s1.Timeout=6; 
 s1.StopBits =2; 
 d=0;
@@ -26,6 +26,7 @@ for i=1:buf_size
     
        h=i; 
        d=i; 
+    
        break;
     end
     end

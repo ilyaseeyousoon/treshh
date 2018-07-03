@@ -22,7 +22,7 @@ module async_transmitter(
 // TxD_data is latched so that it doesn't have to stay valid while it is being sent
 
 parameter ClkFrequency = 25000000;	// 25MHz
-parameter Baud = 781250;
+parameter Baud = 500000;
 
 generate
 	if(ClkFrequency<Baud*8 && (ClkFrequency % Baud!=0)) ASSERTION_ERROR PARAMETER_OUT_OF_RANGE("Frequency incompatible with requested Baud rate");

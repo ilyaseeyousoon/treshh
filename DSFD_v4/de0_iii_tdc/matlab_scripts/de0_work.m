@@ -5,7 +5,7 @@ close all;
 %% 
 buf_size=50000;
 
-s1 = serial('COM4','DataBits',8); 
+s1 = serial('COM17','DataBits',8); 
 s1.InputBufferSize = buf_size; 
 s1.BaudRate = 781250; 
 s1.Timeout=6; 
@@ -31,14 +31,18 @@ for i=1:buf_size
     
 end
 
-z(buf_size)=0;
+% z(buf_size)=0;
 m=1;
 for j=h:4:(buf_size-50-d)
     
  z(m)=temp(j+1)*65536+temp(j+2)*256+temp(j+3);
-
+z(m)=z(m)-15600000;
+if(z(m)<0)
+    z(m)=0;
+end
 
   m=m+1;
          
 end
 
+plot(z);
