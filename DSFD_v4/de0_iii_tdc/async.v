@@ -22,7 +22,7 @@ module async_transmitter(
 // TxD_data is latched so that it doesn't have to stay valid while it is being sent
 
 parameter ClkFrequency = 25000000;	// 25MHz
-parameter Baud = 1000000;
+parameter Baud = 1250000;
 
 generate
 	if(ClkFrequency<Baud*8 && (ClkFrequency % Baud!=0)) ASSERTION_ERROR PARAMETER_OUT_OF_RANGE("Frequency incompatible with requested Baud rate");
@@ -186,7 +186,7 @@ module BaudTickGen(
 	output tick  // generate a tick at the specified baud rate * oversampling
 );
 parameter ClkFrequency = 25000000;
-parameter Baud = 1000000;
+parameter Baud = 1250000;
 parameter Oversampling = 1;
 
 function integer log2(input integer v); begin log2=0; while(v>>log2) log2=log2+1; end endfunction

@@ -52,7 +52,40 @@ SPI3_MOSI <= spi_data_transm:spi_data_transm.port3
 SPI3_SS <= spi_data_transm:spi_data_transm.port5
 SPI1_MOSI <= spi_data_transm:spi_data_transm1.port3
 SPI1_SS <= spi_data_transm:spi_data_transm1.port5
-TxD <= UART:uart_test.port3
+TxD_direct <= UART:uart_test.port3
+TxD <= <VCC>
+SEG_2DP <= SEG7_LUT:test_led2.port1
+SEG_3DP <= SEG7_LUT:test_led3.port1
+SEG_1DP <= SEG7_LUT:test_led1.port1
+SEG_0DP <= SEG7_LUT:test_led0.port1
+SEG_0[0] <= SEG7_LUT:test_led0.port0
+SEG_0[1] <= SEG7_LUT:test_led0.port0
+SEG_0[2] <= SEG7_LUT:test_led0.port0
+SEG_0[3] <= SEG7_LUT:test_led0.port0
+SEG_0[4] <= SEG7_LUT:test_led0.port0
+SEG_0[5] <= SEG7_LUT:test_led0.port0
+SEG_0[6] <= SEG7_LUT:test_led0.port0
+SEG_1[0] <= SEG7_LUT:test_led1.port0
+SEG_1[1] <= SEG7_LUT:test_led1.port0
+SEG_1[2] <= SEG7_LUT:test_led1.port0
+SEG_1[3] <= SEG7_LUT:test_led1.port0
+SEG_1[4] <= SEG7_LUT:test_led1.port0
+SEG_1[5] <= SEG7_LUT:test_led1.port0
+SEG_1[6] <= SEG7_LUT:test_led1.port0
+SEG_2[0] <= SEG7_LUT:test_led2.port0
+SEG_2[1] <= SEG7_LUT:test_led2.port0
+SEG_2[2] <= SEG7_LUT:test_led2.port0
+SEG_2[3] <= SEG7_LUT:test_led2.port0
+SEG_2[4] <= SEG7_LUT:test_led2.port0
+SEG_2[5] <= SEG7_LUT:test_led2.port0
+SEG_2[6] <= SEG7_LUT:test_led2.port0
+SEG_3[0] <= SEG7_LUT:test_led3.port0
+SEG_3[1] <= SEG7_LUT:test_led3.port0
+SEG_3[2] <= SEG7_LUT:test_led3.port0
+SEG_3[3] <= SEG7_LUT:test_led3.port0
+SEG_3[4] <= SEG7_LUT:test_led3.port0
+SEG_3[5] <= SEG7_LUT:test_led3.port0
+SEG_3[6] <= SEG7_LUT:test_led3.port0
 
 
 |DE0_TDC|phase_controller:ph_ctl
@@ -23305,14 +23338,6 @@ data[12] => data_temp_case.DATAB
 data[13] => data_temp_case.DATAB
 data[14] => data_temp_case.DATAB
 data[15] => data_temp_case.DATAB
-data[16] => data_temp_case.DATAB
-data[17] => data_temp_case.DATAB
-data[18] => data_temp_case.DATAB
-data[19] => data_temp_case.DATAB
-data[20] => data_temp_case.DATAB
-data[21] => data_temp_case.DATAB
-data[22] => data_temp_case.DATAB
-data[23] => data_temp_case.DATAB
 data_rdy => always0.IN1
 data_rdy => always0.IN1
 tx <= async_transmitter:async_transmitter_1.port3
@@ -23339,6 +23364,8 @@ TxD_busy <= TxD_busy.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |DE0_TDC|UART:uart_test|async_transmitter:async_transmitter_1|BaudTickGen:tickgen
+clk => Acc[1].CLK
+clk => Acc[2].CLK
 clk => Acc[3].CLK
 clk => Acc[4].CLK
 clk => Acc[5].CLK
@@ -23350,7 +23377,6 @@ clk => Acc[10].CLK
 clk => Acc[11].CLK
 clk => Acc[12].CLK
 clk => Acc[13].CLK
-clk => Acc[14].CLK
 enable => Acc.OUTPUTSELECT
 enable => Acc.OUTPUTSELECT
 enable => Acc.OUTPUTSELECT
@@ -23363,6 +23389,67 @@ enable => Acc.OUTPUTSELECT
 enable => Acc.OUTPUTSELECT
 enable => Acc.OUTPUTSELECT
 enable => Acc.OUTPUTSELECT
-tick <= Acc[14].DB_MAX_OUTPUT_PORT_TYPE
+enable => Acc.OUTPUTSELECT
+tick <= Acc[13].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TDC|SEG7_LUT:test_led1
+oSEG[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+oSEG_DP <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+iDIG[0] => Decoder0.IN3
+iDIG[1] => Decoder0.IN2
+iDIG[2] => Decoder0.IN1
+iDIG[3] => Decoder0.IN0
+
+
+|DE0_TDC|SEG7_LUT:test_led2
+oSEG[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+oSEG_DP <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+iDIG[0] => Decoder0.IN3
+iDIG[1] => Decoder0.IN2
+iDIG[2] => Decoder0.IN1
+iDIG[3] => Decoder0.IN0
+
+
+|DE0_TDC|SEG7_LUT:test_led3
+oSEG[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+oSEG_DP <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+iDIG[0] => Decoder0.IN3
+iDIG[1] => Decoder0.IN2
+iDIG[2] => Decoder0.IN1
+iDIG[3] => Decoder0.IN0
+
+
+|DE0_TDC|SEG7_LUT:test_led0
+oSEG[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+oSEG_DP <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+iDIG[0] => Decoder0.IN3
+iDIG[1] => Decoder0.IN2
+iDIG[2] => Decoder0.IN1
+iDIG[3] => Decoder0.IN0
 
 

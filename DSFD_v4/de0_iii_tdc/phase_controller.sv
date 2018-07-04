@@ -4,7 +4,7 @@ localparam clk_right_fine = 10000, clk_left_fine = 9998, clk_right_coarse = 1004
 	  clk_base = 9999, clk_right_2500=12500,clk_left_2500=7500 ,clk_5000=5000;
 	  
 //localparam clk_right_fine = 5000, clk_left_fine = 4998, clk_right_coarse = 5049, clk_left_coarse = 4949, 
-//		  clk_base = 4999;		
+//	  clk_base = 4999, clk_right_2500=12500,clk_left_2500=7500 ,clk_5000=5000;		
 	  
 /*
 localparam clk_right_fine = 100000, clk_left_fine = 99998, clk_right_coarse = 100049, clk_left_coarse = 99949, 

@@ -30,7 +30,16 @@ module DE0_TDC(
 	SPI3_SS,
 	SPI1_MOSI,
 	SPI1_SS,
-	TxD
+	TxD_direct,
+	TxD,
+	SEG_2DP,
+	SEG_3DP,
+	SEG_1DP,
+	SEG_0DP,
+	SEG_0,
+	SEG_1,
+	SEG_2,
+	SEG_3
 );
 
 //=======================================================
@@ -66,6 +75,16 @@ output SPI3_CLK;
 output SPI1_MOSI;
 
 output TxD;
+output TxD_direct;
+
+output wire	SEG_2DP;
+output wire	SEG_3DP;
+output wire	SEG_1DP;
+output wire	SEG_0DP;
+output wire	[6:0] SEG_0;
+output wire	[6:0] SEG_1;
+output wire	[6:0] SEG_2;
+output wire	[6:0] SEG_3;
 
 output[7:0] DAC_OUT,DAC2_DB;
 output DAC_WR;
@@ -105,7 +124,7 @@ wire [19:0]result_sum;
 wire signal, mod, mod_d, dm_clk, diff_dval, tdc_input_signal, ph_mod;
 
 assign TEST_SIGNAL=ff;
-assign TEST_SIGNAL2=TxD;
+assign TEST_SIGNAL2=TxD_direct;
 
 
 
@@ -230,7 +249,7 @@ always @ (posedge pll_clk[0] or negedge rst)
 	reg key_flag,key_flag_2=0;
 	reg [15:0] result_biass,result_biass_2,diff_out_temp=0;
 	
-			always @ (posedge clk_10k or negedge rst)
+			always @ (posedge clk_40k or negedge rst)
 	begin
 		if(!rst)
 			begin
@@ -306,7 +325,7 @@ always @ (posedge pll_clk[0] or negedge rst)
 	
 	
 				case(horrible_counter_2[4:0])
-   0:		begin result_biass_2=diff_out_0[15:0]+16'd30000; end
+   0:		begin result_biass_2=diff_out_0[15:0]+16'd32767; end
 	1:		begin diff_out_temp=diff_out_0[15:0]+16'd16383;   
 	result_biass_2={diff_out_temp[14:0],temp[0]};   end
 	2:		begin diff_out_temp=diff_out_0[15:0]+16'd8191;   
@@ -368,21 +387,29 @@ spi_data_transm spi_data_transm(pll_clk[0],pll_clk[8],clk_10k,SPI3_MOSI,SPI3_CLK
 accumulation ( ph_mod,diff_dval,  rst,  diff_out_0[15:0],  result_sum );
 //wire [15:0] h={result_sum[7:0],temp[7:0] };
 wire gg;
-spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_10k,SPI1_MOSI,gg,SPI1_SS,result_biass_2[15:0]);
+spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_20k,SPI1_MOSI,gg,SPI1_SS,result_biass_2[15:0]);
 
 wire ff,ff_2;
 
 //*********************************************//
 
 //TEST ВЕРСИЯ МОДУЛЯ ДЛЯ ПРОВЕРКИ В МАТЛАБЕ
- //UART uart_test( clk_20m,24'd10785957, clk_10k, Tdx_temp, ff);
+ //UART uart_test( clk_20m,16'd42053, clk_20k, TxD_direct, ff);
 
  // Рабочая версия uart
- UART uart_test( clk_20m,{temp[7:0],result_biass_2[15:0]}, clk_10k, Tdx_temp, ff);
+ UART uart_test( clk_20m,{temp[7:0],result_biass_2[15:0]}, clk_40k, TxD_direct, ff);
  
  wire Tdx_temp;
  assign TxD=~Tdx_temp;
  
+ SEG7_LUT test_led1	(	SEG_1,SEG_1DP,horrible_counter_2	);
+ SEG7_LUT test_led2	(	SEG_2,SEG_2DP,horrible_counter_2	);
+  SEG7_LUT test_led3	(	SEG_3,SEG_3DP,horrible_counter_2	);
+   SEG7_LUT test_led0	(	SEG_0,SEG_0DP,horrible_counter_2	);
+ 
+ 
+ 
+
 /*
 reg  [23:0]count_test=24'd0;
 always @ (posedge clk_20k )

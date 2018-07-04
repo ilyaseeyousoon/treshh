@@ -4,12 +4,12 @@
 clear all; 
 close all; 
 %% 
-buf_size=50000;
+buf_size=2500000;
 
 s1 = serial('COM17','DataBits',8); 
 s1.InputBufferSize = buf_size; 
-s1.BaudRate = 500000; 
-s1.Timeout=6; 
+s1.BaudRate = 1250000; 
+s1.Timeout=60; 
 s1.StopBits =2; 
 d=0;
 h=0;
@@ -21,7 +21,7 @@ temp = fread(s1);
 fclose(s1)
 
 for i=1:buf_size
-    if(i>40)
+    if(i>0)
     if (temp(i)==123)
     
        h=i; 
@@ -34,13 +34,13 @@ for i=1:buf_size
     
 end
 
-z(buf_size)=0;
+% z(round(buf_size/3))=0;
 m=1;
-for j=h:4:(buf_size-50-d)
+for j=h:3:(buf_size-50-d)
     
- z(m)=temp(j+1)*65536+temp(j+2)*256+temp(j+3);
+ z(m)=+temp(j+1)*256+temp(j+2);
 
-    if(z(m)~=10785957)
+    if(z(m)~=42053)
         error=error+1;
     end
   m=m+1;
