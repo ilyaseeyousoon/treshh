@@ -1,6 +1,6 @@
 //module mlt_x400 (input clk, input rst, input[9:0] int_data[7:0], input[6:0] frac_data[7:0], input start, 
 //					  output[19:0] out_16, output out_dval);
-module mlt_x400 (input clk, input rst, input[9:0] int_data[15:0], input[6:0] frac_data[15:0], input start, 
+module mlt_x400 (input clk, input rst, input[9:0] int_data[0:0], input[6:0] frac_data[0:0], input start, 
 					  output[36:0] out_16, output out_dval);
 
 
@@ -23,7 +23,7 @@ logic[5:0] lr_ena;
 					  
 genvar g;
 generate
-	for(g = 0; g < 16; g++) begin : gen_mult
+	for(g = 0; g <1; g++) begin : gen_mult
 		mult_x50 mlt_inst (~rst, start, clk, int_data[g], mult_out[g]);
 	end
 endgenerate

@@ -1,6 +1,6 @@
 module tdc (input[15:0] pll_clk, input rst, input signal, input mod, output[36:0] out_time, output dval, output test);
 
-parameter CTR_NUM = 16;
+parameter CTR_NUM = 1;
 
 //logic[9:0] int_mlt_data[7:0];
 //logic[6:0] frac_mlt_data[7:0];
