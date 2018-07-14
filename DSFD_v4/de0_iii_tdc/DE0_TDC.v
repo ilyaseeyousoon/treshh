@@ -415,6 +415,20 @@ reg [7:0] temp =0;
 wire [15:0]  data_to_spi = SW[2] ? {diff_out_spi[7:0],temp[7:0]} : diff_out_spi[19:0];
 wire [19:0] diff_out_spi= SW[2]	? diff_out_0+ 20'd125 : diff_out_0+ 20'd30000;
 */
+wire [19:0] diff_out_temp0;
+reg [19:0] diff_out_temp3,diff_out_temp4,diff_out_temp2,diff_out_temp1;
+
+always @ (posedge ph_mod)
+begin
+
+diff_out_temp2 <= diff_out_0;
+diff_out_temp4<=diff_out_temp2+diff_out_0;
+
+end
+
+assign diff_out_temp0=diff_out_temp4;
+
+
 spi_data_transm spi_data_transm(pll_clk[0],pll_clk[8],clk_10k,SPI3_MOSI,SPI3_CLK,SPI3_SS,result_biass_2[15:0]);
 
 accumulation ( ph_mod,diff_dval,  rst,  diff_out_0[15:0],  result_sum );
@@ -437,7 +451,7 @@ wire ff,ff_2;
 //		else result_biass_saved[15:0] <= result_biass_2[15:0];
 //	end
  // Рабочая версия uart
- UART uart_test( clk_20m,diff_out_0[15:0]+16'd32767, clk_20k, TxD_direct, ff);
+ UART uart_test( clk_20m,diff_out_temp0[15:0]+16'd32767, clk_20k, TxD_direct, ff);
  //UART uart_test( clk_20m,{8'd0,sin_to_dac}+16'd32767, clk_40k, TxD_direct, ff); // sin10k out via uart40k
  
  

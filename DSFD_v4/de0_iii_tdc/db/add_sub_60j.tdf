@@ -1,5 +1,5 @@
 --lpm_add_sub CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48 DEVICE_FAMILY="Cyclone III" LPM_PIPELINE=1 LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=10 ONE_INPUT_IS_CONSTANT="YES" aclr clken clock dataa datab result
---VERSION_BEGIN 13.1 cbx_cycloneii 2013:10:24:09:15:20:SJ cbx_lpm_add_sub 2013:10:24:09:15:20:SJ cbx_mgl 2013:10:24:09:16:30:SJ cbx_stratix 2013:10:24:09:15:20:SJ cbx_stratixii 2013:10:24:09:15:20:SJ  VERSION_END
+--VERSION_BEGIN 13.1 cbx_cycloneii 2013:10:23:18:05:48:SJ cbx_lpm_add_sub 2013:10:23:18:05:48:SJ cbx_mgl 2013:10:23:18:06:54:SJ cbx_stratix 2013:10:23:18:05:48:SJ cbx_stratixii 2013:10:23:18:05:48:SJ  VERSION_END
 
 
 -- Copyright (C) 1991-2013 Altera Corporation

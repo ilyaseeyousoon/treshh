@@ -48,7 +48,7 @@ always_ff @ (posedge clk or negedge rst)
 						buf1_rdy <= 0;
 						buf2_rdy <= 0;
 						test_ctr <= test_ctr + 1;
-						diff <= in_buf_2;//+in_buf_1;// проверка шума
+						diff <= in_buf_2-in_buf_1;// проверка шума
 						//diff <= in_buf_2+in_buf_1- 20'h26160;
 						//diff <= in_buf_1+in_buf_2 + 20'h007F0;
 						//diff <= in_buf_2-in_buf_1 + 20'h08000;

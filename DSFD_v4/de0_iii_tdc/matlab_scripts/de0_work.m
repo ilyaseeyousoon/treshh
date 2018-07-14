@@ -3,12 +3,12 @@
 clear all; 
 close all; 
 %% 
-buf_size=50000;
+buf_size=5000;
 
 s1 = serial('COM17','DataBits',8); 
 s1.InputBufferSize = buf_size; 
 s1.BaudRate = 1250000; 
-s1.Timeout=60; 
+s1.Timeout=6; 
 s1.StopBits =2; 
 d=0;
 h=0;
