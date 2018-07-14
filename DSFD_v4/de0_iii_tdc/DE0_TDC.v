@@ -393,23 +393,33 @@ clock_block    cb_inst (CLOCK_50, rst, 1, pll_clk, inv_clk);
 					
 dm_min dm_inst (pll_clk[0], rst, clk_10k, digmod_out, mod_d);
 
-	tdc tdc_inst_0 (tdc_clocks, rst, tdc_input_signal, ph_mod, tdc_out_0, tdc_dval[0], TRIG);					
-//tdc tdc_inst_0 (tdc_clocks, rst, tdc_input_signal, clk_20k, tdc_out_0, tdc_dval[0], TRIG);
-diff diff_inst (tdc_clocks[0], rst, tdc_dval[0], tdc_out_0,clk_10k, diff_out_0, diff_dval);
+tdc tdc_inst_0 (tdc_clocks, rst, tdc_input_signal, ph_mod, tdc_out_0, tdc_dval[0], TRIG);	
+				
 
-//byass_data byass_data1( tdc_clocks[0],  rst,  KEY[2:1], diff_out_0, out_data_byass_top);
+
 byass_data byass_data1( tdc_clocks[0],  rst,  KEY[0], diff_out_0,SW[8], out_data_byass_top);
 
 sin_addr sin_addr1 (pll_clk[9],address_to_sin);
 
 singen  singen1 ( address_to_sin,pll_clk[9],sin_to_dac );
 
-//spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,SPI3_CLK,SPI3_SS,result_sum[15:0]);
+wire trig_200k;
 
-//reg [7:0] temp =0;
-//wire [15:0] h={diff_out_0[7:0],temp[7:0] };
+wire[3:0]  tdc_dval_200;
+wire [36:0] mlt_temp;
+
+
+   phase_controller200 ph_ctl_200(pll_clk[0], 1, KEY[1:0], SW[1:0], ph_mod200);
+	
+	tdc tdc_inst_1 (tdc_clocks, rst, tdc_input_signal, ph_mod200, tdc_out_1, tdc_dval_200[0], trig_200k);	
+
+	diff200mlt diff_inst_mlt (tdc_clocks[0], rst, tdc_dval_200[0], tdc_out_1,mlt_temp);
+	
+	
+   diff200 diff_inst (tdc_clocks[0], rst, tdc_dval[0], tdc_out_0,mlt_temp, diff_out_0, diff_dval);
  
-
+ 
+ 
 /*
 reg [7:0] temp =0;
 wire [15:0]  data_to_spi = SW[2] ? {diff_out_spi[7:0],temp[7:0]} : diff_out_spi[19:0];
@@ -451,7 +461,7 @@ wire ff,ff_2;
 //		else result_biass_saved[15:0] <= result_biass_2[15:0];
 //	end
  // Рабочая версия uart
- UART uart_test( clk_20m,diff_out_temp0[15:0]+16'd32767, clk_20k, TxD_direct, ff);
+ UART uart_test( clk_20m,diff_out_0[15:0]+16'd32767, clk_20k, TxD_direct, ff);
  //UART uart_test( clk_20m,{8'd0,sin_to_dac}+16'd32767, clk_40k, TxD_direct, ff); // sin10k out via uart40k
  
  

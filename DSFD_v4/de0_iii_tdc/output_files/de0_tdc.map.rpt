@@ -1,5 +1,5 @@
 Analysis & Synthesis report for de0_tdc
-Sat Jul 14 11:46:41 2018
+Sat Jul 14 13:09:53 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -17,48 +17,54 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   9. Analysis & Synthesis IP Cores Summary
  10. State Machine - |DE0_TDC|spi_data_transm:spi_data_transm1|spi_state
  11. State Machine - |DE0_TDC|spi_data_transm:spi_data_transm|spi_state
- 12. State Machine - |DE0_TDC|tdc:tdc_inst_0|int_sync:i_sync|state
- 13. State Machine - |DE0_TDC|tdc:tdc_inst_0|frac_sync:fr_sync|state
- 14. State Machine - |DE0_TDC|dm_min:dm_inst|state
- 15. Registers Removed During Synthesis
- 16. Removed Registers Triggering Further Register Optimizations
- 17. General Register Statistics
- 18. Inverted Register Statistics
- 19. Multiplexer Restructuring Statistics (Restructuring Performed)
- 20. Source assignments for singen:singen1|altsyncram:altsyncram_component|altsyncram_9v91:auto_generated
- 21. Parameter Settings for User Entity Instance: clock_block:cb_inst|tdc_pll:pll_inst|altpll:altpll_component
- 22. Parameter Settings for User Entity Instance: clock_block:cb_inst|pll_spi:pll_inst2|altpll:altpll_component
- 23. Parameter Settings for User Entity Instance: tdc:tdc_inst_0
- 24. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component
- 25. Parameter Settings for User Entity Instance: sin_addr:sin_addr1|lpm_counter:LPM_COUNTER_component
- 26. Parameter Settings for User Entity Instance: singen:singen1|altsyncram:altsyncram_component
- 27. Parameter Settings for User Entity Instance: UART:uart_test|async_transmitter:async_transmitter_1
- 28. Parameter Settings for User Entity Instance: UART:uart_test|async_transmitter:async_transmitter_1|BaudTickGen:tickgen
- 29. altpll Parameter Settings by Entity Instance
- 30. lpm_mult Parameter Settings by Entity Instance
- 31. altsyncram Parameter Settings by Entity Instance
- 32. Port Connectivity Checks: "SEG7_LUT:test_led0"
- 33. Port Connectivity Checks: "SEG7_LUT:test_led3"
- 34. Port Connectivity Checks: "SEG7_LUT:test_led2"
- 35. Port Connectivity Checks: "SEG7_LUT:test_led1"
- 36. Port Connectivity Checks: "UART:uart_test"
- 37. Port Connectivity Checks: "spi_data_transm:spi_data_transm1"
- 38. Port Connectivity Checks: "accumulation:comb_1017"
- 39. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst"
- 40. Port Connectivity Checks: "tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_neg"
- 41. Port Connectivity Checks: "tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_pos"
- 42. Port Connectivity Checks: "tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_neg"
- 43. Port Connectivity Checks: "tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_pos"
- 44. Port Connectivity Checks: "tdc:tdc_inst_0|time_counter:gen[0].tc_inst|head_counter:head_ctr_neg"
- 45. Port Connectivity Checks: "tdc:tdc_inst_0|time_counter:gen[0].tc_inst|head_counter:head_ctr_pos"
- 46. Port Connectivity Checks: "dm_min:dm_inst"
- 47. Port Connectivity Checks: "clock_block:cb_inst|pll_spi:pll_inst2"
- 48. Port Connectivity Checks: "clock_block:cb_inst|tdc_pll:pll_inst"
- 49. Port Connectivity Checks: "clock_block:cb_inst"
- 50. Port Connectivity Checks: "phase_controller:ph_ctl"
- 51. Elapsed Time Per Partition
- 52. Analysis & Synthesis Messages
- 53. Analysis & Synthesis Suppressed Messages
+ 12. State Machine - |DE0_TDC|tdc:tdc_inst_1|int_sync:i_sync|state
+ 13. State Machine - |DE0_TDC|tdc:tdc_inst_1|frac_sync:fr_sync|state
+ 14. State Machine - |DE0_TDC|tdc:tdc_inst_0|int_sync:i_sync|state
+ 15. State Machine - |DE0_TDC|tdc:tdc_inst_0|frac_sync:fr_sync|state
+ 16. State Machine - |DE0_TDC|dm_min:dm_inst|state
+ 17. Registers Removed During Synthesis
+ 18. Removed Registers Triggering Further Register Optimizations
+ 19. General Register Statistics
+ 20. Inverted Register Statistics
+ 21. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 22. Source assignments for singen:singen1|altsyncram:altsyncram_component|altsyncram_9v91:auto_generated
+ 23. Parameter Settings for User Entity Instance: clock_block:cb_inst|tdc_pll:pll_inst|altpll:altpll_component
+ 24. Parameter Settings for User Entity Instance: clock_block:cb_inst|pll_spi:pll_inst2|altpll:altpll_component
+ 25. Parameter Settings for User Entity Instance: tdc:tdc_inst_0
+ 26. Parameter Settings for User Entity Instance: tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component
+ 27. Parameter Settings for User Entity Instance: sin_addr:sin_addr1|lpm_counter:LPM_COUNTER_component
+ 28. Parameter Settings for User Entity Instance: singen:singen1|altsyncram:altsyncram_component
+ 29. Parameter Settings for User Entity Instance: tdc:tdc_inst_1
+ 30. Parameter Settings for User Entity Instance: tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component
+ 31. Parameter Settings for User Entity Instance: UART:uart_test|async_transmitter:async_transmitter_1
+ 32. Parameter Settings for User Entity Instance: UART:uart_test|async_transmitter:async_transmitter_1|BaudTickGen:tickgen
+ 33. altpll Parameter Settings by Entity Instance
+ 34. lpm_mult Parameter Settings by Entity Instance
+ 35. altsyncram Parameter Settings by Entity Instance
+ 36. Port Connectivity Checks: "SEG7_LUT:test_led0"
+ 37. Port Connectivity Checks: "SEG7_LUT:test_led3"
+ 38. Port Connectivity Checks: "SEG7_LUT:test_led2"
+ 39. Port Connectivity Checks: "SEG7_LUT:test_led1"
+ 40. Port Connectivity Checks: "UART:uart_test"
+ 41. Port Connectivity Checks: "spi_data_transm:spi_data_transm1"
+ 42. Port Connectivity Checks: "accumulation:comb_1017"
+ 43. Port Connectivity Checks: "tdc:tdc_inst_1"
+ 44. Port Connectivity Checks: "phase_controller200:ph_ctl_200"
+ 45. Port Connectivity Checks: "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst"
+ 46. Port Connectivity Checks: "tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_neg"
+ 47. Port Connectivity Checks: "tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_pos"
+ 48. Port Connectivity Checks: "tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_neg"
+ 49. Port Connectivity Checks: "tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_pos"
+ 50. Port Connectivity Checks: "tdc:tdc_inst_0|time_counter:gen[0].tc_inst|head_counter:head_ctr_neg"
+ 51. Port Connectivity Checks: "tdc:tdc_inst_0|time_counter:gen[0].tc_inst|head_counter:head_ctr_pos"
+ 52. Port Connectivity Checks: "dm_min:dm_inst"
+ 53. Port Connectivity Checks: "clock_block:cb_inst|pll_spi:pll_inst2"
+ 54. Port Connectivity Checks: "clock_block:cb_inst|tdc_pll:pll_inst"
+ 55. Port Connectivity Checks: "clock_block:cb_inst"
+ 56. Port Connectivity Checks: "phase_controller:ph_ctl"
+ 57. Elapsed Time Per Partition
+ 58. Analysis & Synthesis Messages
+ 59. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -84,15 +90,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jul 14 11:46:41 2018      ;
+; Analysis & Synthesis Status        ; Successful - Sat Jul 14 13:09:52 2018      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; de0_tdc                                    ;
 ; Top-level Entity Name              ; DE0_TDC                                    ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 1,039                                      ;
-;     Total combinational functions  ; 787                                        ;
-;     Dedicated logic registers      ; 629                                        ;
-; Total registers                    ; 629                                        ;
+; Total logic elements               ; 1,380                                      ;
+;     Total combinational functions  ; 1,011                                      ;
+;     Dedicated logic registers      ; 915                                        ;
+; Total registers                    ; 915                                        ;
 ; Total pins                         ; 85                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 4,096                                      ;
@@ -217,7 +223,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; clock_block.sv                   ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/clock_block.sv                   ;         ;
 ; mult_x50.v                       ; yes             ; User Wizard-Generated File             ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/mult_x50.v                       ;         ;
 ; tdc_pll.v                        ; yes             ; User Wizard-Generated File             ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/tdc_pll.v                        ;         ;
-; diff.sv                          ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/diff.sv                          ;         ;
 ; phase_controller.sv              ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/phase_controller.sv              ;         ;
 ; output_files/byass_data.v        ; yes             ; User Verilog HDL File                  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/output_files/byass_data.v        ;         ;
 ; singen.v                         ; yes             ; User Wizard-Generated File             ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/singen.v                         ;         ;
@@ -228,6 +233,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; output_files/output_files/UART.v ; yes             ; User Verilog HDL File                  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/output_files/output_files/UART.v ;         ;
 ; async.v                          ; yes             ; User Verilog HDL File                  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/async.v                          ;         ;
 ; led/SEG7_LUT.v                   ; yes             ; User Verilog HDL File                  ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/led/SEG7_LUT.v                   ;         ;
+; phase_controller200.sv           ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/phase_controller200.sv           ;         ;
+; diff200.sv                       ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/diff200.sv                       ;         ;
+; diff200mlt.sv                    ; yes             ; User SystemVerilog HDL File            ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/diff200mlt.sv                    ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altpll.tdf                ;         ;
 ; aglobal131.inc                   ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc            ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_pll.inc           ;         ;
@@ -284,20 +292,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                       ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,039                                                                                                       ;
+; Estimated Total logic elements              ; 1,380                                                                                                       ;
 ;                                             ;                                                                                                             ;
-; Total combinational functions               ; 787                                                                                                         ;
+; Total combinational functions               ; 1011                                                                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                                                                             ;
-;     -- 4 input functions                    ; 266                                                                                                         ;
-;     -- 3 input functions                    ; 144                                                                                                         ;
-;     -- <=2 input functions                  ; 377                                                                                                         ;
+;     -- 4 input functions                    ; 340                                                                                                         ;
+;     -- 3 input functions                    ; 203                                                                                                         ;
+;     -- <=2 input functions                  ; 468                                                                                                         ;
 ;                                             ;                                                                                                             ;
 ; Logic elements by mode                      ;                                                                                                             ;
-;     -- normal mode                          ; 480                                                                                                         ;
-;     -- arithmetic mode                      ; 307                                                                                                         ;
+;     -- normal mode                          ; 637                                                                                                         ;
+;     -- arithmetic mode                      ; 374                                                                                                         ;
 ;                                             ;                                                                                                             ;
-; Total registers                             ; 629                                                                                                         ;
-;     -- Dedicated logic registers            ; 629                                                                                                         ;
+; Total registers                             ; 915                                                                                                         ;
+;     -- Dedicated logic registers            ; 915                                                                                                         ;
 ;     -- I/O registers                        ; 0                                                                                                           ;
 ;                                             ;                                                                                                             ;
 ; I/O pins                                    ; 85                                                                                                          ;
@@ -307,9 +315,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 2                                                                                                           ;
 ;                                             ;                                                                                                             ;
 ; Maximum fan-out node                        ; clock_block:cb_inst|tdc_pll:pll_inst|altpll:altpll_component|tdc_pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 465                                                                                                         ;
-; Total fan-out                               ; 4089                                                                                                        ;
-; Average fan-out                             ; 2.56                                                                                                        ;
+; Maximum fan-out                             ; 783                                                                                                         ;
+; Total fan-out                               ; 5554                                                                                                        ;
+; Average fan-out                             ; 2.64                                                                                                        ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------------+
 
 
@@ -318,12 +326,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                         ; Library Name ;
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |DE0_TDC                                                ; 787 (322)         ; 629 (116)    ; 4096        ; 0            ; 0       ; 0         ; 85   ; 0            ; |DE0_TDC                                                                                                                                                                                                    ; work         ;
+; |DE0_TDC                                                ; 1011 (290)        ; 915 (84)     ; 4096        ; 0            ; 0       ; 0         ; 85   ; 0            ; |DE0_TDC                                                                                                                                                                                                    ; work         ;
 ;    |SEG7_LUT:test_led0|                                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|SEG7_LUT:test_led0                                                                                                                                                                                 ; work         ;
 ;    |UART:uart_test|                                     ; 80 (44)           ; 56 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|UART:uart_test                                                                                                                                                                                     ; work         ;
 ;       |async_transmitter:async_transmitter_1|           ; 36 (23)           ; 25 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|UART:uart_test|async_transmitter:async_transmitter_1                                                                                                                                               ; work         ;
 ;          |BaudTickGen:tickgen|                          ; 13 (13)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|UART:uart_test|async_transmitter:async_transmitter_1|BaudTickGen:tickgen                                                                                                                           ; work         ;
-;    |byass_data:byass_data1|                             ; 65 (65)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|byass_data:byass_data1                                                                                                                                                                             ; work         ;
+;    |byass_data:byass_data1|                             ; 68 (68)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|byass_data:byass_data1                                                                                                                                                                             ; work         ;
 ;    |clock_block:cb_inst|                                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|clock_block:cb_inst                                                                                                                                                                                ; work         ;
 ;       |pll_spi:pll_inst2|                               ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|clock_block:cb_inst|pll_spi:pll_inst2                                                                                                                                                              ; work         ;
 ;          |altpll:altpll_component|                      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|clock_block:cb_inst|pll_spi:pll_inst2|altpll:altpll_component                                                                                                                                      ; work         ;
@@ -331,8 +339,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |tdc_pll:pll_inst|                                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|clock_block:cb_inst|tdc_pll:pll_inst                                                                                                                                                               ; work         ;
 ;          |altpll:altpll_component|                      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|clock_block:cb_inst|tdc_pll:pll_inst|altpll:altpll_component                                                                                                                                       ; work         ;
 ;             |tdc_pll_altpll:auto_generated|             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|clock_block:cb_inst|tdc_pll:pll_inst|altpll:altpll_component|tdc_pll_altpll:auto_generated                                                                                                         ; work         ;
-;    |diff:diff_inst|                                     ; 28 (28)           ; 82 (82)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|diff:diff_inst                                                                                                                                                                                     ; work         ;
-;    |phase_controller:ph_ctl|                            ; 52 (52)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|phase_controller:ph_ctl                                                                                                                                                                            ; work         ;
+;    |diff200:diff_inst|                                  ; 45 (45)           ; 86 (86)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|diff200:diff_inst                                                                                                                                                                                  ; work         ;
+;    |diff200mlt:diff_inst_mlt|                           ; 2 (2)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|diff200mlt:diff_inst_mlt                                                                                                                                                                           ; work         ;
+;    |phase_controller200:ph_ctl_200|                     ; 48 (48)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|phase_controller200:ph_ctl_200                                                                                                                                                                     ; work         ;
+;    |phase_controller:ph_ctl|                            ; 51 (51)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|phase_controller:ph_ctl                                                                                                                                                                            ; work         ;
 ;    |sin_addr:sin_addr1|                                 ; 13 (0)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|sin_addr:sin_addr1                                                                                                                                                                                 ; work         ;
 ;       |lpm_counter:LPM_COUNTER_component|               ; 13 (0)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|sin_addr:sin_addr1|lpm_counter:LPM_COUNTER_component                                                                                                                                               ; work         ;
 ;          |cntr_95j:auto_generated|                      ; 13 (11)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|sin_addr:sin_addr1|lpm_counter:LPM_COUNTER_component|cntr_95j:auto_generated                                                                                                                       ; work         ;
@@ -342,7 +352,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |altsyncram_9v91:auto_generated|               ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|singen:singen1|altsyncram:altsyncram_component|altsyncram_9v91:auto_generated                                                                                                                      ; work         ;
 ;    |spi_data_transm:spi_data_transm1|                   ; 16 (16)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|spi_data_transm:spi_data_transm1                                                                                                                                                                   ; work         ;
 ;    |spi_data_transm:spi_data_transm|                    ; 16 (16)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|spi_data_transm:spi_data_transm                                                                                                                                                                    ; work         ;
-;    |tdc:tdc_inst_0|                                     ; 188 (1)           ; 273 (23)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0                                                                                                                                                                                     ; work         ;
+;    |tdc:tdc_inst_0|                                     ; 187 (1)           ; 273 (23)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0                                                                                                                                                                                     ; work         ;
 ;       |frac_sync:fr_sync|                               ; 6 (6)             ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|frac_sync:fr_sync                                                                                                                                                                   ; work         ;
 ;       |int_sync:i_sync|                                 ; 0 (0)             ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|int_sync:i_sync                                                                                                                                                                     ; work         ;
 ;       |mlt_x400:mlt_inst|                               ; 45 (22)           ; 54 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|mlt_x400:mlt_inst                                                                                                                                                                   ; work         ;
@@ -355,13 +365,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                      |mpar_add:sub_par_add|             ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
 ;                         |lpm_add_sub:adder[0]|          ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
 ;                            |add_sub_efh:auto_generated| ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_efh:auto_generated ; work         ;
-;       |time_counter:gen[0].tc_inst|                     ; 136 (49)          ; 149 (68)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst                                                                                                                                                         ; work         ;
+;       |time_counter:gen[0].tc_inst|                     ; 135 (48)          ; 149 (68)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst                                                                                                                                                         ; work         ;
 ;          |head_counter:head_ctr_neg|                    ; 17 (17)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|head_counter:head_ctr_neg                                                                                                                               ; work         ;
 ;          |head_counter:head_ctr_pos|                    ; 17 (17)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|head_counter:head_ctr_pos                                                                                                                               ; work         ;
 ;          |integer_counter:int_ctr_neg|                  ; 12 (12)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_neg                                                                                                                             ; work         ;
 ;          |integer_counter:int_ctr_pos|                  ; 11 (11)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_pos                                                                                                                             ; work         ;
 ;          |tail_counter:tail_ctr_neg|                    ; 15 (15)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_neg                                                                                                                               ; work         ;
 ;          |tail_counter:tail_ctr_pos|                    ; 15 (15)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_pos                                                                                                                               ; work         ;
+;    |tdc:tdc_inst_1|                                     ; 188 (1)           ; 270 (21)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1                                                                                                                                                                                     ; work         ;
+;       |frac_sync:fr_sync|                               ; 6 (6)             ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|frac_sync:fr_sync                                                                                                                                                                   ; work         ;
+;       |int_sync:i_sync|                                 ; 0 (0)             ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|int_sync:i_sync                                                                                                                                                                     ; work         ;
+;       |mlt_x400:mlt_inst|                               ; 45 (22)           ; 54 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|mlt_x400:mlt_inst                                                                                                                                                                   ; work         ;
+;          |mult_x50:gen_mult[0].mlt_inst|                ; 23 (0)            ; 14 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst                                                                                                                                     ; work         ;
+;             |lpm_mult:lpm_mult_component|               ; 23 (0)            ; 14 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component                                                                                                         ; work         ;
+;                |multcore:mult_core|                     ; 23 (10)           ; 14 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core                                                                                      ; work         ;
+;                   |mpar_add:padder|                     ; 13 (0)            ; 14 (4)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
+;                      |lpm_add_sub:adder[0]|             ; 8 (0)             ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
+;                         |add_sub_60j:auto_generated|    ; 8 (8)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_60j:auto_generated                      ; work         ;
+;                      |mpar_add:sub_par_add|             ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
+;                         |lpm_add_sub:adder[0]|          ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
+;                            |add_sub_efh:auto_generated| ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_efh:auto_generated ; work         ;
+;       |time_counter:gen[0].tc_inst|                     ; 136 (49)          ; 148 (67)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|time_counter:gen[0].tc_inst                                                                                                                                                         ; work         ;
+;          |head_counter:head_ctr_neg|                    ; 17 (17)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|time_counter:gen[0].tc_inst|head_counter:head_ctr_neg                                                                                                                               ; work         ;
+;          |head_counter:head_ctr_pos|                    ; 17 (17)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|time_counter:gen[0].tc_inst|head_counter:head_ctr_pos                                                                                                                               ; work         ;
+;          |integer_counter:int_ctr_neg|                  ; 12 (12)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|time_counter:gen[0].tc_inst|integer_counter:int_ctr_neg                                                                                                                             ; work         ;
+;          |integer_counter:int_ctr_pos|                  ; 11 (11)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|time_counter:gen[0].tc_inst|integer_counter:int_ctr_pos                                                                                                                             ; work         ;
+;          |tail_counter:tail_ctr_neg|                    ; 15 (15)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_neg                                                                                                                               ; work         ;
+;          |tail_counter:tail_ctr_pos|                    ; 15 (15)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TDC|tdc:tdc_inst_1|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_pos                                                                                                                               ; work         ;
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -385,6 +415,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Altera ; LPM_COUNTER  ; 13.1    ; N/A          ; N/A          ; |DE0_TDC|sin_addr:sin_addr1                                             ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/sin_addr.v ;
 ; Altera ; ROM: 1-PORT  ; 13.1    ; N/A          ; N/A          ; |DE0_TDC|singen:singen1                                                 ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/singen.v   ;
 ; Altera ; LPM_MULT     ; 13.1    ; N/A          ; N/A          ; |DE0_TDC|tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/mult_x50.v ;
+; Altera ; LPM_MULT     ; 13.1    ; N/A          ; N/A          ; |DE0_TDC|tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst ; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/mult_x50.v ;
 +--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------+----------------------------------------------------+
 
 
@@ -444,6 +475,36 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DE0_TDC|tdc:tdc_inst_1|int_sync:i_sync|state                                                                                ;
++-----------------------+--------------------+-----------------+--------------------+-----------------------+------------------+---------------+
+; Name                  ; state.st_ret_clock ; state.st_ena_on ; state.st_read_data ; state.st_change_clock ; state.st_ena_off ; state.st_wait ;
++-----------------------+--------------------+-----------------+--------------------+-----------------------+------------------+---------------+
+; state.st_wait         ; 0                  ; 0               ; 0                  ; 0                     ; 0                ; 0             ;
+; state.st_ena_off      ; 0                  ; 0               ; 0                  ; 0                     ; 1                ; 1             ;
+; state.st_change_clock ; 0                  ; 0               ; 0                  ; 1                     ; 0                ; 1             ;
+; state.st_read_data    ; 0                  ; 0               ; 1                  ; 0                     ; 0                ; 1             ;
+; state.st_ena_on       ; 0                  ; 1               ; 0                  ; 0                     ; 0                ; 1             ;
+; state.st_ret_clock    ; 1                  ; 0               ; 0                  ; 0                     ; 0                ; 1             ;
++-----------------------+--------------------+-----------------+--------------------+-----------------------+------------------+---------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DE0_TDC|tdc:tdc_inst_1|frac_sync:fr_sync|state                                                                              ;
++-----------------------+--------------------+-----------------+--------------------+-----------------------+------------------+---------------+
+; Name                  ; state.st_ret_clock ; state.st_ena_on ; state.st_read_data ; state.st_change_clock ; state.st_ena_off ; state.st_wait ;
++-----------------------+--------------------+-----------------+--------------------+-----------------------+------------------+---------------+
+; state.st_wait         ; 0                  ; 0               ; 0                  ; 0                     ; 0                ; 0             ;
+; state.st_ena_off      ; 0                  ; 0               ; 0                  ; 0                     ; 1                ; 1             ;
+; state.st_change_clock ; 0                  ; 0               ; 0                  ; 1                     ; 0                ; 1             ;
+; state.st_read_data    ; 0                  ; 0               ; 1                  ; 0                     ; 0                ; 1             ;
+; state.st_ena_on       ; 0                  ; 1               ; 0                  ; 0                     ; 0                ; 1             ;
+; state.st_ret_clock    ; 1                  ; 0               ; 0                  ; 0                     ; 0                ; 1             ;
++-----------------------+--------------------+-----------------+--------------------+-----------------------+------------------+---------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |DE0_TDC|tdc:tdc_inst_0|int_sync:i_sync|state                                                                                ;
 +-----------------------+--------------------+-----------------+--------------------+-----------------------+------------------+---------------+
 ; Name                  ; state.st_ret_clock ; state.st_ena_on ; state.st_read_data ; state.st_change_clock ; state.st_ena_off ; state.st_wait ;
@@ -490,6 +551,29 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Register name                                                                                                                                            ; Reason for Removal                                                                                                                                             ;
 +----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][32]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][31]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][30]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][29]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][28]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][27]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][26]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][25]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][24]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][23]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][22]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][21]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][20]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][19]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][18]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][17]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[17..36]                                                                                                        ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|time_counter:gen[0].tc_inst|hp_reg[6..10]                                                                                                 ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|time_counter:gen[0].tc_inst|hn_reg[6..10]                                                                                                 ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|time_counter:gen[0].tc_inst|tp_reg[6..10]                                                                                                 ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|time_counter:gen[0].tc_inst|tn_reg[6..10]                                                                                                 ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|time_counter:gen[0].tc_inst|ip_reg[10]                                                                                                    ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|time_counter:gen[0].tc_inst|in_reg[10]                                                                                                    ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][32]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][31]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][30]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
@@ -513,37 +597,67 @@ Encoding Type:  One-Hot
 ; tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tn_reg[6..10]                                                                                                 ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|time_counter:gen[0].tc_inst|ip_reg[10]                                                                                                    ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|time_counter:gen[0].tc_inst|in_reg[10]                                                                                                    ; Stuck at GND due to stuck port data_in                                                                                                                         ;
-; diff:diff_inst|in_buf_1[17..36]                                                                                                                          ; Stuck at GND due to stuck port data_in                                                                                                                         ;
-; diff:diff_inst|in_buf_2[17..36]                                                                                                                          ; Stuck at GND due to stuck port data_in                                                                                                                         ;
-; diff_out_temp2[16..19]                                                                                                                                   ; Lost fanout                                                                                                                                                    ;
+; diff200mlt:diff_inst_mlt|in_buf_1[17..36]                                                                                                                ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; diff200:diff_inst|in_buf_1[20..36]                                                                                                                       ; Lost fanout                                                                                                                                                    ;
+; diff200:diff_inst|in_buf_2[20..36]                                                                                                                       ; Lost fanout                                                                                                                                                    ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[8,9]     ; Lost fanout                                                                                                                                                    ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[0,1,6,7] ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[8,9]     ; Lost fanout                                                                                                                                                    ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[0,1,6,7] ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|drop_bits_node[0][1]       ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|drop_bits_node[0][0]       ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|drop_bits_node[0][1]       ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|drop_bits_node[0][0]       ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][16]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[16]                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][16]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[16]                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                         ;
-; diff:diff_inst|in_buf_1[16]                                                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                         ;
-; diff:diff_inst|in_buf_2[16]                                                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; diff200mlt:diff_inst_mlt|in_buf_1[16]                                                                                                                    ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][15]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[15]                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][15]                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[15]                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                         ;
-; diff:diff_inst|in_buf_1[15]                                                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                         ;
-; diff:diff_inst|in_buf_2[15]                                                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                         ;
-; diff:diff_inst|diff[17,18]                                                                                                                               ; Merged with diff:diff_inst|diff[19]                                                                                                                            ;
-; diff:diff_inst|diff_1[17,18]                                                                                                                             ; Merged with diff:diff_inst|diff_1[19]                                                                                                                          ;
+; diff200mlt:diff_inst_mlt|in_buf_1[15]                                                                                                                    ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; diff200:diff_inst|in_buf_1[16..18]                                                                                                                       ; Merged with diff200:diff_inst|in_buf_1[19]                                                                                                                     ;
+; diff200:diff_inst|in_buf_2[16..18]                                                                                                                       ; Merged with diff200:diff_inst|in_buf_2[19]                                                                                                                     ;
+; phase_controller200:ph_ctl_200|clk_max[11,14]                                                                                                            ; Merged with phase_controller200:ph_ctl_200|clk_max[15]                                                                                                         ;
 ; phase_controller:ph_ctl|clk_max[14]                                                                                                                      ; Merged with phase_controller:ph_ctl|clk_max[15]                                                                                                                ;
 ; phase_controller:ph_ctl|clk_max[11]                                                                                                                      ; Merged with phase_controller:ph_ctl|clk_max[10]                                                                                                                ;
+; phase_controller:ph_ctl|key_ctl_d[1]                                                                                                                     ; Merged with phase_controller200:ph_ctl_200|key_ctl_d[1]                                                                                                        ;
+; phase_controller:ph_ctl|key_ctl_q[1]                                                                                                                     ; Merged with phase_controller200:ph_ctl_200|key_ctl_q[1]                                                                                                        ;
+; phase_controller:ph_ctl|right_hold                                                                                                                       ; Merged with phase_controller200:ph_ctl_200|right_hold                                                                                                          ;
+; phase_controller:ph_ctl|key_ctl_d[0]                                                                                                                     ; Merged with phase_controller200:ph_ctl_200|key_ctl_d[0]                                                                                                        ;
+; phase_controller:ph_ctl|key_ctl_q[0]                                                                                                                     ; Merged with phase_controller200:ph_ctl_200|key_ctl_q[0]                                                                                                        ;
+; phase_controller:ph_ctl|left_hold                                                                                                                        ; Merged with phase_controller200:ph_ctl_200|left_hold                                                                                                           ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[4]       ; Merged with tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[2] ;
 ; tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[5]       ; Merged with tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[3] ;
+; tdc:tdc_inst_1|lr_signal[0][1]                                                                                                                           ; Merged with tdc:tdc_inst_0|lr_signal[0][1]                                                                                                                     ;
+; tdc:tdc_inst_1|time_counter:gen[0].tc_inst|signal_d                                                                                                      ; Merged with tdc:tdc_inst_0|time_counter:gen[0].tc_inst|signal_d                                                                                                ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[4]       ; Merged with tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[2] ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[5]       ; Merged with tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[3] ;
+; tdc:tdc_inst_1|lr_signal[0][0]                                                                                                                           ; Merged with tdc:tdc_inst_0|lr_signal[0][0]                                                                                                                     ;
+; phase_controller200:ph_ctl_200|clk_max[13]                                                                                                               ; Merged with phase_controller200:ph_ctl_200|clk_max[12]                                                                                                         ;
+; phase_controller200:ph_ctl_200|clk_max[9]                                                                                                                ; Merged with phase_controller200:ph_ctl_200|clk_max[5]                                                                                                          ;
+; phase_controller200:ph_ctl_200|clk_max[15]                                                                                                               ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; phase_controller:ph_ctl|clk_max[15]                                                                                                                      ; Stuck at GND due to stuck port data_in                                                                                                                         ;
-; diff:diff_inst|diff[15,16]                                                                                                                               ; Merged with diff:diff_inst|diff[19]                                                                                                                            ;
-; diff:diff_inst|diff_1[15,16]                                                                                                                             ; Merged with diff:diff_inst|diff_1[19]                                                                                                                          ;
+; diff200:diff_inst|in_buf_1[15]                                                                                                                           ; Merged with diff200:diff_inst|in_buf_1[19]                                                                                                                     ;
+; diff200:diff_inst|in_buf_2[15]                                                                                                                           ; Merged with diff200:diff_inst|in_buf_2[19]                                                                                                                     ;
+; diff200:diff_inst|diff[17,18]                                                                                                                            ; Merged with diff200:diff_inst|diff[19]                                                                                                                         ;
+; diff200:diff_inst|diff_1[17,18]                                                                                                                          ; Merged with diff200:diff_inst|diff_1[19]                                                                                                                       ;
+; diff200:diff_inst|diff[16]                                                                                                                               ; Merged with diff200:diff_inst|diff[19]                                                                                                                         ;
+; diff200:diff_inst|diff_1[16]                                                                                                                             ; Merged with diff200:diff_inst|diff_1[19]                                                                                                                       ;
 ; UART:uart_test|data_count[3]                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                         ;
 ; phase_controller:ph_ctl|clk_max[12]                                                                                                                      ; Stuck at VCC due to stuck port data_in                                                                                                                         ;
-; phase_controller:ph_ctl|left_hold                                                                                                                        ; Stuck at GND due to stuck port data_in                                                                                                                         ;
-; phase_controller:ph_ctl|right_hold                                                                                                                       ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; phase_controller200:ph_ctl_200|left_hold                                                                                                                 ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; phase_controller200:ph_ctl_200|right_hold                                                                                                                ; Stuck at GND due to stuck port data_in                                                                                                                         ;
+; tdc:tdc_inst_1|time_counter:gen[0].tc_inst|integer_counter:int_ctr_neg|wr_en                                                                             ; Merged with tdc:tdc_inst_1|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_neg|wr_en                                                                         ;
+; tdc:tdc_inst_1|time_counter:gen[0].tc_inst|integer_counter:int_ctr_pos|wr_en                                                                             ; Merged with tdc:tdc_inst_1|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_pos|wr_en                                                                         ;
 ; tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_neg|wr_en                                                                             ; Merged with tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_neg|wr_en                                                                         ;
 ; tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_pos|wr_en                                                                             ; Merged with tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_pos|wr_en                                                                         ;
 ; tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_pos|ctr_ena                                                                           ; Merged with tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_neg|ctr_ena                                                                     ;
+; tdc:tdc_inst_1|time_counter:gen[0].tc_inst|integer_counter:int_ctr_pos|ctr_ena                                                                           ; Merged with tdc:tdc_inst_1|time_counter:gen[0].tc_inst|integer_counter:int_ctr_neg|ctr_ena                                                                     ;
+; tdc:tdc_inst_1|time_counter:gen[0].tc_inst|n_data_rdy[0]                                                                                                 ; Merged with tdc:tdc_inst_1|time_counter:gen[0].tc_inst|n_data_rdy[1]                                                                                           ;
+; tdc:tdc_inst_1|time_counter:gen[0].tc_inst|p_data_rdy[0]                                                                                                 ; Merged with tdc:tdc_inst_1|time_counter:gen[0].tc_inst|p_data_rdy[1]                                                                                           ;
 ; tdc:tdc_inst_0|time_counter:gen[0].tc_inst|n_data_rdy[0]                                                                                                 ; Merged with tdc:tdc_inst_0|time_counter:gen[0].tc_inst|n_data_rdy[1]                                                                                           ;
 ; tdc:tdc_inst_0|time_counter:gen[0].tc_inst|p_data_rdy[0]                                                                                                 ; Merged with tdc:tdc_inst_0|time_counter:gen[0].tc_inst|p_data_rdy[1]                                                                                           ;
 ; spi_data_transm:spi_data_transm1|spi_state~20                                                                                                            ; Lost fanout                                                                                                                                                    ;
@@ -556,6 +670,12 @@ Encoding Type:  One-Hot
 ; spi_data_transm:spi_data_transm|spi_state~22                                                                                                             ; Lost fanout                                                                                                                                                    ;
 ; spi_data_transm:spi_data_transm|spi_state~23                                                                                                             ; Lost fanout                                                                                                                                                    ;
 ; spi_data_transm:spi_data_transm|spi_state~24                                                                                                             ; Lost fanout                                                                                                                                                    ;
+; tdc:tdc_inst_1|int_sync:i_sync|state~4                                                                                                                   ; Lost fanout                                                                                                                                                    ;
+; tdc:tdc_inst_1|int_sync:i_sync|state~5                                                                                                                   ; Lost fanout                                                                                                                                                    ;
+; tdc:tdc_inst_1|int_sync:i_sync|state~6                                                                                                                   ; Lost fanout                                                                                                                                                    ;
+; tdc:tdc_inst_1|frac_sync:fr_sync|state~4                                                                                                                 ; Lost fanout                                                                                                                                                    ;
+; tdc:tdc_inst_1|frac_sync:fr_sync|state~5                                                                                                                 ; Lost fanout                                                                                                                                                    ;
+; tdc:tdc_inst_1|frac_sync:fr_sync|state~6                                                                                                                 ; Lost fanout                                                                                                                                                    ;
 ; tdc:tdc_inst_0|int_sync:i_sync|state~4                                                                                                                   ; Lost fanout                                                                                                                                                    ;
 ; tdc:tdc_inst_0|int_sync:i_sync|state~5                                                                                                                   ; Lost fanout                                                                                                                                                    ;
 ; tdc:tdc_inst_0|int_sync:i_sync|state~6                                                                                                                   ; Lost fanout                                                                                                                                                    ;
@@ -575,25 +695,41 @@ Encoding Type:  One-Hot
 ; tdc:tdc_inst_0|frac_sync:fr_sync|state.st_ret_clock                                                                                                      ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|out_valid                                                                                                         ;
 ; tdc:tdc_inst_0|int_sync:i_sync|out_valid                                                                                                                 ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|out_valid                                                                                                         ;
 ; tdc:tdc_inst_0|int_sync:i_sync|state.st_ret_clock                                                                                                        ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|out_valid                                                                                                         ;
+; tdc:tdc_inst_1|frac_sync:fr_sync|state.st_ret_clock                                                                                                      ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|out_valid                                                                                                         ;
+; tdc:tdc_inst_1|int_sync:i_sync|out_valid                                                                                                                 ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|out_valid                                                                                                         ;
+; tdc:tdc_inst_1|int_sync:i_sync|state.st_ret_clock                                                                                                        ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|out_valid                                                                                                         ;
 ; tdc:tdc_inst_0|int_sync:i_sync|state.st_read_data                                                                                                        ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|state.st_read_data                                                                                                ;
+; tdc:tdc_inst_1|int_sync:i_sync|state.st_read_data                                                                                                        ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|state.st_read_data                                                                                                ;
 ; tdc:tdc_inst_0|int_sync:i_sync|lr_ena[0][1]                                                                                                              ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|lr_ena[0][1]                                                                                                      ;
 ; tdc:tdc_inst_0|int_sync:i_sync|state.st_change_clock                                                                                                     ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|state.st_change_clock                                                                                             ;
+; tdc:tdc_inst_1|int_sync:i_sync|lr_ena[0][1]                                                                                                              ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|lr_ena[0][1]                                                                                                      ;
+; tdc:tdc_inst_1|int_sync:i_sync|state.st_change_clock                                                                                                     ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|state.st_change_clock                                                                                             ;
 ; tdc:tdc_inst_0|int_sync:i_sync|lr_ena[0][0]                                                                                                              ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|lr_ena[0][0]                                                                                                      ;
 ; tdc:tdc_inst_0|int_sync:i_sync|state.st_ena_off                                                                                                          ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|state.st_ena_off                                                                                                  ;
+; tdc:tdc_inst_1|int_sync:i_sync|lr_ena[0][0]                                                                                                              ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|lr_ena[0][0]                                                                                                      ;
+; tdc:tdc_inst_1|int_sync:i_sync|state.st_ena_off                                                                                                          ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|state.st_ena_off                                                                                                  ;
 ; tdc:tdc_inst_0|int_sync:i_sync|state.st_wait                                                                                                             ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|state.st_wait                                                                                                     ;
 ; tdc:tdc_inst_0|int_sync:i_sync|lr_wrdata[1]                                                                                                              ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|lr_wrdata[1]                                                                                                      ;
+; tdc:tdc_inst_1|int_sync:i_sync|state.st_wait                                                                                                             ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|state.st_wait                                                                                                     ;
+; tdc:tdc_inst_1|int_sync:i_sync|lr_wrdata[1]                                                                                                              ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|lr_wrdata[1]                                                                                                      ;
 ; tdc:tdc_inst_0|int_sync:i_sync|state.st_ena_on                                                                                                           ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|state.st_ena_on                                                                                                   ;
 ; tdc:tdc_inst_0|int_sync:i_sync|lr_wrdata[0]                                                                                                              ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|lr_wrdata[0]                                                                                                      ;
+; tdc:tdc_inst_1|int_sync:i_sync|state.st_ena_on                                                                                                           ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|state.st_ena_on                                                                                                   ;
+; tdc:tdc_inst_1|int_sync:i_sync|lr_wrdata[0]                                                                                                              ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|lr_wrdata[0]                                                                                                      ;
 ; tdc:tdc_inst_0|int_sync:i_sync|data_wr[0]                                                                                                                ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|data_wr[0]                                                                                                        ;
+; tdc:tdc_inst_1|int_sync:i_sync|data_wr[0]                                                                                                                ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|data_wr[0]                                                                                                        ;
 ; tdc:tdc_inst_0|int_sync:i_sync|lr_clear[0][1]                                                                                                            ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|lr_clear[0][1]                                                                                                    ;
 ; tdc:tdc_inst_0|int_sync:i_sync|lr_clear[0][0]                                                                                                            ; Merged with tdc:tdc_inst_0|frac_sync:fr_sync|lr_clear[0][0]                                                                                                    ;
-; clk_div3[0]                                                                                                                                              ; Merged with clk_div[0]                                                                                                                                         ;
-; clk_div4[0]                                                                                                                                              ; Merged with clk_div[0]                                                                                                                                         ;
+; tdc:tdc_inst_1|s_out_int                                                                                                                                 ; Merged with tdc:tdc_inst_1|s_out_fr                                                                                                                            ;
+; tdc:tdc_inst_1|int_sync:i_sync|lr_clear[0][0]                                                                                                            ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|lr_clear[0][0]                                                                                                    ;
+; tdc:tdc_inst_1|int_sync:i_sync|lr_clear[0][1]                                                                                                            ; Merged with tdc:tdc_inst_1|frac_sync:fr_sync|lr_clear[0][1]                                                                                                    ;
 ; clk_div2[0]                                                                                                                                              ; Merged with clk_div[0]                                                                                                                                         ;
-; clk_div2[1]                                                                                                                                              ; Merged with clk_div[1]                                                                                                                                         ;
-; clk_div4[1]                                                                                                                                              ; Merged with clk_div[1]                                                                                                                                         ;
+; clk_div4[0]                                                                                                                                              ; Merged with clk_div[0]                                                                                                                                         ;
+; clk_div3[0]                                                                                                                                              ; Merged with clk_div[0]                                                                                                                                         ;
 ; clk_div3[1]                                                                                                                                              ; Merged with clk_div[1]                                                                                                                                         ;
-; Total Number of Removed Registers = 202                                                                                                                  ;                                                                                                                                                                ;
+; clk_div4[1]                                                                                                                                              ; Merged with clk_div[1]                                                                                                                                         ;
+; clk_div2[1]                                                                                                                                              ; Merged with clk_div[1]                                                                                                                                         ;
+; Total Number of Removed Registers = 329                                                                                                                  ;                                                                                                                                                                ;
 +----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -608,53 +744,89 @@ Encoding Type:  One-Hot
 ;                                                                                                                                                    ;                           ; dm_min:dm_inst|ctr[5], dm_min:dm_inst|ctr[0], dm_min:dm_inst|ctr[3],        ;
 ;                                                                                                                                                    ;                           ; dm_min:dm_inst|ctr[2], dm_min:dm_inst|ctr[1], dm_min:dm_inst|state.st_wait, ;
 ;                                                                                                                                                    ;                           ; dm_min:dm_inst|state.st_hf                                                  ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[7] ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][15],                           ;
-;                                                                                                                                                    ; due to stuck port data_in ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[15], diff:diff_inst|in_buf_1[15], ;
-;                                                                                                                                                    ;                           ; diff:diff_inst|in_buf_2[15]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][32]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[32], diff:diff_inst|in_buf_1[32], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[32]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][31]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[31], diff:diff_inst|in_buf_1[31], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[31]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][30]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[30], diff:diff_inst|in_buf_1[30], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[30]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][29]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[29], diff:diff_inst|in_buf_1[29], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[29]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][28]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[28], diff:diff_inst|in_buf_1[28], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[28]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][27]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[27], diff:diff_inst|in_buf_1[27], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[27]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][26]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[26], diff:diff_inst|in_buf_1[26], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[26]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][25]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[25], diff:diff_inst|in_buf_1[25], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[25]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][24]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[24], diff:diff_inst|in_buf_1[24], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[24]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][23]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[23], diff:diff_inst|in_buf_1[23], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[23]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][22]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[22], diff:diff_inst|in_buf_1[22], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[22]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][21]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[21], diff:diff_inst|in_buf_1[21], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[21]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][20]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[20], diff:diff_inst|in_buf_1[20], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[20]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][19]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[19], diff:diff_inst|in_buf_1[19], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[19]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][18]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[18], diff:diff_inst|in_buf_1[18], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[18]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][17]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[17], diff:diff_inst|in_buf_1[17], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[17]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][16]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[16], diff:diff_inst|in_buf_1[16], ;
-;                                                                                                                                                    ; due to stuck port data_in ; diff:diff_inst|in_buf_2[16]                                                 ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[36]                                                                                                      ; Stuck at GND              ; diff:diff_inst|in_buf_1[36], diff:diff_inst|in_buf_2[36]                    ;
-;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[35]                                                                                                      ; Stuck at GND              ; diff:diff_inst|in_buf_1[35], diff:diff_inst|in_buf_2[35]                    ;
-;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[34]                                                                                                      ; Stuck at GND              ; diff:diff_inst|in_buf_1[34], diff:diff_inst|in_buf_2[34]                    ;
-;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
-; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[33]                                                                                                      ; Stuck at GND              ; diff:diff_inst|in_buf_1[33], diff:diff_inst|in_buf_2[33]                    ;
-;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[7] ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][15],                           ;
+;                                                                                                                                                    ; due to stuck port data_in ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[15],                              ;
+;                                                                                                                                                    ;                           ; diff200mlt:diff_inst_mlt|in_buf_1[15]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][32]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[32],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[32]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][31]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[31],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[31]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][30]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[30],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[30]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][29]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[29],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[29]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][28]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[28],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[28]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][27]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[27],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[27]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][26]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[26],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[26]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][25]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[25],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[25]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][24]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[24],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[24]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][23]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[23],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[23]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][22]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[22],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[22]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][21]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[21],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[21]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][20]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[20],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[20]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][19]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[19],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[19]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][18]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[18],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[18]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][17]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[17],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[17]                                       ;
 ; dm_min:dm_inst|state~5                                                                                                                             ; Lost Fanouts              ; dm_min:dm_inst|state.st_mf, dm_min:dm_inst|state.st_lf                      ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|single_input_node[7] ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][15],                           ;
+;                                                                                                                                                    ; due to stuck port data_in ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[15]                               ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_1[0][16]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[16],                              ;
+;                                                                                                                                                    ; due to stuck port data_in ; diff200mlt:diff_inst_mlt|in_buf_1[16]                                       ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[36]                                                                                                      ; Stuck at GND              ; diff200mlt:diff_inst_mlt|in_buf_1[36]                                       ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[35]                                                                                                      ; Stuck at GND              ; diff200mlt:diff_inst_mlt|in_buf_1[35]                                       ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[34]                                                                                                      ; Stuck at GND              ; diff200mlt:diff_inst_mlt|in_buf_1[34]                                       ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][28]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[28]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][27]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[27]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][26]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[26]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][25]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[25]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][24]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[24]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][23]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[23]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][22]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[22]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][21]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[21]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][30]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[30]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][19]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[19]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][18]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[18]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][17]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[17]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][32]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[32]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][31]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[31]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][29]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[29]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][16]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[16]                               ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
 ; phase_controller:ph_ctl|clk_max[15]                                                                                                                ; Stuck at GND              ; phase_controller:ph_ctl|clk_max[12]                                         ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_1|mlt_x400:mlt_inst|sum_st_5[33]                                                                                                      ; Stuck at GND              ; diff200mlt:diff_inst_mlt|in_buf_1[33]                                       ;
+;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
+; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_1[0][20]                                                                                                   ; Stuck at GND              ; tdc:tdc_inst_0|mlt_x400:mlt_inst|sum_st_5[20]                               ;
 ;                                                                                                                                                    ; due to stuck port data_in ;                                                                             ;
 +----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------+
 
@@ -664,12 +836,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 629   ;
-; Number of registers using Synchronous Clear  ; 69    ;
-; Number of registers using Synchronous Load   ; 40    ;
+; Total registers                              ; 915   ;
+; Number of registers using Synchronous Clear  ; 130   ;
+; Number of registers using Synchronous Load   ; 41    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 252   ;
+; Number of registers using Clock Enable       ; 440   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -682,7 +854,7 @@ Encoding Type:  One-Hot
 ; spi_data_transm:spi_data_transm|spi_ss  ; 2       ;
 ; spi_data_transm:spi_data_transm1|spi_ss ; 2       ;
 ; byass_data:byass_data1|count_byass[0]   ; 24      ;
-; byass_data:byass_data1|count_byass[2]   ; 17      ;
+; byass_data:byass_data1|count_byass[2]   ; 20      ;
 ; UART:uart_test|data_reg[8]              ; 1       ;
 ; UART:uart_test|data_reg[10]             ; 1       ;
 ; UART:uart_test|data_reg[11]             ; 1       ;
@@ -698,27 +870,37 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_TDC|UART:uart_test|async_transmitter:async_transmitter_1|TxD_shift[2]                 ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |DE0_TDC|dm_min:dm_inst|cycle_ctr[5]                                                       ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|fr_sum[1]                              ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_TDC|UART:uart_test|async_transmitter:async_transmitter_1|TxD_shift[6]                 ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |DE0_TDC|dm_min:dm_inst|cycle_ctr[9]                                                       ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_1|time_counter:gen[0].tc_inst|int_out[3]                             ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|int_out[3]                             ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_1|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_neg|ctr_out[1]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_1|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_pos|ctr_out[1]   ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_neg|ctr_out[5]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_pos|ctr_out[5]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|tail_counter:tail_ctr_pos|ctr_out[3]   ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|head_counter:head_ctr_neg|ctr[0]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|head_counter:head_ctr_pos|ctr[2]       ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |DE0_TDC|horrible_counter_2[3]                                                             ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|head_counter:head_ctr_pos|ctr[3]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_1|time_counter:gen[0].tc_inst|head_counter:head_ctr_neg|ctr[3]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TDC|tdc:tdc_inst_1|time_counter:gen[0].tc_inst|head_counter:head_ctr_pos|ctr[2]       ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |DE0_TDC|horrible_counter_2[0]                                                             ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DE0_TDC|phase_controller:ph_ctl|clk_max[10]                                               ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |DE0_TDC|phase_controller:ph_ctl|clk_max[8]                                                ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |DE0_TDC|phase_controller:ph_ctl|clk_max[13]                                               ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE0_TDC|phase_controller:ph_ctl|clk_max[0]                                                ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE0_TDC|phase_controller:ph_ctl|clk_max[3]                                                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE0_TDC|byass_data:byass_data1|count_byass[3]                                             ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_neg|counter[3] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_pos|counter[3] ;
-; 32:1               ; 8 bits    ; 168 LEs       ; 48 LEs               ; 120 LEs                ; Yes        ; |DE0_TDC|result_biass_2[11]                                                                ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |DE0_TDC|byass_data:byass_data1|output_buf[5]                                              ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE0_TDC|byass_data:byass_data1|output_buf[3]                                              ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |DE0_TDC|byass_data:byass_data1|output_buf[1]                                              ;
-; 19:1               ; 8 bits    ; 96 LEs        ; 16 LEs               ; 80 LEs                 ; Yes        ; |DE0_TDC|UART:uart_test|data_temp_case[7]                                                  ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |DE0_TDC|UART:uart_test|data_count[0]                                                      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DE0_TDC|phase_controller200:ph_ctl_200|clk_max[7]                                         ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |DE0_TDC|phase_controller200:ph_ctl_200|clk_max[4]                                         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE0_TDC|byass_data:byass_data1|count_byass[1]                                             ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_neg|counter[5] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_0|time_counter:gen[0].tc_inst|integer_counter:int_ctr_pos|counter[6] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_1|time_counter:gen[0].tc_inst|integer_counter:int_ctr_neg|counter[4] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |DE0_TDC|tdc:tdc_inst_1|time_counter:gen[0].tc_inst|integer_counter:int_ctr_pos|counter[3] ;
+; 32:1               ; 8 bits    ; 168 LEs       ; 48 LEs               ; 120 LEs                ; Yes        ; |DE0_TDC|result_biass_2[10]                                                                ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |DE0_TDC|byass_data:byass_data1|output_buf[6]                                              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE0_TDC|byass_data:byass_data1|output_buf[2]                                              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE0_TDC|byass_data:byass_data1|output_buf[4]                                              ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |DE0_TDC|byass_data:byass_data1|output_buf[0]                                              ;
+; 19:1               ; 8 bits    ; 96 LEs        ; 16 LEs               ; 80 LEs                 ; Yes        ; |DE0_TDC|UART:uart_test|data_temp_case[2]                                                  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |DE0_TDC|UART:uart_test|data_count[3]                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 
 
@@ -1612,6 +1794,51 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tdc:tdc_inst_1 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; CTR_NUM        ; 1     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component ;
++------------------------------------------------+-------------+--------------------------------------------------------------------------+
+; Parameter Name                                 ; Value       ; Type                                                                     ;
++------------------------------------------------+-------------+--------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON          ; AUTO_CARRY                                                               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF         ; IGNORE_CARRY                                                             ;
+; AUTO_CASCADE_CHAINS                            ; ON          ; AUTO_CASCADE                                                             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF         ; IGNORE_CASCADE                                                           ;
+; LPM_WIDTHA                                     ; 10          ; Signed Integer                                                           ;
+; LPM_WIDTHB                                     ; 6           ; Signed Integer                                                           ;
+; LPM_WIDTHP                                     ; 16          ; Signed Integer                                                           ;
+; LPM_WIDTHR                                     ; 0           ; Untyped                                                                  ;
+; LPM_WIDTHS                                     ; 1           ; Untyped                                                                  ;
+; LPM_REPRESENTATION                             ; UNSIGNED    ; Untyped                                                                  ;
+; LPM_PIPELINE                                   ; 1           ; Signed Integer                                                           ;
+; LATENCY                                        ; 0           ; Untyped                                                                  ;
+; INPUT_A_IS_CONSTANT                            ; NO          ; Untyped                                                                  ;
+; INPUT_B_IS_CONSTANT                            ; YES         ; Untyped                                                                  ;
+; USE_EAB                                        ; OFF         ; Untyped                                                                  ;
+; MAXIMIZE_SPEED                                 ; 9           ; Untyped                                                                  ;
+; DEVICE_FAMILY                                  ; Cyclone III ; Untyped                                                                  ;
+; CARRY_CHAIN                                    ; MANUAL      ; Untyped                                                                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT         ; TECH_MAPPER_APEX20K                                                      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO        ; Untyped                                                                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0           ; Untyped                                                                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0           ; Untyped                                                                  ;
+; CBXI_PARAMETER                                 ; NOTHING     ; Untyped                                                                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx          ; Untyped                                                                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx          ; Untyped                                                                  ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF         ; Untyped                                                                  ;
++------------------------------------------------+-------------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: UART:uart_test|async_transmitter:async_transmitter_1 ;
 +----------------+----------+-----------------------------------------------------------------------+
@@ -1665,8 +1892,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+--------------------------------------------------------------------------------------------+
 ; Name                                  ; Value                                                                                      ;
 +---------------------------------------+--------------------------------------------------------------------------------------------+
-; Number of entity instances            ; 1                                                                                          ;
+; Number of entity instances            ; 2                                                                                          ;
 ; Entity Instance                       ; tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component ;
+;     -- LPM_WIDTHA                     ; 10                                                                                         ;
+;     -- LPM_WIDTHB                     ; 6                                                                                          ;
+;     -- LPM_WIDTHP                     ; 16                                                                                         ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                                         ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                                                        ;
+;     -- USE_EAB                        ; OFF                                                                                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                                         ;
+; Entity Instance                       ; tdc:tdc_inst_1|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component ;
 ;     -- LPM_WIDTHA                     ; 10                                                                                         ;
 ;     -- LPM_WIDTHB                     ; 6                                                                                          ;
 ;     -- LPM_WIDTHP                     ; 16                                                                                         ;
@@ -1761,6 +1999,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; result ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tdc:tdc_inst_1"                                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; test ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "phase_controller200:ph_ctl_200"                                                                                                                                                      ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rst     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rst[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1891,7 +2148,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Jul 14 11:46:35 2018
+    Info: Processing started: Sat Jul 14 13:09:45 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de0_tdc -c de0_tdc
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file time_counter.sv
@@ -1963,15 +2220,24 @@ Info (12021): Found 4 design units, including 4 entities, in source file async.v
     Info (12023): Found entity 4: BaudTickGen
 Info (12021): Found 1 design units, including 1 entities, in source file led/seg7_lut.v
     Info (12023): Found entity 1: SEG7_LUT
+Info (12021): Found 1 design units, including 1 entities, in source file phase_controller200.sv
+    Info (12023): Found entity 1: phase_controller200
+Info (12021): Found 1 design units, including 1 entities, in source file diff200.sv
+    Info (12023): Found entity 1: diff200
+Info (12021): Found 1 design units, including 1 entities, in source file diff200mlt.sv
+    Info (12023): Found entity 1: diff200mlt
 Warning (10236): Verilog HDL Implicit Net warning at time_counter.sv(16): created implicit net for "mod_posedge"
 Warning (10236): Verilog HDL Implicit Net warning at time_counter.sv(16): created implicit net for "signal_xor"
 Warning (10236): Verilog HDL Implicit Net warning at time_counter.sv(17): created implicit net for "mod_negedge"
 Warning (10236): Verilog HDL Implicit Net warning at DE0_TDC.v(162): created implicit net for "pll_rst"
-Critical Warning (10846): Verilog HDL Instantiation warning at DE0_TDC.v(434): instance has no name
+Warning (10236): Verilog HDL Implicit Net warning at DE0_TDC.v(412): created implicit net for "ph_mod200"
+Warning (10236): Verilog HDL Implicit Net warning at diff200mlt.sv(11): created implicit net for "o_dval"
+Critical Warning (10846): Verilog HDL Instantiation warning at DE0_TDC.v(444): instance has no name
 Info (12127): Elaborating entity "DE0_TDC" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at DE0_TDC.v(162): object "pll_rst" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at DE0_TDC.v(283): object "result_biass" assigned a value but never read
-Warning (10858): Verilog HDL warning at DE0_TDC.v(458): object Tdx_temp used but never assigned
+Warning (10036): Verilog HDL or VHDL warning at DE0_TDC.v(428): object "diff_out_temp0" assigned a value but never read
+Warning (10858): Verilog HDL warning at DE0_TDC.v(468): object Tdx_temp used but never assigned
 Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(181): truncated value with size 32 to match size of target (16)
 Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(203): truncated value with size 32 to match size of target (16)
 Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(226): truncated value with size 32 to match size of target (16)
@@ -1979,7 +2245,7 @@ Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(250): truncated val
 Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(271): truncated value with size 32 to match size of target (16)
 Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(297): truncated value with size 32 to match size of target (5)
 Warning (10230): Verilog HDL assignment warning at DE0_TDC.v(310): truncated value with size 32 to match size of target (5)
-Warning (10030): Net "Tdx_temp" at DE0_TDC.v(458) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "Tdx_temp" at DE0_TDC.v(468) has no driver or initial value, using a default initial value '0'
 Warning (10034): Output port "LED" at DE0_TDC.v(58) has no driver
 Info (12128): Elaborating entity "phase_controller" for hierarchy "phase_controller:ph_ctl"
 Warning (10230): Verilog HDL assignment warning at phase_controller.sv(41): truncated value with size 32 to match size of target (16)
@@ -2223,8 +2489,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
 Info (12128): Elaborating entity "add_sub_efh" for hierarchy "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_efh:auto_generated"
 Info (12128): Elaborating entity "altshift" for hierarchy "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|altshift:external_latency_ffs"
 Info (12131): Elaborated megafunction instantiation "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component|altshift:external_latency_ffs", which is child of megafunction instantiation "tdc:tdc_inst_0|mlt_x400:mlt_inst|mult_x50:gen_mult[0].mlt_inst|lpm_mult:lpm_mult_component"
-Info (12128): Elaborating entity "diff" for hierarchy "diff:diff_inst"
-Warning (10230): Verilog HDL assignment warning at diff.sv(50): truncated value with size 32 to match size of target (8)
 Info (12128): Elaborating entity "byass_data" for hierarchy "byass_data:byass_data1"
 Warning (10036): Verilog HDL or VHDL warning at byass_data.v(8): object "count_plus_flag" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at byass_data.v(8): object "count_min_flag" assigned a value but never read
@@ -2266,6 +2530,24 @@ Info (12133): Instantiated megafunction "singen:singen1|altsyncram:altsyncram_co
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9v91.tdf
     Info (12023): Found entity 1: altsyncram_9v91
 Info (12128): Elaborating entity "altsyncram_9v91" for hierarchy "singen:singen1|altsyncram:altsyncram_component|altsyncram_9v91:auto_generated"
+Info (12128): Elaborating entity "phase_controller200" for hierarchy "phase_controller200:ph_ctl_200"
+Warning (10230): Verilog HDL assignment warning at phase_controller200.sv(41): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at phase_controller200.sv(54): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at phase_controller200.sv(55): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at phase_controller200.sv(56): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at phase_controller200.sv(57): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at phase_controller200.sv(70): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at phase_controller200.sv(71): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at phase_controller200.sv(72): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at phase_controller200.sv(73): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at phase_controller200.sv(84): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at phase_controller200.sv(86): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "diff200mlt" for hierarchy "diff200mlt:diff_inst_mlt"
+Warning (10036): Verilog HDL or VHDL warning at diff200mlt.sv(11): object "o_dval" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at diff200mlt.sv(4): object "diff_1" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at diff200mlt.sv(52): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "diff200" for hierarchy "diff200:diff_inst"
+Warning (10230): Verilog HDL assignment warning at diff200.sv(52): truncated value with size 32 to match size of target (8)
 Info (12128): Elaborating entity "spi_data_transm" for hierarchy "spi_data_transm:spi_data_transm"
 Warning (10036): Verilog HDL or VHDL warning at spi_data_transm.v(57): object "spi_write_negedge" assigned a value but never read
 Info (12128): Elaborating entity "accumulation" for hierarchy "accumulation:comb_1017"
@@ -2281,7 +2563,14 @@ Warning (10230): Verilog HDL assignment warning at UART.v(102): truncated value 
 Info (12128): Elaborating entity "async_transmitter" for hierarchy "UART:uart_test|async_transmitter:async_transmitter_1"
 Info (12128): Elaborating entity "BaudTickGen" for hierarchy "UART:uart_test|async_transmitter:async_transmitter_1|BaudTickGen:tickgen"
 Info (12128): Elaborating entity "SEG7_LUT" for hierarchy "SEG7_LUT:test_led1"
-Warning (12241): 13 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12020): Port "ordered port 3" on the entity instantiation of "gen_mult[0].mlt_inst" is connected to a signal of width 11. The formal width of the signal in the module is 10.  The extra bits will be ignored.
+Warning (12030): Port "ordered port 5" on the entity instantiation of "int_ctr_neg" is connected to a signal of width 11. The formal width of the signal in the module is 10.  The extra bits will be left dangling without any fan-out logic.
+Warning (12030): Port "ordered port 5" on the entity instantiation of "int_ctr_pos" is connected to a signal of width 11. The formal width of the signal in the module is 10.  The extra bits will be left dangling without any fan-out logic.
+Warning (12030): Port "ordered port 4" on the entity instantiation of "tail_ctr_neg" is connected to a signal of width 11. The formal width of the signal in the module is 6.  The extra bits will be left dangling without any fan-out logic.
+Warning (12030): Port "ordered port 4" on the entity instantiation of "tail_ctr_pos" is connected to a signal of width 11. The formal width of the signal in the module is 6.  The extra bits will be left dangling without any fan-out logic.
+Warning (12030): Port "ordered port 4" on the entity instantiation of "head_ctr_neg" is connected to a signal of width 11. The formal width of the signal in the module is 6.  The extra bits will be left dangling without any fan-out logic.
+Warning (12030): Port "ordered port 4" on the entity instantiation of "head_ctr_pos" is connected to a signal of width 11. The formal width of the signal in the module is 6.  The extra bits will be left dangling without any fan-out logic.
+Warning (12241): 14 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[0]" is stuck at GND
     Warning (13410): Pin "LED[1]" is stuck at GND
@@ -2293,7 +2582,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[7]" is stuck at GND
     Warning (13410): Pin "TxD" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 46 registers lost all their fanouts during netlist optimizations.
+Info (17049): 84 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/output_files/de0_tdc.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 2 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
@@ -2308,17 +2597,17 @@ Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[6]"
     Warning (15610): No output dependent on input pin "SW[7]"
     Warning (15610): No output dependent on input pin "SW[9]"
-Info (21057): Implemented 1138 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1507 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 70 output pins
-    Info (21061): Implemented 1043 logic cells
+    Info (21061): Implemented 1412 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 2 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 100 warnings
-    Info: Peak virtual memory: 521 megabytes
-    Info: Processing ended: Sat Jul 14 11:46:41 2018
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 124 warnings
+    Info: Peak virtual memory: 517 megabytes
+    Info: Processing ended: Sat Jul 14 13:09:53 2018
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +------------------------------------------+
