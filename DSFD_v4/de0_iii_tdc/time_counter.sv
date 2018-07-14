@@ -1,5 +1,5 @@
 module time_counter (input clk, input rst, input signal, input mod, 
-							  output[6:0] frac_part, output[9:0] int_part, output wrena);
+							  output[10:0] frac_part, output[10:0] int_part, output wrena );
 							  
 //!!! Problem in latching data from tail negative counter
 
@@ -7,9 +7,9 @@ logic hp_wr, hn_wr, tp_wr, tn_wr, ip_wr, in_wr, p_data_valid, n_data_valid,
 		signal_d, mod_d, wr_en, neg_wr_en, signal_q;
 
 logic[2:0] p_data_rdy, n_data_rdy, lr_mod_pos, lr_mod_neg;		
-logic[5:0] hp_code, hn_code, tp_code, tn_code, hp_reg, hn_reg, tp_reg, tn_reg;
-logic[6:0] fr_sum, fr_sum_d;
-logic[9:0] ip_code, in_code, ip_reg, in_reg, int_out, int_out_d;
+logic[10:0] hp_code, hn_code, tp_code, tn_code, hp_reg, hn_reg, tp_reg, tn_reg;
+logic[10:0] fr_sum, fr_sum_d;
+logic[10:0] ip_code, in_code, ip_reg, in_reg, int_out, int_out_d;
 logic[11:0] out_time;
 logic[3:0] lr_mod, lr_signal;
 
@@ -25,6 +25,7 @@ integer_counter int_ctr_neg (clk, rst, mod_negedge, mod_posedge, signal_xor, in_
 assign mod_posedge = !mod_d && mod;		
 assign mod_negedge = mod_d && !mod;		
 assign signal_xor = signal_d ^ signal;
+//assign signal_xor = signal_d;
 
 assign p_data_valid = & p_data_rdy && !mod_d;
 assign n_data_valid = & n_data_rdy && mod_d;
@@ -94,19 +95,20 @@ always_ff @ (posedge clk or negedge rst)
 						n_data_rdy[0] <= 1'b1;
 					end
 				
-				if(n_data_valid)	//send data from negative counters
-					begin
-						fr_sum <= hn_reg + tn_reg;
-						int_out <= in_reg - 1;
-						wr_en <= 1;
-						n_data_rdy <= 0;
-					end
-				else if(p_data_valid)	//send data from positive counters
+				if(p_data_valid)	//send data from positive counters
 					begin
 						fr_sum <= hp_reg + tp_reg;
 						int_out <= ip_reg - 1;
 						wr_en <= 1;
 						p_data_rdy <= 0;
+					end
+				else 
+					if(n_data_valid)	//send data from negative counters
+					begin
+						fr_sum <= hn_reg + tn_reg;
+						int_out <= in_reg - 1;
+						wr_en <= 1;
+						n_data_rdy <= 0;
 					end
 				else wr_en <= 0;
 			end

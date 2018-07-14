@@ -15,10 +15,13 @@ module UART
 	  reg enb_flag,data_rdy_flag,data_rdy_wait,wait_enb=0;
 	  reg [3:0] data_count=4'd0;
 	  reg [7:0] data_temp_case=8'd0;
-	  wire [7:0] data_temp;
-	  assign data_temp=data_temp_case;
+	  reg [7:0] data_temp_case1=8'd0;
+	  reg [7:0] data_temp_case2=8'd0;
+	  reg [15:0] data_reg=16'd32000;
+	  //wire [7:0] data_temp;
+	  //assign data_temp=data_temp_case;
 	  
-	  
+always@(posedge data_rdy) data_reg <= data;
 	  
 	  always @(posedge clk_20m)
 begin
@@ -42,10 +45,12 @@ begin
 	 4'd0: begin   
 	 if (data_rdy_flag==1 && transm_rdy==0 && enb_flag==0)
 	 begin
+	 //data_reg[15:0] = data[15:0];
 	 enb_flag=1;
 	 data_temp_case<=8'd123;
 	 data_count<=data_count+1;
 	 data_rdy_wait=1;
+	 
 	 end
     end
 	 
@@ -69,8 +74,9 @@ begin
 	 if (transm_rdy==0 && enb_flag==0)
 	 begin
 	 enb_flag=1;
-	 //data_temp_case <= data[15:8];
-	 data_temp_case<=data[15:8];
+	 //data_temp_case<=data_temp_case1;
+	 data_temp_case <= data_reg[15:8];
+	 //data_temp_case1<=data[7:0];
 	 data_count<=data_count+1;
 	 end
 	 end
@@ -91,8 +97,8 @@ begin
 	 if (transm_rdy==0 && enb_flag==0)
 	 begin
 	 enb_flag=1;
-	 //data_temp_case <= data[15:8];
-	 data_temp_case<=data[7:0];
+	 data_temp_case <= data_reg[7:0];
+	 //data_temp_case<=data_temp_case2;
 	 data_count<=data_count+1;
 	 end
 	 end

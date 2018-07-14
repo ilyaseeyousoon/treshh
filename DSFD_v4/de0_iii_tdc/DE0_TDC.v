@@ -101,6 +101,12 @@ reg[15:0] clk_div;
 reg[10:0] clk_10k_d;
 reg clk_10k;
 
+
+reg[15:0] clk_div5;
+reg[10:0] clk_100k_d;
+reg clk_100k;
+
+
 wire [7:0] out_data_byass_top ,sin_to_dac ;
 wire [8:0] address_to_sin;
 assign DAC2_DB = sin_to_dac;
@@ -123,8 +129,8 @@ wire [19:0]result_sum;
 
 wire signal, mod, mod_d, dm_clk, diff_dval, tdc_input_signal, ph_mod;
 
-assign TEST_SIGNAL=ff;
-assign TEST_SIGNAL2=TxD_direct;
+assign TEST_SIGNAL=ph_mod;
+assign TEST_SIGNAL2=diff_dval;
 
 
 
@@ -178,6 +184,30 @@ always @ (posedge pll_clk[0] or negedge rst)
 			end
 	end
 	
+	
+	always @ (posedge pll_clk[0] or negedge rst)
+	begin
+		if(!rst)
+			begin
+				clk_div5 <= 0;
+				clk_100k <= 0;
+				clk_100k_d <= 0;
+			end
+		else
+			begin	
+				if(clk_div5 == 999) 
+					begin																													
+						clk_div5 = 0;
+						clk_100k <= ~clk_100k;
+					end
+				else clk_div5 <= clk_div5 + 1;
+				
+				clk_100k_d <= {clk_100k_d[9:0], clk_100k};
+			end
+	end
+	
+	
+	
 	always @ (posedge pll_clk[0] or negedge rst)
 	begin
 		if(!rst)
@@ -198,6 +228,9 @@ always @ (posedge pll_clk[0] or negedge rst)
 				clk_20k_d <= {clk_20k_d[9:0], clk_20k};
 			end
 	end
+	
+	
+	
 	
 		always @ (posedge pll_clk[0] or negedge rst)
 	begin
@@ -382,7 +415,7 @@ reg [7:0] temp =0;
 wire [15:0]  data_to_spi = SW[2] ? {diff_out_spi[7:0],temp[7:0]} : diff_out_spi[19:0];
 wire [19:0] diff_out_spi= SW[2]	? diff_out_0+ 20'd125 : diff_out_0+ 20'd30000;
 */
-spi_data_transm spi_data_transm(pll_clk[0],pll_clk[8],clk_10k,SPI3_MOSI,SPI3_CLK,SPI3_SS,result_biass[15:0]);
+spi_data_transm spi_data_transm(pll_clk[0],pll_clk[8],clk_10k,SPI3_MOSI,SPI3_CLK,SPI3_SS,result_biass_2[15:0]);
 
 accumulation ( ph_mod,diff_dval,  rst,  diff_out_0[15:0],  result_sum );
 //wire [15:0] h={result_sum[7:0],temp[7:0] };
@@ -396,16 +429,25 @@ wire ff,ff_2;
 //TEST ВЕРСИЯ МОДУЛЯ ДЛЯ ПРОВЕРКИ В МАТЛАБЕ
  //UART uart_test( clk_20m,16'd42053, clk_20k, TxD_direct, ff);
 
+ 
+// reg [15:0] result_biass_saved;
+//always @ (posedge ph_mod or negedge rst)
+//	begin
+//		if(!rst)	result_biass_saved<=0;
+//		else result_biass_saved[15:0] <= result_biass_2[15:0];
+//	end
  // Рабочая версия uart
- UART uart_test( clk_20m,{temp[7:0],result_biass_2[15:0]}, clk_40k, TxD_direct, ff);
+ UART uart_test( clk_20m,diff_out_0[15:0]+16'd32767, clk_20k, TxD_direct, ff);
+ //UART uart_test( clk_20m,{8'd0,sin_to_dac}+16'd32767, clk_40k, TxD_direct, ff); // sin10k out via uart40k
+ 
  
  wire Tdx_temp;
  assign TxD=~Tdx_temp;
  
  SEG7_LUT test_led1	(	SEG_1,SEG_1DP,horrible_counter_2	);
  SEG7_LUT test_led2	(	SEG_2,SEG_2DP,horrible_counter_2	);
-  SEG7_LUT test_led3	(	SEG_3,SEG_3DP,horrible_counter_2	);
-   SEG7_LUT test_led0	(	SEG_0,SEG_0DP,horrible_counter_2	);
+ SEG7_LUT test_led3	(	SEG_3,SEG_3DP,horrible_counter_2	);
+ SEG7_LUT test_led0	(	SEG_0,SEG_0DP,horrible_counter_2	);
  
  
  

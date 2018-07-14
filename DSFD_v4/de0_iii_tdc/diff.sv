@@ -48,18 +48,10 @@ always_ff @ (posedge clk or negedge rst)
 						buf1_rdy <= 0;
 						buf2_rdy <= 0;
 						test_ctr <= test_ctr + 1;
-						if(clk_10k==1)// добавил проверку для 20 Кгц. на 10 будет фигня 
-						begin
-						//diff <= in_buf_1+in_buf_2 + 20'h007F0;
-						diff <= in_buf_2+in_buf_1;// проверка шума
+						diff <= in_buf_2;//+in_buf_1;// проверка шума
 						//diff <= in_buf_2+in_buf_1- 20'h26160;
-						end
-						else
-						begin
 						//diff <= in_buf_1+in_buf_2 + 20'h007F0;
 						//diff <= in_buf_2-in_buf_1 + 20'h08000;
-						diff <= in_buf_2+in_buf_1;// проверка шума
-						end
 						out_valid <= 1;
 					end
 				else out_valid <= 0;

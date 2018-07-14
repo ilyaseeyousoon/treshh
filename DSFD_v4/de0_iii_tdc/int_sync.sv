@@ -1,13 +1,13 @@
 parameter CTR_NUMBER = 1;	//number of integer and fractional counters
 
-module int_sync (input[CTR_NUMBER-1:0] clocks, input rst, input[9:0] in_data[CTR_NUMBER-1:0], input[CTR_NUMBER-1:0] in_wr, 
-					  output[9:0] out_data[CTR_NUMBER-1:0], output valid);
+module int_sync (input[CTR_NUMBER-1:0] clocks, input rst, input[10:0] in_data[CTR_NUMBER-1:0], input[CTR_NUMBER-1:0] in_wr, 
+					  output[10:0] out_data[CTR_NUMBER-1:0], output valid);
 
 localparam st_wait = 0, st_ena_off = 1, st_change_clock = 2, st_read_data = 3, st_ena_on = 4, st_ret_clock = 5;
 
 logic ena, data_ready, clear_wr, sync_read, out_valid;
 logic[2:0] state, next_state;					  
-logic[9:0] data[CTR_NUMBER-1:0], sync_data[CTR_NUMBER-1:0];
+logic[10:0] data[CTR_NUMBER-1:0], sync_data[CTR_NUMBER-1:0];
 logic[CTR_NUMBER-1:0] data_wr;
 logic[1:0] lr_wrdata, lr_clear[CTR_NUMBER-1:0], lr_ena[CTR_NUMBER-1:0];
 

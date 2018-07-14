@@ -1,6 +1,6 @@
 //module mlt_x400 (input clk, input rst, input[9:0] int_data[7:0], input[6:0] frac_data[7:0], input start, 
 //					  output[19:0] out_16, output out_dval);
-module mlt_x400 (input clk, input rst, input[9:0] int_data[0:0], input[6:0] frac_data[0:0], input start, 
+module mlt_x400 (input clk, input rst, input[10:0] int_data[0:0], input[10:0] frac_data[0:0], input start, 
 					  output[36:0] out_16, output out_dval);
 
 
@@ -19,7 +19,8 @@ logic[34:0] sum_st_3[3:0];
 logic[35:0] sum_st_4[1:0];
 logic[36:0] sum_st_5;
 
-logic[5:0] lr_ena;
+//logic[5:0] lr_ena;
+logic[2:0] lr_ena;
 					  
 genvar g;
 generate
@@ -28,7 +29,9 @@ generate
 	end
 endgenerate
 
-assign out_dval = lr_ena[5];
+//assign out_dval = lr_ena[5];
+assign out_dval = lr_ena[2];
+
 assign out_16 = sum_st_5;
 
 integer i;
@@ -41,26 +44,30 @@ always_ff @ (posedge clk or negedge rst)
 			end
 		else
 			begin
-				lr_ena <= {lr_ena[4:0], start};
+				//lr_ena <= {lr_ena[4:0], start};
+				lr_ena <= {lr_ena[1:0], start};
+				
 				for(i = 0; i < 1; i++)//изменение числа каналов
 					begin
-				//if((i !=1)&& (i != 3) && (i!=5))
-				//	begin
+									//if((i !=1)&& (i != 3) && (i!=5))
+									//	begin
 						frac_delay[i] <= (start) ? frac_data[i] : 0;
 						sum_st_1[i] <= (lr_ena[0]) ? (mult_out[i] + frac_delay[i]) : 0;
-				//	end
+									//	end
 					end
-					for(i = 0; i < 8; i++)
-					sum_st_2[i] <= (lr_ena[1]) ? (sum_st_1[i*2] + sum_st_1[i*2+1]) : 0;
 					
-				for(i = 0; i < 4; i++)
-					sum_st_3[i] <= (lr_ena[2]) ? (sum_st_2[i*2] + sum_st_2[i*2+1]) : 0;
+//				for(i = 0; i < 8; i++)
+//					sum_st_2[i] <= (lr_ena[1]) ? (sum_st_1[i*2] + sum_st_1[i*2+1]) : 0;
+//					
+//				for(i = 0; i < 4; i++)
+//					sum_st_3[i] <= (lr_ena[2]) ? (sum_st_2[i*2] + sum_st_2[i*2+1]) : 0;
+//					
+//				for(i = 0; i < 2; i++)
+//					sum_st_4[i] <= (lr_ena[3]) ? (sum_st_3[i*2] + sum_st_3[i*2+1]) : 0;
 					
-				for(i = 0; i < 2; i++)
-					sum_st_4[i] <= (lr_ena[3]) ? (sum_st_3[i*2] + sum_st_3[i*2+1]) : 0;
-					
-				//sum_st_4 <= (lr_ena[3]) ? (sum_st_3[0] + sum_st_3[1]) : 0;
-				sum_st_5 <= (sum_st_4[0] + sum_st_4[1]);
+									//sum_st_4 <= (lr_ena[3]) ? (sum_st_3[0] + sum_st_3[1]) : 0;
+//					sum_st_5 <= (sum_st_4[0] + sum_st_4[1]);
+					sum_st_5 <= sum_st_1[0];
 				
 			end
 	end
