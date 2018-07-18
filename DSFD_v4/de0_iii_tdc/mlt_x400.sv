@@ -33,6 +33,7 @@ assign out_16 = sum_st_5;
 
 integer i;
 
+
 always_ff @ (posedge clk or negedge rst)
 	begin
 		if(!rst)
@@ -42,7 +43,7 @@ always_ff @ (posedge clk or negedge rst)
 		else
 			begin
 				lr_ena <= {lr_ena[4:0], start};
-				for(i = 0; i < 1; i++)//изменение числа каналов
+				for(i = 0; i < 16; i++)//изменение числа каналов
 					begin
 				//if((i !=1)&& (i != 3) && (i!=5))
 				//	begin
@@ -64,6 +65,10 @@ always_ff @ (posedge clk or negedge rst)
 				
 			end
 	end
+	
+
+	
+	
 	
 endmodule
 	

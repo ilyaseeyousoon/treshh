@@ -1,5 +1,5 @@
 EDA Netlist Writer report for de0_tdc
-Wed Jul 04 18:14:37 2018
+Wed Jul 18 15:23:25 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Jul 04 18:14:37 2018 ;
+; EDA Netlist Writer Status ; Successful - Wed Jul 18 15:23:25 2018 ;
 ; Revision Name             ; de0_tdc                               ;
 ; Top-level Entity Name     ; DE0_TDC                               ;
 ; Family                    ; Cyclone III                           ;
@@ -66,20 +66,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                   ;
-+----------------------------------------------------------------------------------------------+
-; Generated Files                                                                              ;
-+----------------------------------------------------------------------------------------------+
-; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc_6_1200mv_85c_slow.svo    ;
-; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc_6_1200mv_0c_slow.svo     ;
-; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc_min_1200mv_0c_fast.svo   ;
-; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc.svo                      ;
-; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc_6_1200mv_85c_v_slow.sdo  ;
-; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc_6_1200mv_0c_v_slow.sdo   ;
-; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc_min_1200mv_0c_v_fast.sdo ;
-; C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc_v.sdo                    ;
-+----------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                ;
++-------------------------------------------------------------------------------------------+
+; Generated Files                                                                           ;
++-------------------------------------------------------------------------------------------+
+; E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc_6_1200mv_85c_slow.svo    ;
+; E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc_6_1200mv_0c_slow.svo     ;
+; E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc_min_1200mv_0c_fast.svo   ;
+; E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc.svo                      ;
+; E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc_6_1200mv_85c_v_slow.sdo  ;
+; E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc_6_1200mv_0c_v_slow.sdo   ;
+; E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc_min_1200mv_0c_v_fast.sdo ;
+; E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/de0_tdc_v.sdo                    ;
++-------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,20 +88,20 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Jul 04 18:14:33 2018
+    Info: Processing started: Wed Jul 18 15:23:15 2018
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off de0_tdc -c de0_tdc
-Info (204019): Generated file de0_tdc_6_1200mv_85c_slow.svo in folder "C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file de0_tdc_6_1200mv_0c_slow.svo in folder "C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file de0_tdc_min_1200mv_0c_fast.svo in folder "C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file de0_tdc.svo in folder "C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file de0_tdc_6_1200mv_85c_v_slow.sdo in folder "C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file de0_tdc_6_1200mv_0c_v_slow.sdo in folder "C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file de0_tdc_min_1200mv_0c_v_fast.sdo in folder "C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file de0_tdc_v.sdo in folder "C:/gitt/ch_d/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file de0_tdc_6_1200mv_85c_slow.svo in folder "E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file de0_tdc_6_1200mv_0c_slow.svo in folder "E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file de0_tdc_min_1200mv_0c_fast.svo in folder "E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file de0_tdc.svo in folder "E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file de0_tdc_6_1200mv_85c_v_slow.sdo in folder "E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file de0_tdc_6_1200mv_0c_v_slow.sdo in folder "E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file de0_tdc_min_1200mv_0c_v_fast.sdo in folder "E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file de0_tdc_v.sdo in folder "E:/GITHUB/treshh/DSFD_v4/de0_iii_tdc/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 431 megabytes
-    Info: Processing ended: Wed Jul 04 18:14:37 2018
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 492 megabytes
+    Info: Processing ended: Wed Jul 18 15:23:25 2018
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:09
 
 

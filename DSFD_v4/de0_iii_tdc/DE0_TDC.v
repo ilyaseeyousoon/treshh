@@ -287,22 +287,9 @@ always @ (posedge pll_clk[0] or negedge rst)
 				  end 
 				  
 				  
-	/*			  
-				  	case(horrible_counter[4:0])
-	0: 	begin result_biass=result_sum[15:0]; end
-	1:		begin result_biass={result_sum[14:0],temp[0]};   end
-	2:		begin result_biass={result_sum[13:0],temp[1:0]}; end
-	3:		begin result_biass={result_sum[12:0],temp[2:0]}; end
-	4:		begin result_biass={result_sum[11:0],temp[3:0]}; end
-	5:		begin result_biass={result_sum[10:0],temp[4:0]}; end
-	6:		begin result_biass={result_sum[9:0],temp[5:0]}; end
-	7:		begin result_biass={result_sum[8:0],temp[6:0]}; end
-	8:		begin result_biass={result_sum[7:0],temp[7:0]}; end
-	9:		begin result_biass={result_sum[7:0],temp[7:0]}; end
-	endcase
-		*/	
+
 				case(horrible_counter[4:0])
-   0:		begin result_biass=result_sum[15:0]+16'd30000; end
+   0:		begin result_biass=result_sum[15:0]+16'd32767; end
 	1:		begin diff_out_temp=result_sum[15:0]+16'd16383;   
 	result_biass={diff_out_temp[14:0],temp[0]};   end
 	2:		begin diff_out_temp=result_sum[15:0]+16'd8191;   
@@ -351,41 +338,44 @@ always @ (posedge pll_clk[0] or negedge rst)
 	
 
 	
-//phase_controller ph_ctl(pll_clk[0], 1, KEY[1:0], SW[0], ph_mod);
+
   phase_controller ph_ctl(pll_clk[0], 1, KEY[1:0], SW[1:0], ph_mod);
 
-//signal_pll pll_sg (.areset(~pll_rst), .inclk0(CLOCK_50), .c0(dm_clk), .c1(mod));
 
 clock_block    cb_inst (CLOCK_50, rst, 1, pll_clk, inv_clk);   
 					
 dm_min dm_inst (pll_clk[0], rst, clk_10k, digmod_out, mod_d);
 
 	tdc tdc_inst_0 (tdc_clocks, rst, tdc_input_signal, ph_mod, tdc_out_0, tdc_dval[0], TRIG);					
-//tdc tdc_inst_0 (tdc_clocks, rst, tdc_input_signal, clk_20k, tdc_out_0, tdc_dval[0], TRIG);
+
 diff diff_inst (tdc_clocks[0], rst, tdc_dval[0], tdc_out_0,clk_10k, diff_out_0, diff_dval);
 
-//byass_data byass_data1( tdc_clocks[0],  rst,  KEY[2:1], diff_out_0, out_data_byass_top);
+
 byass_data byass_data1( tdc_clocks[0],  rst,  KEY[0], diff_out_0,SW[8], out_data_byass_top);
 
 sin_addr sin_addr1 (pll_clk[9],address_to_sin);
 
 singen  singen1 ( address_to_sin,pll_clk[9],sin_to_dac );
 
-//spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_40k,SPI3_MOSI,SPI3_CLK,SPI3_SS,result_sum[15:0]);
 
-//reg [7:0] temp =0;
-//wire [15:0] h={diff_out_0[7:0],temp[7:0] };
- 
+wire [19:0] diff_out_temp0;
+reg [19:0] diff_out_temp3,diff_out_temp4,diff_out_temp2,diff_out_temp1;
 
-/*
-reg [7:0] temp =0;
-wire [15:0]  data_to_spi = SW[2] ? {diff_out_spi[7:0],temp[7:0]} : diff_out_spi[19:0];
-wire [19:0] diff_out_spi= SW[2]	? diff_out_0+ 20'd125 : diff_out_0+ 20'd30000;
-*/
+always @ (posedge ph_mod)
+begin
+
+diff_out_temp2 <= diff_out_0;
+diff_out_temp4<=diff_out_temp2+diff_out_0;
+
+end
+
+assign diff_out_temp0=diff_out_temp4;
+
+
 spi_data_transm spi_data_transm(pll_clk[0],pll_clk[8],clk_10k,SPI3_MOSI,SPI3_CLK,SPI3_SS,result_biass[15:0]);
 
-accumulation ( ph_mod,diff_dval,  rst,  diff_out_0[15:0],  result_sum );
-//wire [15:0] h={result_sum[7:0],temp[7:0] };
+accumulation ( ph_mod,diff_dval,  rst,  diff_out_temp0[15:0],  result_sum );
+
 wire gg;
 spi_data_transm spi_data_transm1(pll_clk[0],pll_clk[8],clk_20k,SPI1_MOSI,gg,SPI1_SS,result_biass_2[15:0]);
 
@@ -397,7 +387,7 @@ wire ff,ff_2;
  //UART uart_test( clk_20m,16'd42053, clk_20k, TxD_direct, ff);
 
  // Рабочая версия uart
- UART uart_test( clk_20m,{temp[7:0],result_biass_2[15:0]}, clk_40k, TxD_direct, ff);
+ UART uart_test( clk_20m,result_biass[15:0], clk_20k, TxD_direct, ff);
  
  wire Tdx_temp;
  assign TxD=~Tdx_temp;
@@ -410,26 +400,6 @@ wire ff,ff_2;
  
  
 
-/*
-reg  [23:0]count_test=24'd0;
-always @ (posedge clk_20k )
-begin
 
-
-count_test<=count_test+1;
-end
-*/
-
-
-/*
-reg [7:0] temp =0;
-wire [19:0] result_sum_2 =result_sum[19:0]-20'd80;
-wire [15:0]temp2= {result_sum_2[7:0],temp[7:0]};
-*/
-/*
-//проверка шума
-reg [7:0] temp =0;
-wire [15:0]temp2= {diff_out_0[7:0],temp[5:0]};
-*/
 
 endmodule
